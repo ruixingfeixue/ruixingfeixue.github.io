@@ -89,13 +89,12 @@
 
 <meta name="description" content="瑞空间|瑞生活">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="瑞空间|瑞生活">
+<meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="瑞空间|瑞生活">
 <meta property="og:description" content="瑞空间|瑞生活">
-<meta property="og:updated_time" content="2017-04-12T09:00:14.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="瑞空间|瑞生活">
 <meta name="twitter:description" content="瑞空间|瑞生活">
 
 
@@ -124,19 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/"/>
 
 
 
 
 
-  <title>
-  
-
-  
-    categories | 瑞空间|瑞生活
-  
-</title>
+  <title> 瑞空间|瑞生活 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -161,7 +154,9 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,21 +239,152 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
-  <header class="post-header">
-
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-    
+  <section id="posts" class="posts-expand">
     
       
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/12/常用的Hexo指令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞空间|瑞生活">
+    </span>
+
     
-  </div>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/12/常用的Hexo指令/" itemprop="url">
+                  常用的Hexo指令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-12T16:10:18+08:00">
+                2017-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="init"><a href="#init" class="headerlink" title="init"></a>init</h4><p><code>$ hexo init [folder]</code><br>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
+<hr>
+<h4 id="new"><a href="#new" class="headerlink" title="new"></a>new</h4><p><code>$ hexo new [layout] &lt;title&gt;</code><br>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<hr>
+<h4 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h4><p><code>$ hexo generate</code><br>生成静态文件。</p>
+<p>选项    描述<br>-d, –deploy    文件生成后立即部署网站<br>-w, –watch    监视文件变动<br>该命令可以简写为</p>
+<p><code>$ hexo g</code></p>
+<hr>
+<h4 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h4><p><code>$ hexo publish [layout] &lt;filename&gt;</code><br>发表草稿。</p>
+<hr>
+<h4 id="server"><a href="#server" class="headerlink" title="server"></a>server</h4><p><code>$ hexo server</code><br>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="external">http://localhost:4000/。</a></p>
+<p>选项    描述<br>-p, –port    重设端口<br>-s, –static    只使用静态文件<br>-l, –log    启动日记记录，使用覆盖记录格式</p>
+<hr>
+<h4 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h4><p><code>$ hexo deploy</code><br>部署网站。</p>
+<p>参数    描述<br>-g, –generate    部署之前预先生成静态文件<br>该命令可以简写为：</p>
+<p><code>$ hexo d</code></p>
+<hr>
+<h4 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h4><p><code>$ hexo clean</code><br>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<hr>
+<h4 id="version"><a href="#version" class="headerlink" title="version"></a>version</h4><p><code>$ hexo version</code><br>显示 Hexo 版本。</p>
+<p>更多指令请参考 <a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="external">Hexo指令</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
 
 
           </div>
@@ -266,10 +392,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
