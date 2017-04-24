@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="计算方法a-行内样式   1000b-ID选择器的数量   100c-类、伪类和属性选择器的数量   10d-标签选择器和伪元素选择器的数量  1   value=a*1000+b*100+c*10+d    选择器 a b c d value          h1 0 0 0 1 1       p&amp;gt;em 0 0 0 2 2      style:”” 1000 0 0 0 1000">
+<meta name="description" content="半透明边框(Demo点这里)科普RGBA和HSLA背景知识RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )R：红色值。正整数 | 百分数G：绿色值。正整数 | 百分数B：蓝色值。正整数 | 百分数A：Alpha透明度。取值0~1之间。 HSLA(H,S,L,A)取值:H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css优先级">
-<meta property="og:url" content="http://yoursite.com/2017/02/27/css优先级/index.html">
+<meta property="og:title" content="CSS揭秘第二章-背景与边框">
+<meta property="og:url" content="http://yoursite.com/2016/11/26/css揭秘读书笔记01/index.html">
 <meta property="og:site_name" content="瑞的指南针">
-<meta property="og:description" content="计算方法a-行内样式   1000b-ID选择器的数量   100c-类、伪类和属性选择器的数量   10d-标签选择器和伪元素选择器的数量  1   value=a*1000+b*100+c*10+d    选择器 a b c d value          h1 0 0 0 1 1       p&amp;gt;em 0 0 0 2 2      style:”” 1000 0 0 0 1000">
-<meta property="og:updated_time" content="2017-04-24T09:25:23.378Z">
+<meta property="og:description" content="半透明边框(Demo点这里)科普RGBA和HSLA背景知识RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )R：红色值。正整数 | 百分数G：绿色值。正整数 | 百分数B：蓝色值。正整数 | 百分数A：Alpha透明度。取值0~1之间。 HSLA(H,S,L,A)取值:H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值">
+<meta property="og:updated_time" content="2017-04-24T10:49:34.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css优先级">
-<meta name="twitter:description" content="计算方法a-行内样式   1000b-ID选择器的数量   100c-类、伪类和属性选择器的数量   10d-标签选择器和伪元素选择器的数量  1   value=a*1000+b*100+c*10+d    选择器 a b c d value          h1 0 0 0 1 1       p&amp;gt;em 0 0 0 2 2      style:”” 1000 0 0 0 1000">
+<meta name="twitter:title" content="CSS揭秘第二章-背景与边框">
+<meta name="twitter:description" content="半透明边框(Demo点这里)科普RGBA和HSLA背景知识RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )R：红色值。正整数 | 百分数G：绿色值。正整数 | 百分数B：蓝色值。正整数 | 百分数A：Alpha透明度。取值0~1之间。 HSLA(H,S,L,A)取值:H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/27/css优先级/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/26/css揭秘读书笔记01/"/>
 
 
 
 
 
-  <title> css优先级 | 瑞的指南针 </title>
+  <title> CSS揭秘第二章-背景与边框 | 瑞的指南针 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -260,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/27/css优先级/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/26/css揭秘读书笔记01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -281,7 +281,7 @@
             
             
               
-                css优先级
+                CSS揭秘第二章-背景与边框
               
             
           </h1>
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-27T17:19:09+08:00">
-                2017-02-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-26T20:57:47+08:00">
+                2016-11-26
               </time>
             
 
@@ -354,72 +354,25 @@
       
 
       
-        <h5 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h5><p>a-行内样式   1000<br>b-ID选择器的数量   100<br>c-类、伪类和属性选择器的数量   10<br>d-标签选择器和伪元素选择器的数量  1  </p>
-<p><code>value=a*1000+b*100+c*10+d</code></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">选择器</th>
-<th style="text-align:center">a</th>
-<th style="text-align:center">b</th>
-<th style="text-align:center">c</th>
-<th style="text-align:center">d</th>
-<th style="text-align:center">value </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">    h1</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">1  </td>
-</tr>
-<tr>
-<td style="text-align:center">  p&gt;em</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">2   </td>
-</tr>
-<tr>
-<td style="text-align:center">style:””</td>
-<td style="text-align:center">1000</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1000 </td>
-</tr>
-<tr>
-<td style="text-align:center">.common p</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">10</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">11 </td>
-</tr>
-<tr>
-<td style="text-align:center">div#content</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">100</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">101</td>
-</tr>
-<tr>
-<td style="text-align:center">a:link</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">10</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">11</td>
-</tr>
-</tbody>
-</table>
-<p>假设优先级相同，使用css层叠。<br>优先级高的覆盖优先级低的，后面的覆盖前面的，不同属性会合并。<br>a:link{ color:blue}      11<br>a[href^=”#”]{ color:grey}    11</p>
-<p>改变优先级：<br>1、改变位置<br>2、提升选择器优先级<br>3、使用!important</p>
+        <h4 id="半透明边框-Demo点这里"><a href="#半透明边框-Demo点这里" class="headerlink" title="半透明边框(Demo点这里)"></a>半透明边框(<a href="http://runjs.cn/code/iobax1rr" target="_blank" rel="external">Demo点这里</a>)</h4><h5 id="科普RGBA和HSLA背景知识"><a href="#科普RGBA和HSLA背景知识" class="headerlink" title="科普RGBA和HSLA背景知识"></a>科普RGBA和HSLA背景知识</h5><p>RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )<br>R：红色值。正整数 | 百分数<br>G：绿色值。正整数 | 百分数<br>B：蓝色值。正整数 | 百分数<br>A：Alpha透明度。取值0~1之间。</p>
+<p>HSLA(H,S,L,A)取值:<br>H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值为：0-360<br>S：Saturation(饱和度)。取值为：0.0% - 100.0%<br>L：Lightness(亮度)。取值为：0.0% - 100.0%<br>A：Alpha透明度。取值0~1之间。    </p>
+<h5 id="如何给容器加上透明边框"><a href="#如何给容器加上透明边框" class="headerlink" title="如何给容器加上透明边框"></a>如何给容器加上透明边框</h5><p><code>border: 10px solid hsla(0,0%,100%,.5) background: white;</code><br>使用如上代码来实现结果会发现透明边框没有显示出来。因为默认背景会覆盖边框。<br>解决方案：设置background-clip: padding-box;即可。默认的是border-box。</p>
+<hr>
+<h4 id="二、多重边框-Demo点这里"><a href="#二、多重边框-Demo点这里" class="headerlink" title="二、多重边框(Demo点这里)"></a>二、多重边框(<a href="http://runjs.cn/code/1xsddkkz" target="_blank" rel="external">Demo点这里</a>)</h4><h5 id="使用box-shadow来实现"><a href="#使用box-shadow来实现" class="headerlink" title="使用box-shadow来实现"></a>使用box-shadow来实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: yellowgreen;</div><div class="line">box-shadow: 0 0 0 10px #655,0 0 0 15px deeppink,0 2px 5px 15px rgba(0,0,0,.6);</div></pre></td></tr></table></figure>
+<p>好处：投影的行为不会影响布局，也不会受到box-sizing的影响。也不会影响鼠标事件。  </p>
+<h5 id="outline方案"><a href="#outline方案" class="headerlink" title="outline方案"></a>outline方案</h5><p><code>background: yellowgreen;border: 10px solid #655;outline: 5px solid deeppink;</code><br>好处：outline边框样式灵活，可以使用虚线(box-shadow不可以。<br>还可以设置outline-offset属性来控制它跟元素边缘之间的间距，可设为负值实现缝边效果。<br>注意点：如果元素是圆角的，描边不一定是圆角，绝大多数情况下描边是直角的。</p>
+<hr>
+<p>####三、灵活的背景定位(<a href="http://runjs.cn/code/ukmlrtb3" target="_blank" rel="external">Demo点这里</a>)<br>1、使用backgrou-position实现带有偏移量的背景定位(实例见:demo/3.html)<br><code>background: url(code-pirate.svg) no-repeat #58a;background-position: right 20px bottom 10px;</code><br>浏览器的回退实现:即把bottom right 定位值写进background的简写属性。<br>2、background-origin实现带有偏移量的背景定位<br><code>background-origin: content-box;</code><br>一般来说背景位置的偏移量即是padding的值，所以可以借助background-orgin来实现背景偏移。默认值为border—box。<br>3、calc()方案<br>实现背景距离下方20px,右方20px,即水平偏移100%-20px,垂直偏移100%-20px。<br><code>background-position: calc(100% - 20px) calc(100% - 10px);</code><br>注意点：请不要忘记在 calc() 函数内部的 - 和 + 运算符的两侧各加一个空白符，否则会产生解析错误！</p>
+<hr>
+<p>####四、边框内圆角(<a href="http://runjs.cn/code/6sw4mcef" target="_blank" rel="external">Demo点这里</a>)<br>1、使用box-shadow和outline<br>使用ouline实现描边，然后使用box-shadow来填充元素扩张值从而实现边框内圆角效果。</p>
+<hr>
+<p>####五、条纹背景(<a href="http://runjs.cn/code/at8ng7eu" target="_blank" rel="external">Demo点这里</a>)<br>1、如何实现渐变<br><code>background: linear-gradient(white 50%, black 0);background-size: 100% 30px;</code><br>如上即有一个从上到下白色(0-50%)到黑色的渐变(50%-100%),此处的0表示那它的位置就是会被浏览器调整为前一个色标的位置值，就是50%。<br>注意:在50%的分界点是突然渐变的，不是平缓的过渡。<br>2、斜向条纹的实现<br><code>background: repeating-linear-gradient(60deg,#fb3, #fb3 15px, #58a 0, #58a 30px);</code><br>如上即有一个60度的重复渐变。从0到15px是黄色，从15到30px是墨绿色。<br>3、同色系条纹(色彩差异不大，只是明度不同)<br>方法一:按普通方法来，正常色值按语法写即可<br>方法二:背景设为颜色值，改变透明度来实现   </p>
+<hr>
+<p>####六、复杂的背景图案(待消化)</p>
+<hr>
+<p>####七、伪随机背景(待消化)</p>
+<hr>
+<p>####八、连续的背景边框(<a href="http://runjs.cn/code/2dsqth0a" target="_blank" rel="external">Demo点这里</a>)<br>1、如何给边框设背景<br>方法一:使用两个 HTML 元素：一个元素用来把我们的石雕图片设为背景，另一个元素用来存放内容，并设置纯白背景，然后覆盖在前者之上。<br>方法二:只用一个元素就能达成完全一样的效果。主要的思路就是在石雕背景图片之上，再叠加一层纯白的实色背景。为了让下层的图片背景透过边框区域显示出来，我们需要给两层背景指定不同的background-clip值。最后一个要点在于，我们只能在多重背景的最底层设置背景色，因此需要用一道从白色过渡到白色的 CSS 渐变来模拟出纯白实色背景的效果。<br>2、关于border-image能做成的效果<br>可以参考(<a href="http://www.zhangxinxu.com/wordpress/2010/01/css3-border-image/" target="_blank" rel="external">这里</a>)   </p>
 
       
     </div>
@@ -467,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/12/常用的hexo指令/" rel="next" title="常用的hexo指令">
-                <i class="fa fa-chevron-left"></i> 常用的hexo指令
+              <a href="/2016/12/05/css揭秘读书笔记02/" rel="next" title="css揭秘读书笔记02">
+                <i class="fa fa-chevron-left"></i> css揭秘读书笔记02
               </a>
             
           </div>
@@ -477,8 +430,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/14/css揭秘读书笔记03/" rel="prev" title="css揭秘读书笔记03">
-                css揭秘读书笔记03 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/03/css设计指南读书笔记/" rel="prev" title="css设计指南读书笔记">
+                css设计指南读书笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -608,7 +561,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#计算方法"><span class="nav-number">1.</span> <span class="nav-text">计算方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#半透明边框-Demo点这里"><span class="nav-number">1.</span> <span class="nav-text">半透明边框(Demo点这里)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#科普RGBA和HSLA背景知识"><span class="nav-number">1.1.</span> <span class="nav-text">科普RGBA和HSLA背景知识</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何给容器加上透明边框"><span class="nav-number">1.2.</span> <span class="nav-text">如何给容器加上透明边框</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、多重边框-Demo点这里"><span class="nav-number">2.</span> <span class="nav-text">二、多重边框(Demo点这里)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用box-shadow来实现"><span class="nav-number">2.1.</span> <span class="nav-text">使用box-shadow来实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#outline方案"><span class="nav-number">2.2.</span> <span class="nav-text">outline方案</span></a></li></ol></li></ol></div>
             
 
           </div>
