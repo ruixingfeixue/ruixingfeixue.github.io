@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -103,7 +103,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"left","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
@@ -1114,7 +1114,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/26/css揭秘读书笔记01/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/26/CSS揭秘第二章-背景与边框/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -1136,7 +1136,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/11/26/css揭秘读书笔记01/" itemprop="url">
+                <a class="post-title-link" href="/2016/11/26/CSS揭秘第二章-背景与边框/" itemprop="url">
                   CSS揭秘第二章-背景与边框
                 </a>
               
@@ -1213,25 +1213,47 @@
       
         
           
-            <h4 id="半透明边框-Demo点这里"><a href="#半透明边框-Demo点这里" class="headerlink" title="半透明边框(Demo点这里)"></a>半透明边框(<a href="http://runjs.cn/code/iobax1rr" target="_blank" rel="external">Demo点这里</a>)</h4><h5 id="科普RGBA和HSLA背景知识"><a href="#科普RGBA和HSLA背景知识" class="headerlink" title="科普RGBA和HSLA背景知识"></a>科普RGBA和HSLA背景知识</h5><p>RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )<br>R：红色值。正整数 | 百分数<br>G：绿色值。正整数 | 百分数<br>B：蓝色值。正整数 | 百分数<br>A：Alpha透明度。取值0~1之间。</p>
+            <h4 id="半透明边框"><a href="#半透明边框" class="headerlink" title="半透明边框"></a>半透明边框</h4><p>(<a href="http://runjs.cn/code/iobax1rr" target="_blank" rel="external">Demo点这里</a>)</p>
+<h5 id="科普RGBA和HSLA背景知识"><a href="#科普RGBA和HSLA背景知识" class="headerlink" title="科普RGBA和HSLA背景知识"></a>科普RGBA和HSLA背景知识</h5><p>RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )<br>R：红色值。正整数 | 百分数<br>G：绿色值。正整数 | 百分数<br>B：蓝色值。正整数 | 百分数<br>A：Alpha透明度。取值0~1之间。</p>
 <p>HSLA(H,S,L,A)取值:<br>H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值为：0-360<br>S：Saturation(饱和度)。取值为：0.0% - 100.0%<br>L：Lightness(亮度)。取值为：0.0% - 100.0%<br>A：Alpha透明度。取值0~1之间。    </p>
 <h5 id="如何给容器加上透明边框"><a href="#如何给容器加上透明边框" class="headerlink" title="如何给容器加上透明边框"></a>如何给容器加上透明边框</h5><p><code>border: 10px solid hsla(0,0%,100%,.5) background: white;</code><br>使用如上代码来实现结果会发现透明边框没有显示出来。因为默认背景会覆盖边框。<br>解决方案：设置background-clip: padding-box;即可。默认的是border-box。</p>
 <hr>
-<h4 id="二、多重边框-Demo点这里"><a href="#二、多重边框-Demo点这里" class="headerlink" title="二、多重边框(Demo点这里)"></a>二、多重边框(<a href="http://runjs.cn/code/1xsddkkz" target="_blank" rel="external">Demo点这里</a>)</h4><h5 id="使用box-shadow来实现"><a href="#使用box-shadow来实现" class="headerlink" title="使用box-shadow来实现"></a>使用box-shadow来实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: yellowgreen;</div><div class="line">box-shadow: 0 0 0 10px #655,0 0 0 15px deeppink,0 2px 5px 15px rgba(0,0,0,.6);</div></pre></td></tr></table></figure>
+<h4 id="多重边框"><a href="#多重边框" class="headerlink" title="多重边框"></a>多重边框</h4><p>(<a href="http://runjs.cn/code/uddyuvxi" target="_blank" rel="external">Demo点这里</a>)</p>
+<h5 id="使用box-shadow来实现"><a href="#使用box-shadow来实现" class="headerlink" title="使用box-shadow来实现"></a>使用box-shadow来实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: yellowgreen;</div><div class="line">box-shadow: 0 0 0 10px #655,0 0 0 15px deeppink,0 2px 5px 15px rgba(0,0,0,.6);</div></pre></td></tr></table></figure>
 <p>好处：投影的行为不会影响布局，也不会受到box-sizing的影响。也不会影响鼠标事件。  </p>
 <h5 id="outline方案"><a href="#outline方案" class="headerlink" title="outline方案"></a>outline方案</h5><p><code>background: yellowgreen;border: 10px solid #655;outline: 5px solid deeppink;</code><br>好处：outline边框样式灵活，可以使用虚线(box-shadow不可以。<br>还可以设置outline-offset属性来控制它跟元素边缘之间的间距，可设为负值实现缝边效果。<br>注意点：如果元素是圆角的，描边不一定是圆角，绝大多数情况下描边是直角的。</p>
 <hr>
-<p>####三、灵活的背景定位(<a href="http://runjs.cn/code/ukmlrtb3" target="_blank" rel="external">Demo点这里</a>)<br>1、使用backgrou-position实现带有偏移量的背景定位(实例见:demo/3.html)<br><code>background: url(code-pirate.svg) no-repeat #58a;background-position: right 20px bottom 10px;</code><br>浏览器的回退实现:即把bottom right 定位值写进background的简写属性。<br>2、background-origin实现带有偏移量的背景定位<br><code>background-origin: content-box;</code><br>一般来说背景位置的偏移量即是padding的值，所以可以借助background-orgin来实现背景偏移。默认值为border—box。<br>3、calc()方案<br>实现背景距离下方20px,右方20px,即水平偏移100%-20px,垂直偏移100%-20px。<br><code>background-position: calc(100% - 20px) calc(100% - 10px);</code><br>注意点：请不要忘记在 calc() 函数内部的 - 和 + 运算符的两侧各加一个空白符，否则会产生解析错误！</p>
+<h4 id="灵活的背景定位"><a href="#灵活的背景定位" class="headerlink" title="灵活的背景定位"></a>灵活的背景定位</h4><p>(<a href="http://runjs.cn/code/mpsazdgq" target="_blank" rel="external">Demo点这里</a>)</p>
+<h5 id="使用backgrou-position实现带有偏移量的背景定位"><a href="#使用backgrou-position实现带有偏移量的背景定位" class="headerlink" title="使用backgrou-position实现带有偏移量的背景定位"></a>使用backgrou-position实现带有偏移量的背景定位</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: url(code-pirate.svg) no-repeat #58a;</div><div class="line">background-position: right 20px bottom 10px;</div></pre></td></tr></table></figure>
+<p>浏览器的回退实现:即把bottom right 定位值写进background的简写属性。</p>
+<h5 id="background-origin实现带有偏移量的背景定位"><a href="#background-origin实现带有偏移量的背景定位" class="headerlink" title="background-origin实现带有偏移量的背景定位"></a>background-origin实现带有偏移量的背景定位</h5><p><code>background-origin: content-box;</code><br>当背景位置的偏移量是padding的值可以借助background-orgin来实现背景偏移。默认值为border—box。 </p>
+<h5 id="calc-方案"><a href="#calc-方案" class="headerlink" title="calc()方案"></a>calc()方案</h5><p>实现背景距离下方20px,右方20px,即水平偏移100%-20px,垂直偏移100%-20px。<br><code>background-position: calc(100% - 20px) calc(100% - 10px);</code><br>注意点：请不要忘记在 calc() 函数内部的 - 和 + 运算符的两侧各加一个空白符，否则会产生解析错误！<br>这个规则如此怪异，是为了向前兼容：未来，在 calc() 内部可能会允许使用关键字，而这些关键字可能会包含连字符（即减号）。</p>
 <hr>
-<p>####四、边框内圆角(<a href="http://runjs.cn/code/6sw4mcef" target="_blank" rel="external">Demo点这里</a>)<br>1、使用box-shadow和outline<br>使用ouline实现描边，然后使用box-shadow来填充元素扩张值从而实现边框内圆角效果。</p>
+<h4 id="边框内圆角"><a href="#边框内圆角" class="headerlink" title="边框内圆角"></a>边框内圆角</h4><p>(<a href="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYPesLUaz6wtMdL37gibpM6LiajkkqkicGlPp3PLfJ5bAnbiamyZekHDcfCwxLNFibzoaPYLoYLpQyrFiaw/0?wx_fmt=png" target="_blank" rel="external">Demo点这里</a>)</p>
+<h5 id="使用box-shadow和outline"><a href="#使用box-shadow和outline" class="headerlink" title="使用box-shadow和outline"></a>使用box-shadow和outline</h5><p>使用ouline描边，box-shadow来填充元素扩张值从而实现边框内圆角效果。<br>如图，在我们的例子中， border-radius是 .8em，那么最小的扩张值就<br>是0.8(√2-1)≈ 0.331。我们要做的就是把它稍微向上取个整,把.34em设置为投影的扩张半径。<br>为了避免每次都要计算，你可以直接使用圆角半径的一半，因为(√2-1)&lt;0.5。<br>注意点：r(√2-1)&lt;扩张半径&lt;描边宽度。这意味着，如果描边的宽度比r(√2-1)小，那我们是不可能用这个方法达成该效果的。</p>
+<p><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYPesLUaz6wtMdL37gibpM6LiajkkqkicGlPp3PLfJ5bAnbiamyZekHDcfCwxLNFibzoaPYLoYLpQyrFiaw/0?wx_fmt=png" alt="说明"></p>
 <hr>
-<p>####五、条纹背景(<a href="http://runjs.cn/code/at8ng7eu" target="_blank" rel="external">Demo点这里</a>)<br>1、如何实现渐变<br><code>background: linear-gradient(white 50%, black 0);background-size: 100% 30px;</code><br>如上即有一个从上到下白色(0-50%)到黑色的渐变(50%-100%),此处的0表示那它的位置就是会被浏览器调整为前一个色标的位置值，就是50%。<br>注意:在50%的分界点是突然渐变的，不是平缓的过渡。<br>2、斜向条纹的实现<br><code>background: repeating-linear-gradient(60deg,#fb3, #fb3 15px, #58a 0, #58a 30px);</code><br>如上即有一个60度的重复渐变。从0到15px是黄色，从15到30px是墨绿色。<br>3、同色系条纹(色彩差异不大，只是明度不同)<br>方法一:按普通方法来，正常色值按语法写即可<br>方法二:背景设为颜色值，改变透明度来实现   </p>
+<h4 id="条纹背景"><a href="#条纹背景" class="headerlink" title="条纹背景"></a>条纹背景</h4><p>(<a href="http://runjs.cn/code/ml9zhtlt" target="_blank" rel="external">Demo点这里</a>)</p>
+<h5 id="如何实现渐变"><a href="#如何实现渐变" class="headerlink" title="如何实现渐变"></a>如何实现渐变</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(white 50%, black 0);</div><div class="line">background-size: 100% 30px;</div></pre></td></tr></table></figure>
+<p>如上即有一个从上到下白色(0-50%)到黑色的渐变(50%-100%)。       </p>
+<blockquote>
+<p>如果多个色标具有相同的位置，它们会产生一个无限小的过渡区域，<br>过渡的起止色分别是第一个和最后一个指定值。<br>从效果上看，颜色会在那个位置突然变化，而不是一个平滑的渐变过程。</p>
+</blockquote>
+<h5 id="斜向条纹的实现"><a href="#斜向条纹的实现" class="headerlink" title="斜向条纹的实现"></a>斜向条纹的实现</h5><p><code>background: repeating-linear-gradient(60deg,#fb3, #fb3 15px, #58a 0, #58a 30px);</code><br>如上即有一个60度的重复渐变。从0到15px是黄色，从15到30px是墨绿色。   </p>
+<blockquote>
+<p>如果某个色标的位置值比整个列表中在它之前的色标的位置值都要小，则该色标的位置值会被设置为它前面所有色标位置值的最大值。</p>
+</blockquote>
+<h5 id="垂直条纹的实现"><a href="#垂直条纹的实现" class="headerlink" title="垂直条纹的实现"></a>垂直条纹的实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(to right, #fb3 50%, #58a 0);</div><div class="line">background-size: 30px 100%;</div></pre></td></tr></table></figure>
+<p>改变background属性的方向即可。默认是从上到下。其次要注意background-size数值要调换。</p>
+<p>如图，在我们的斜向条纹中，背景尺寸指定的长度值决定了直角三角形的斜边长度，<br>但条纹的宽度实际上是直角三角形的高。<br>这意味着，如果想让条纹的宽度变化为我们原本想要的 15px ，就需要把background-size指定为2×15√2≈42.42像素<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYPesLUaz6wtMdL37gibpM6LrAkL2XUzX6me3Pdkgwl0FFRI19c7awySqqVcH0YpWmmcvGAs1x0j8w/0?wx_fmt=png" alt="说明"></p>
+<p>实际上repeating-linear-gradient()和repeating-radial-gradient()循环加强版就可以实现。<br><code>background: repeating-linear-gradient(45deg,#fb3, #fb3 15px, #58a 0, #58a 30px);</code><br>这样就创建了一个45度的渐变条纹。<br>注意：在这个方法中，不论条纹的角度如何，我们在创建双色条纹时都需要用到四个色标。</p>
+<h5 id="同色系条纹-色彩差异不大，只是明度不同"><a href="#同色系条纹-色彩差异不大，只是明度不同" class="headerlink" title="同色系条纹(色彩差异不大，只是明度不同)"></a>同色系条纹(色彩差异不大，只是明度不同)</h5><p>方法一:按普通方法来，正常色值按语法写即可<br>方法二:背景设为颜色值，改变透明度来实现  </p>
 <hr>
-<p>####六、复杂的背景图案(待消化)</p>
-<hr>
-<p>####七、伪随机背景(待消化)</p>
-<hr>
-<p>####八、连续的背景边框(<a href="http://runjs.cn/code/2dsqth0a" target="_blank" rel="external">Demo点这里</a>)<br>1、如何给边框设背景<br>方法一:使用两个 HTML 元素：一个元素用来把我们的石雕图片设为背景，另一个元素用来存放内容，并设置纯白背景，然后覆盖在前者之上。<br>方法二:只用一个元素就能达成完全一样的效果。主要的思路就是在石雕背景图片之上，再叠加一层纯白的实色背景。为了让下层的图片背景透过边框区域显示出来，我们需要给两层背景指定不同的background-clip值。最后一个要点在于，我们只能在多重背景的最底层设置背景色，因此需要用一道从白色过渡到白色的 CSS 渐变来模拟出纯白实色背景的效果。<br>2、关于border-image能做成的效果<br>可以参考(<a href="http://www.zhangxinxu.com/wordpress/2010/01/css3-border-image/" target="_blank" rel="external">这里</a>)   </p>
+<h4 id="复杂的背景图案-待消化"><a href="#复杂的背景图案-待消化" class="headerlink" title="复杂的背景图案(待消化)"></a>复杂的背景图案(待消化)</h4><hr>
+<h4 id="伪随机背景-待消化"><a href="#伪随机背景-待消化" class="headerlink" title="伪随机背景(待消化)"></a>伪随机背景(待消化)</h4><hr>
+<h4 id="连续的背景边框-Demo点这里"><a href="#连续的背景边框-Demo点这里" class="headerlink" title="连续的背景边框(Demo点这里)"></a>连续的背景边框(<a href="http://runjs.cn/code/2dsqth0a" target="_blank" rel="external">Demo点这里</a>)</h4><h5 id="如何给边框设背景"><a href="#如何给边框设背景" class="headerlink" title="如何给边框设背景"></a>如何给边框设背景</h5><p>方法一:使用两个 HTML 元素：一个元素用来把我们的石雕图片设为背景，另一个元素用来存放内容，并设置纯白背景，然后覆盖在前者之上。   </p>
+<p>方法二:只用一个元素就能达成完全一样的效果。主要的思路就是在石雕背景图片之上，再叠加一层纯白的实色背景。为了让下层的图片背景透过边框区域显示出来，我们需要给两层背景指定不同的background-clip值。最后一个要点在于，我们只能在多重背景的最底层设置背景色，因此需要用一道从白色过渡到白色的 CSS 渐变来模拟出纯白实色背景的效果。 </p>
+<h5 id="关于border-image能做成的效果"><a href="#关于border-image能做成的效果" class="headerlink" title="关于border-image能做成的效果"></a>关于border-image能做成的效果</h5><p>可以参考(<a href="http://www.zhangxinxu.com/wordpress/2010/01/css3-border-image/" target="_blank" rel="external">这里</a>)   </p>
 
           
         
@@ -1416,7 +1438,7 @@
 </pre>
 
 <hr>
-<h4 id="盒阴影"><a href="#盒阴影" class="headerlink" title="盒阴影"></a>盒阴影</h4><p>最简单的语法形式：<br><code>box-shadow:4px 4px 5px 8px #aaa inset</code><br>这几个属性值分别代表：水平偏移量、垂直偏移量、模糊量、扩展量、颜色、阴影位于边框内部<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZb1DouKW3o2vwL5Szictia17bmr85aoexQKU0zvALgdhPvb7HicCFQYzNGrHC4QkdqtROmLIJjRzbUWw/0?wx_fmt=png" alt="box-shadow效果"></p>
+<h4 id="盒阴影"><a href="#盒阴影" class="headerlink" title="盒阴影"></a>盒阴影</h4><p>最简单的语法形式：<br><code>box-shadow:4px 4px 5px 8px #aaa inset</code><br>这几个属性值分别代表：水平偏移量、垂直偏移量、模糊量、扩展量、颜色、阴影位于边框内部<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZbia7Ga5EX8nwS9HlgqJ60g6GcB8zfGvDKjfbgn0xAib1VEo1ZicgyrRnWw3chjGdubgABLTgwzy56nQ/0?wx_fmt=png" alt="box-shadow效果"></p>
 <h4 id="自动添加浏览器私有属性-http-pleeease-io-play"><a href="#自动添加浏览器私有属性-http-pleeease-io-play" class="headerlink" title="自动添加浏览器私有属性  http://pleeease.io/play/"></a>自动添加浏览器私有属性  <a href="http://pleeease.io/play/" target="_blank" rel="external">http://pleeease.io/play/</a></h4>
           
         
@@ -1507,7 +1529,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1518,7 +1540,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1575,7 +1597,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -1618,8 +1640,6 @@
 
 
 
-  
-
 
 
   
@@ -1640,9 +1660,6 @@
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-  
-  <script type="text/javascript" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
-
 
   
 
@@ -1655,13 +1672,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
 
