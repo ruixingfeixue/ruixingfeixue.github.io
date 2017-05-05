@@ -90,19 +90,19 @@
 <meta name="description" content="半透明边框(Demo点这里) 科普RGBA和HSLA背景知识RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )R：红色值。正整数 | 百分数G：绿色值。正整数 | 百分数B：蓝色值。正整数 | 百分数A：Alpha透明度。取值0~1之间。 HSLA(H,S,L,A)取值:H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="背景与边框">
+<meta property="og:title" content="css揭秘-背景与边框">
 <meta property="og:url" content="http://yoursite.com/2016/11/26/css揭秘-背景与边框/index.html">
 <meta property="og:site_name" content="瑞的指南针">
 <meta property="og:description" content="半透明边框(Demo点这里) 科普RGBA和HSLA背景知识RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )R：红色值。正整数 | 百分数G：绿色值。正整数 | 百分数B：蓝色值。正整数 | 百分数A：Alpha透明度。取值0~1之间。 HSLA(H,S,L,A)取值:H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取">
-<meta property="og:image" content="http://yoursite.com/img/2.png">
-<meta property="og:image" content="http://yoursite.com/img/1.jpg">
-<meta property="og:image" content="http://yoursite.com/img/3.png">
-<meta property="og:image" content="http://yoursite.com/img/4.png">
-<meta property="og:updated_time" content="2017-05-04T10:58:27.921Z">
+<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZanWiaVnoIkPBuYm6JoGgpa7vw8SRx7QnBZqGew90gptzg7QibCcn9uVhsicERwj4uQvylYemprMCGiaQ/0?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYPesLUaz6wtMdL37gibpM6LrAkL2XUzX6me3Pdkgwl0FFRI19c7awySqqVcH0YpWmmcvGAs1x0j8w/0?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYYKm8aYbWIk7ByrhzWt3VYlpNxicEXjauvK90AGhtWtr00YVkD6oMhumianhSKa9gSauBhFoPicyiaxQ/0?wx_fmt=png">
+<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYYKm8aYbWIk7ByrhzWt3VYHp7tkJvfgVtLEe1XzvOMoAibdNJNzyia5kO48UcichvOdmTPQdrbrMtyw/0?wx_fmt=png">
+<meta property="og:updated_time" content="2017-05-05T05:30:27.860Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="背景与边框">
+<meta name="twitter:title" content="css揭秘-背景与边框">
 <meta name="twitter:description" content="半透明边框(Demo点这里) 科普RGBA和HSLA背景知识RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )R：红色值。正整数 | 百分数G：绿色值。正整数 | 百分数B：蓝色值。正整数 | 百分数A：Alpha透明度。取值0~1之间。 HSLA(H,S,L,A)取值:H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取">
-<meta name="twitter:image" content="http://yoursite.com/img/2.png">
+<meta name="twitter:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZanWiaVnoIkPBuYm6JoGgpa7vw8SRx7QnBZqGew90gptzg7QibCcn9uVhsicERwj4uQvylYemprMCGiaQ/0?wx_fmt=png">
 
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <title> 背景与边框 | 瑞的指南针 </title>
+  <title> css揭秘-背景与边框 | 瑞的指南针 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +286,7 @@
             
             
               
-                背景与边框
+                css揭秘-背景与边框
               
             
           </h1>
@@ -377,7 +377,7 @@
 <hr>
 <h4 id="边框内圆角"><a href="#边框内圆角" class="headerlink" title="边框内圆角"></a>边框内圆角</h4><p>(<a href="http://runjs.cn/code/4cd0rqhq" target="_blank" rel="external">Demo点这里</a>)</p>
 <h5 id="使用box-shadow和outline"><a href="#使用box-shadow和outline" class="headerlink" title="使用box-shadow和outline"></a>使用box-shadow和outline</h5><p>使用ouline描边，box-shadow来填充元素扩张值从而实现边框内圆角效果。<br>如图，在我们的例子中， border-radius是 .8em，那么最小的扩张值就<br>是0.8(√2-1)≈ 0.331。我们要做的就是把它稍微向上取个整,把.34em设置为投影的扩张半径。<br>为了避免每次都要计算，你可以直接使用圆角半径的一半，因为(√2-1)&lt;0.5。<br>注意点：r(√2-1)&lt;扩张半径&lt;描边宽度。这意味着，如果描边的宽度比r(√2-1)小，那我们是不可能用这个方法达成该效果的。</p>
-<p><img src="/img/2.png" alt="说明"></p>
+<p><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZanWiaVnoIkPBuYm6JoGgpa7vw8SRx7QnBZqGew90gptzg7QibCcn9uVhsicERwj4uQvylYemprMCGiaQ/0?wx_fmt=png" alt="说明"></p>
 <hr>
 <h4 id="条纹背景"><a href="#条纹背景" class="headerlink" title="条纹背景"></a>条纹背景</h4><p>(<a href="http://runjs.cn/code/ml9zhtlt" target="_blank" rel="external">Demo点这里</a>)</p>
 <h5 id="如何实现渐变"><a href="#如何实现渐变" class="headerlink" title="如何实现渐变"></a>如何实现渐变</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(white 50%, black 0);</div><div class="line">background-size: 100% 30px;</div></pre></td></tr></table></figure>
@@ -391,15 +391,19 @@
 </blockquote>
 <h5 id="垂直条纹的实现"><a href="#垂直条纹的实现" class="headerlink" title="垂直条纹的实现"></a>垂直条纹的实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(to right, #fb3 50%, #58a 0);</div><div class="line">background-size: 30px 100%;</div></pre></td></tr></table></figure>
 <p>改变background属性的方向即可。默认是从上到下。其次要注意background-size数值要调换。</p>
-<p>如图，在我们的斜向条纹中，背景尺寸指定的长度值决定了直角三角形的斜边长度，<br>但条纹的宽度实际上是直角三角形的高。<br>这意味着，如果想让条纹的宽度变化为我们原本想要的 15px ，就需要把background-size指定为2×15√2≈42.42像素<br><img src="/img/1.jpg" alt="说明"></p>
+<p>如图，在我们的斜向条纹中，背景尺寸指定的长度值决定了直角三角形的斜边长度，<br>但条纹的宽度实际上是直角三角形的高。<br>这意味着，如果想让条纹的宽度变化为我们原本想要的 15px ，就需要把background-size指定为2×15√2≈42.42像素<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYPesLUaz6wtMdL37gibpM6LrAkL2XUzX6me3Pdkgwl0FFRI19c7awySqqVcH0YpWmmcvGAs1x0j8w/0?wx_fmt=png" alt="说明"></p>
 <p>实际上repeating-linear-gradient()和repeating-radial-gradient()循环加强版就可以实现。<br><code>background: repeating-linear-gradient(45deg,#fb3, #fb3 15px, #58a 0, #58a 30px);</code><br>这样就创建了一个45度的渐变条纹。<br>注意：在这个方法中，不论条纹的角度如何，我们在创建双色条纹时都需要用到四个色标。</p>
 <h5 id="同色系条纹-色彩差异不大，只是明度不同"><a href="#同色系条纹-色彩差异不大，只是明度不同" class="headerlink" title="同色系条纹(色彩差异不大，只是明度不同)"></a>同色系条纹(色彩差异不大，只是明度不同)</h5><p>方法一:按普通方法来，正常色值按语法写即可<br>方法二:背景设为颜色值，改变透明度来实现  </p>
 <hr>
-<h4 id="复杂的背景图案"><a href="#复杂的背景图案" class="headerlink" title="复杂的背景图案"></a>复杂的背景图案</h4><p>(<a href="http://runjs.cn/code/nqzsurmc" target="_blank" rel="external">Demo点这里</a>)<br>1.创建条纹网格<br>按照常规的路子走都能想到<br>2.让网格的框框更细<br>使用长度而不是百分比<br>3.叠加出更逼真的网格<br>linear-gradient的叠加使用<br>4.波点<br>用两层背景来实现。重点是要弄清楚图案是怎样平铺的<br><img src="/img/3.png" alt="波点"><br>5.棋盘效果<br><img src="/img/4.png" alt="棋盘"><br>要想实现如图的平铺效果，窍门在于用两个直角三角形来拼合出我们想要的方块。</p>
-<h4 id="伪随机背景-待消化"><a href="#伪随机背景-待消化" class="headerlink" title="伪随机背景(待消化)"></a>伪随机背景(待消化)</h4><hr>
-<h4 id="连续的背景边框-Demo点这里"><a href="#连续的背景边框-Demo点这里" class="headerlink" title="连续的背景边框(Demo点这里)"></a>连续的背景边框(<a href="http://runjs.cn/code/2dsqth0a" target="_blank" rel="external">Demo点这里</a>)</h4><h5 id="如何给边框设背景"><a href="#如何给边框设背景" class="headerlink" title="如何给边框设背景"></a>如何给边框设背景</h5><p>方法一:使用两个 HTML 元素：一个元素用来把我们的石雕图片设为背景，另一个元素用来存放内容，并设置纯白背景，然后覆盖在前者之上。   </p>
-<p>方法二:只用一个元素就能达成完全一样的效果。主要的思路就是在石雕背景图片之上，再叠加一层纯白的实色背景。为了让下层的图片背景透过边框区域显示出来，我们需要给两层背景指定不同的background-clip值。最后一个要点在于，我们只能在多重背景的最底层设置背景色，因此需要用一道从白色过渡到白色的 CSS 渐变来模拟出纯白实色背景的效果。 </p>
-<h5 id="关于border-image能做成的效果"><a href="#关于border-image能做成的效果" class="headerlink" title="关于border-image能做成的效果"></a>关于border-image能做成的效果</h5><p>可以参考(<a href="http://www.zhangxinxu.com/wordpress/2010/01/css3-border-image/" target="_blank" rel="external">这里</a>)   </p>
+<h4 id="复杂的背景图案"><a href="#复杂的背景图案" class="headerlink" title="复杂的背景图案"></a>复杂的背景图案</h4><p>(<a href="http://runjs.cn/code/nqzsurmc" target="_blank" rel="external">Demo点这里</a>)<br>1.创建条纹网格<br>按照常规的路子走都能想到<br>2.让网格的框框更细<br>使用长度而不是百分比<br>3.叠加出更逼真的网格<br>linear-gradient的叠加使用<br>4.波点<br>用两层背景来实现。重点是要弄清楚图案是怎样平铺的<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYYKm8aYbWIk7ByrhzWt3VYlpNxicEXjauvK90AGhtWtr00YVkD6oMhumianhSKa9gSauBhFoPicyiaxQ/0?wx_fmt=png" alt="波点"><br>5.棋盘效果<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYYKm8aYbWIk7ByrhzWt3VYHp7tkJvfgVtLEe1XzvOMoAibdNJNzyia5kO48UcichvOdmTPQdrbrMtyw/0?wx_fmt=png" alt="棋盘"><br>要想实现如图的平铺效果，窍门在于用两个直角三角形来拼合出我们想要的方块。</p>
+<h4 id="伪随机背景"><a href="#伪随机背景" class="headerlink" title="伪随机背景"></a>伪随机背景</h4><p>(<a href="http://runjs.cn/code/zkvgmgln" target="_blank" rel="external">Demo点这里</a>)<br>质数来实现伪随机，有点懵逼啊！蝉原则好像很屌的样子！</p>
+<hr>
+<h4 id="连续的背景边框"><a href="#连续的背景边框" class="headerlink" title="连续的背景边框"></a>连续的背景边框</h4><p>(<a href="http://runjs.cn/code/xyj5fn49" target="_blank" rel="external">Demo点这里</a>)   </p>
+<h5 id="如何给边框设背景"><a href="#如何给边框设背景" class="headerlink" title="如何给边框设背景"></a>如何给边框设背景</h5><p>方法一:使用两个 HTML 元素：一个元素用来把我们的石雕图片设为背景，另一个元素用来存放内容，并设置纯白背景，然后覆盖在前者之上。   </p>
+<p>方法二:只用一个元素就能达成完全一样的效果。主要的思路就是在石雕背景图片之上，再叠加一层纯白的实色背景。为了让下层的图片背景透过边框区域显示出来，我们需要给两层背景指定不同的background-clip值。最后一个要点在于，我们只能在多重背景的最底层设置背景色，因此需要用一道从白色过渡到白色的 CSS 渐变来模拟出纯白实色背景的效果。<br>注意点：出来的图片backgroud-origin默认是padding-box，需要设置为border-box。</p>
+<h5 id="实现信封效果"><a href="#实现信封效果" class="headerlink" title="实现信封效果"></a>实现信封效果</h5><p>1.可以用background实现<br>2.可以用border-image实现<br>用border-image实现存在的问题：<br>每当我们改变border-image-slice时，都需要同时修改border-width来让它们相互匹配。<br>由于我们不能在border-image-slice属性中使用em单位，只能把边框厚度指定为像素单位。<br>条纹的宽度需要在色标的位置信息中写好，因此我们在改变条纹宽度时，需要修改四处。</p>
+<h5 id="蚂蚁行军边框"><a href="#蚂蚁行军边框" class="headerlink" title="蚂蚁行军边框"></a>蚂蚁行军边框</h5><p>background-position 以动画的方式改变为100%,实现滚动效果<br>可以使用background创建出各种特殊样式的虚线框：不管是为虚线线段指定不同的颜色，还是自定义线段的长度和间隙的长度</p>
+<h5 id="关于border-image了解的详细"><a href="#关于border-image了解的详细" class="headerlink" title="关于border-image了解的详细"></a>关于border-image了解的详细</h5><p>可以参考(<a href="http://www.zhangxinxu.com/wordpress/2010/01/css3-border-image/" target="_blank" rel="external">这里</a>)   </p>
 
       
     </div>
@@ -588,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#半透明边框"><span class="nav-number">1.</span> <span class="nav-text">半透明边框</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#科普RGBA和HSLA背景知识"><span class="nav-number">1.1.</span> <span class="nav-text">科普RGBA和HSLA背景知识</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何给容器加上透明边框"><span class="nav-number">1.2.</span> <span class="nav-text">如何给容器加上透明边框</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多重边框"><span class="nav-number">2.</span> <span class="nav-text">多重边框</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用box-shadow来实现"><span class="nav-number">2.1.</span> <span class="nav-text">使用box-shadow来实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#outline方案"><span class="nav-number">2.2.</span> <span class="nav-text">outline方案</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#灵活的背景定位"><span class="nav-number">3.</span> <span class="nav-text">灵活的背景定位</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用backgrou-position实现带有偏移量的背景定位"><span class="nav-number">3.1.</span> <span class="nav-text">使用backgrou-position实现带有偏移量的背景定位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#background-origin实现带有偏移量的背景定位"><span class="nav-number">3.2.</span> <span class="nav-text">background-origin实现带有偏移量的背景定位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#calc-方案"><span class="nav-number">3.3.</span> <span class="nav-text">calc()方案</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#边框内圆角"><span class="nav-number">4.</span> <span class="nav-text">边框内圆角</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用box-shadow和outline"><span class="nav-number">4.1.</span> <span class="nav-text">使用box-shadow和outline</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条纹背景"><span class="nav-number">5.</span> <span class="nav-text">条纹背景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何实现渐变"><span class="nav-number">5.1.</span> <span class="nav-text">如何实现渐变</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#斜向条纹的实现"><span class="nav-number">5.2.</span> <span class="nav-text">斜向条纹的实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垂直条纹的实现"><span class="nav-number">5.3.</span> <span class="nav-text">垂直条纹的实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#同色系条纹-色彩差异不大，只是明度不同"><span class="nav-number">5.4.</span> <span class="nav-text">同色系条纹(色彩差异不大，只是明度不同)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂的背景图案"><span class="nav-number">6.</span> <span class="nav-text">复杂的背景图案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#伪随机背景-待消化"><span class="nav-number">7.</span> <span class="nav-text">伪随机背景(待消化)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连续的背景边框-Demo点这里"><span class="nav-number">8.</span> <span class="nav-text">连续的背景边框(Demo点这里)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何给边框设背景"><span class="nav-number">8.1.</span> <span class="nav-text">如何给边框设背景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于border-image能做成的效果"><span class="nav-number">8.2.</span> <span class="nav-text">关于border-image能做成的效果</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#半透明边框"><span class="nav-number">1.</span> <span class="nav-text">半透明边框</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#科普RGBA和HSLA背景知识"><span class="nav-number">1.1.</span> <span class="nav-text">科普RGBA和HSLA背景知识</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何给容器加上透明边框"><span class="nav-number">1.2.</span> <span class="nav-text">如何给容器加上透明边框</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多重边框"><span class="nav-number">2.</span> <span class="nav-text">多重边框</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用box-shadow来实现"><span class="nav-number">2.1.</span> <span class="nav-text">使用box-shadow来实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#outline方案"><span class="nav-number">2.2.</span> <span class="nav-text">outline方案</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#灵活的背景定位"><span class="nav-number">3.</span> <span class="nav-text">灵活的背景定位</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用backgrou-position实现带有偏移量的背景定位"><span class="nav-number">3.1.</span> <span class="nav-text">使用backgrou-position实现带有偏移量的背景定位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#background-origin实现带有偏移量的背景定位"><span class="nav-number">3.2.</span> <span class="nav-text">background-origin实现带有偏移量的背景定位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#calc-方案"><span class="nav-number">3.3.</span> <span class="nav-text">calc()方案</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#边框内圆角"><span class="nav-number">4.</span> <span class="nav-text">边框内圆角</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用box-shadow和outline"><span class="nav-number">4.1.</span> <span class="nav-text">使用box-shadow和outline</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条纹背景"><span class="nav-number">5.</span> <span class="nav-text">条纹背景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何实现渐变"><span class="nav-number">5.1.</span> <span class="nav-text">如何实现渐变</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#斜向条纹的实现"><span class="nav-number">5.2.</span> <span class="nav-text">斜向条纹的实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垂直条纹的实现"><span class="nav-number">5.3.</span> <span class="nav-text">垂直条纹的实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#同色系条纹-色彩差异不大，只是明度不同"><span class="nav-number">5.4.</span> <span class="nav-text">同色系条纹(色彩差异不大，只是明度不同)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂的背景图案"><span class="nav-number">6.</span> <span class="nav-text">复杂的背景图案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#伪随机背景"><span class="nav-number">7.</span> <span class="nav-text">伪随机背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连续的背景边框"><span class="nav-number">8.</span> <span class="nav-text">连续的背景边框</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何给边框设背景"><span class="nav-number">8.1.</span> <span class="nav-text">如何给边框设背景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实现信封效果"><span class="nav-number">8.2.</span> <span class="nav-text">实现信封效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#蚂蚁行军边框"><span class="nav-number">8.3.</span> <span class="nav-text">蚂蚁行军边框</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于border-image了解的详细"><span class="nav-number">8.4.</span> <span class="nav-text">关于border-image了解的详细</span></a></li></ol></li></ol></div>
             
 
           </div>
