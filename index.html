@@ -1457,6 +1457,155 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/20/css揭秘-序言/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/20/css揭秘-序言/" itemprop="url">
+                  css揭秘-序言
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-20T18:06:14+08:00">
+                2016-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css揭秘/" itemprop="url" rel="index">
+                    <span itemprop="name">css揭秘</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="css编码技巧"><a href="#css编码技巧" class="headerlink" title="css编码技巧"></a>css编码技巧</h4><h5 id="尽量减少代码重复"><a href="#尽量减少代码重复" class="headerlink" title="尽量减少代码重复"></a>尽量减少代码重复</h5><p>当某些值相互依赖时，应该把它们的相互关系用代码表达出来。如：</p>
+<p><code>font-size: 20px;line-height: 30px;</code><br><code>font-size: 20px;line-height: 1.5;</code></p>
+<p>做按钮时应考虑到底哪些效果应该跟着按钮一起放大，而哪些效果是保持不变的。</p>
+<p>Q：怎样解决不能颜色背景的按钮？(<a href="http://runjs.cn/code/gi75vrzv" target="_blank" rel="external">Demo点这里</a>)<br>A：把半透明的黑色或白色叠加在主色调上，即可产生主色调的亮色和暗色变体。<br>说人话，加入透明色。</p>
+<h5 id="代码变得更DRY的方法"><a href="#代码变得更DRY的方法" class="headerlink" title="代码变得更DRY的方法"></a>代码变得更DRY的方法</h5><p>代码易维护 vs. 代码量少<br>代码易维护和代码量少不可兼得，应该根据实际情况取舍</p>
+<p>currentColor<br>CSS中有史以来的第一个变量,会自动地从文本颜色那里得到颜色。</p>
+<h5 id="合理使用简写"><a href="#合理使用简写" class="headerlink" title="合理使用简写"></a>合理使用简写</h5><h6 id="我应该使用预处理器吗"><a href="#我应该使用预处理器吗" class="headerlink" title="我应该使用预处理器吗"></a>我应该使用预处理器吗</h6><p>如果使用得当，它们在大型项目中可以让代码更加灵活<br>CSS 的文件体积和复杂度可能会失控。<br>调试难度会增加，因为你在开发工具中看到的CSS代码并不是你写的源代码。<br>预处理器在开发过程中引入了一定程度的延时。<br>很多受预处理器启发的特性都已经以各种方式融入到原生CSS中了。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/03/css设计指南读书笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1599,155 +1748,6 @@
 
 <hr>
 <h4 id="盒阴影"><a href="#盒阴影" class="headerlink" title="盒阴影"></a>盒阴影</h4><p>最简单的语法形式：<br><code>box-shadow:4px 4px 5px 8px #aaa inset</code><br>这几个属性值分别代表：水平偏移量、垂直偏移量、模糊量、扩展量、颜色、阴影位于边框内部<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZbia7Ga5EX8nwS9HlgqJ60g6GcB8zfGvDKjfbgn0xAib1VEo1ZicgyrRnWw3chjGdubgABLTgwzy56nQ/0?wx_fmt=png" alt="box-shadow效果"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/01/css揭秘-序言/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/01/css揭秘-序言/" itemprop="url">
-                  css揭秘-序言
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-01T18:06:14+08:00">
-                2016-11-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css揭秘/" itemprop="url" rel="index">
-                    <span itemprop="name">css揭秘</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="css编码技巧"><a href="#css编码技巧" class="headerlink" title="css编码技巧"></a>css编码技巧</h4><h5 id="尽量减少代码重复"><a href="#尽量减少代码重复" class="headerlink" title="尽量减少代码重复"></a>尽量减少代码重复</h5><p>当某些值相互依赖时，应该把它们的相互关系用代码表达出来。如：</p>
-<p><code>font-size: 20px;line-height: 30px;</code><br><code>font-size: 20px;line-height: 1.5;</code></p>
-<p>做按钮时应考虑到底哪些效果应该跟着按钮一起放大，而哪些效果是保持不变的。</p>
-<p>Q：怎样解决不能颜色背景的按钮？(<a href="http://runjs.cn/code/gi75vrzv" target="_blank" rel="external">Demo点这里</a>)<br>A：把半透明的黑色或白色叠加在主色调上，即可产生主色调的亮色和暗色变体。<br>说人话，加入透明色。</p>
-<h5 id="代码变得更DRY的方法"><a href="#代码变得更DRY的方法" class="headerlink" title="代码变得更DRY的方法"></a>代码变得更DRY的方法</h5><p>代码易维护 vs. 代码量少<br>代码易维护和代码量少不可兼得，应该根据实际情况取舍</p>
-<p>currentColor<br>CSS中有史以来的第一个变量,会自动地从文本颜色那里得到颜色。</p>
-<h5 id="合理使用简写"><a href="#合理使用简写" class="headerlink" title="合理使用简写"></a>合理使用简写</h5><h6 id="我应该使用预处理器吗"><a href="#我应该使用预处理器吗" class="headerlink" title="我应该使用预处理器吗"></a>我应该使用预处理器吗</h6><p>如果使用得当，它们在大型项目中可以让代码更加灵活<br>CSS 的文件体积和复杂度可能会失控。<br>调试难度会增加，因为你在开发工具中看到的CSS代码并不是你写的源代码。<br>预处理器在开发过程中引入了一定程度的延时。<br>很多受预处理器启发的特性都已经以各种方式融入到原生CSS中了。</p>
 
           
         
