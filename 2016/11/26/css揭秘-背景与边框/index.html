@@ -92,15 +92,15 @@
 <meta property="og:url" content="http://yoursite.com/2016/11/26/css揭秘-背景与边框/index.html">
 <meta property="og:site_name" content="瑞的指南针">
 <meta property="og:description" content="半透明边框(Demo点这里) 科普RGBA和HSLA背景知识RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )R：红色值。正整数 | 百分数G：绿色值。正整数 | 百分数B：蓝色值。正整数 | 百分数A：Alpha透明度。取值0~1之间。 HSLA(H,S,L,A)取值:H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取">
-<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZanWiaVnoIkPBuYm6JoGgpa7vw8SRx7QnBZqGew90gptzg7QibCcn9uVhsicERwj4uQvylYemprMCGiaQ/0?wx_fmt=png">
-<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYPesLUaz6wtMdL37gibpM6LrAkL2XUzX6me3Pdkgwl0FFRI19c7awySqqVcH0YpWmmcvGAs1x0j8w/0?wx_fmt=png">
-<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYYKm8aYbWIk7ByrhzWt3VYlpNxicEXjauvK90AGhtWtr00YVkD6oMhumianhSKa9gSauBhFoPicyiaxQ/0?wx_fmt=png">
-<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYYKm8aYbWIk7ByrhzWt3VYHp7tkJvfgVtLEe1XzvOMoAibdNJNzyia5kO48UcichvOdmTPQdrbrMtyw/0?wx_fmt=png">
-<meta property="og:updated_time" content="2017-05-05T09:51:20.812Z">
+<meta property="og:image" content="http://yoursite.com/img/2.png">
+<meta property="og:image" content="http://yoursite.com/img/1.jpg">
+<meta property="og:image" content="http://yoursite.com/img/3.png">
+<meta property="og:image" content="http://yoursite.com/img/4.png">
+<meta property="og:updated_time" content="2017-05-08T02:05:43.062Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css揭秘-背景与边框">
 <meta name="twitter:description" content="半透明边框(Demo点这里) 科普RGBA和HSLA背景知识RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )R：红色值。正整数 | 百分数G：绿色值。正整数 | 百分数B：蓝色值。正整数 | 百分数A：Alpha透明度。取值0~1之间。 HSLA(H,S,L,A)取值:H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取">
-<meta name="twitter:image" content="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZanWiaVnoIkPBuYm6JoGgpa7vw8SRx7QnBZqGew90gptzg7QibCcn9uVhsicERwj4uQvylYemprMCGiaQ/0?wx_fmt=png">
+<meta name="twitter:image" content="http://yoursite.com/img/2.png">
 
 
 
@@ -375,7 +375,7 @@
 <hr>
 <h4 id="边框内圆角"><a href="#边框内圆角" class="headerlink" title="边框内圆角"></a>边框内圆角</h4><p>(<a href="http://runjs.cn/code/4cd0rqhq" target="_blank" rel="external">Demo点这里</a>)</p>
 <h5 id="使用box-shadow和outline"><a href="#使用box-shadow和outline" class="headerlink" title="使用box-shadow和outline"></a>使用box-shadow和outline</h5><p>使用ouline描边，box-shadow来填充元素扩张值从而实现边框内圆角效果。<br>如图，在我们的例子中， border-radius是 .8em，那么最小的扩张值就<br>是0.8(√2-1)≈ 0.331。我们要做的就是把它稍微向上取个整,把.34em设置为投影的扩张半径。<br>为了避免每次都要计算，你可以直接使用圆角半径的一半，因为(√2-1)&lt;0.5。<br>注意点：r(√2-1)&lt;扩张半径&lt;描边宽度。这意味着，如果描边的宽度比r(√2-1)小，那我们是不可能用这个方法达成该效果的。</p>
-<p><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZanWiaVnoIkPBuYm6JoGgpa7vw8SRx7QnBZqGew90gptzg7QibCcn9uVhsicERwj4uQvylYemprMCGiaQ/0?wx_fmt=png" alt="说明"></p>
+<p><img src="/img/2.png" alt="说明"></p>
 <hr>
 <h4 id="条纹背景"><a href="#条纹背景" class="headerlink" title="条纹背景"></a>条纹背景</h4><p>(<a href="http://runjs.cn/code/ml9zhtlt" target="_blank" rel="external">Demo点这里</a>)</p>
 <h5 id="如何实现渐变"><a href="#如何实现渐变" class="headerlink" title="如何实现渐变"></a>如何实现渐变</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(white 50%, black 0);</div><div class="line">background-size: 100% 30px;</div></pre></td></tr></table></figure>
@@ -389,11 +389,11 @@
 </blockquote>
 <h5 id="垂直条纹的实现"><a href="#垂直条纹的实现" class="headerlink" title="垂直条纹的实现"></a>垂直条纹的实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(to right, #fb3 50%, #58a 0);</div><div class="line">background-size: 30px 100%;</div></pre></td></tr></table></figure>
 <p>改变background属性的方向即可。默认是从上到下。其次要注意background-size数值要调换。</p>
-<p>如图，在我们的斜向条纹中，背景尺寸指定的长度值决定了直角三角形的斜边长度，<br>但条纹的宽度实际上是直角三角形的高。<br>这意味着，如果想让条纹的宽度变化为我们原本想要的 15px ，就需要把background-size指定为2×15√2≈42.42像素<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYPesLUaz6wtMdL37gibpM6LrAkL2XUzX6me3Pdkgwl0FFRI19c7awySqqVcH0YpWmmcvGAs1x0j8w/0?wx_fmt=png" alt="说明"></p>
+<p>如图，在我们的斜向条纹中，背景尺寸指定的长度值决定了直角三角形的斜边长度，<br>但条纹的宽度实际上是直角三角形的高。<br>这意味着，如果想让条纹的宽度变化为我们原本想要的 15px ，就需要把background-size指定为2×15√2≈42.42像素<br><img src="/img/1.jpg" alt="说明"></p>
 <p>实际上repeating-linear-gradient()和repeating-radial-gradient()循环加强版就可以实现。<br><code>background: repeating-linear-gradient(45deg,#fb3, #fb3 15px, #58a 0, #58a 30px);</code><br>这样就创建了一个45度的渐变条纹。<br>注意：在这个方法中，不论条纹的角度如何，我们在创建双色条纹时都需要用到四个色标。</p>
 <h5 id="同色系条纹-色彩差异不大，只是明度不同"><a href="#同色系条纹-色彩差异不大，只是明度不同" class="headerlink" title="同色系条纹(色彩差异不大，只是明度不同)"></a>同色系条纹(色彩差异不大，只是明度不同)</h5><p>方法一:按普通方法来，正常色值按语法写即可<br>方法二:背景设为颜色值，改变透明度来实现  </p>
 <hr>
-<h4 id="复杂的背景图案"><a href="#复杂的背景图案" class="headerlink" title="复杂的背景图案"></a>复杂的背景图案</h4><p>(<a href="http://runjs.cn/code/nqzsurmc" target="_blank" rel="external">Demo点这里</a>)<br>1.创建条纹网格<br>按照常规的路子走都能想到<br>2.让网格的框框更细<br>使用长度而不是百分比<br>3.叠加出更逼真的网格<br>linear-gradient的叠加使用<br>4.波点<br>用两层背景来实现。重点是要弄清楚图案是怎样平铺的<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYYKm8aYbWIk7ByrhzWt3VYlpNxicEXjauvK90AGhtWtr00YVkD6oMhumianhSKa9gSauBhFoPicyiaxQ/0?wx_fmt=png" alt="波点"><br>5.棋盘效果<br><img src="https://mmbiz.qlogo.cn/mmbiz_png/iaTPiaMJEjlZYYKm8aYbWIk7ByrhzWt3VYHp7tkJvfgVtLEe1XzvOMoAibdNJNzyia5kO48UcichvOdmTPQdrbrMtyw/0?wx_fmt=png" alt="棋盘"><br>要想实现如图的平铺效果，窍门在于用两个直角三角形来拼合出我们想要的方块。</p>
+<h4 id="复杂的背景图案"><a href="#复杂的背景图案" class="headerlink" title="复杂的背景图案"></a>复杂的背景图案</h4><p>(<a href="http://runjs.cn/code/nqzsurmc" target="_blank" rel="external">Demo点这里</a>)<br>1.创建条纹网格<br>按照常规的路子走都能想到<br>2.让网格的框框更细<br>使用长度而不是百分比<br>3.叠加出更逼真的网格<br>linear-gradient的叠加使用<br>4.波点<br>用两层背景来实现。重点是要弄清楚图案是怎样平铺的<br><img src="/img/3.png" alt="波点"><br>5.棋盘效果<br><img src="/img/4.png" alt="棋盘"><br>要想实现如图的平铺效果，窍门在于用两个直角三角形来拼合出我们想要的方块。</p>
 <h4 id="伪随机背景"><a href="#伪随机背景" class="headerlink" title="伪随机背景"></a>伪随机背景</h4><p>(<a href="http://runjs.cn/code/zkvgmgln" target="_blank" rel="external">Demo点这里</a>)<br>质数来实现伪随机，有点懵逼啊！蝉原则好像很屌的样子！</p>
 <hr>
 <h4 id="连续的背景边框"><a href="#连续的背景边框" class="headerlink" title="连续的背景边框"></a>连续的背景边框</h4><p>(<a href="http://runjs.cn/code/xyj5fn49" target="_blank" rel="external">Demo点这里</a>)   </p>
