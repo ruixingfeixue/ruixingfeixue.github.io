@@ -85,17 +85,17 @@
 
 
 
-<meta name="description" content="单侧投影(Demo点这里)1.单边投影对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。如Demo图一。辣">
+<meta name="description" content="单侧投影(Demo点这里)1.单边投影对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。辣么把扩张半径设为">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css揭秘-视觉效果">
 <meta property="og:url" content="http://yoursite.com/2016/12/14/css揭秘-视觉效果/index.html">
 <meta property="og:site_name" content="瑞的指南针">
-<meta property="og:description" content="单侧投影(Demo点这里)1.单边投影对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。如Demo图一。辣">
-<meta property="og:updated_time" content="2017-05-08T09:53:51.829Z">
+<meta property="og:description" content="单侧投影(Demo点这里)1.单边投影对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。辣么把扩张半径设为">
+<meta property="og:updated_time" content="2017-05-11T06:18:07.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css揭秘-视觉效果">
-<meta name="twitter:description" content="单侧投影(Demo点这里)1.单边投影对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。如Demo图一。辣">
+<meta name="twitter:description" content="单侧投影(Demo点这里)1.单边投影对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。辣么把扩张半径设为">
 
 
 
@@ -352,14 +352,14 @@
       
 
       
-        <h4 id="单侧投影"><a href="#单侧投影" class="headerlink" title="单侧投影"></a>单侧投影</h4><p>(<a href="http://runjs.cn/code/h7z1dee8" target="_blank" rel="external">Demo点这里</a>)<br>1.单边投影<br>对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?<br>最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。<br>这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。<br>举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。如Demo图一。<br>辣么把扩张半径设为负的模糊值不就看不见投影啦。再用偏移量来移动，不就形成单边投影啦。如Demo图二。</p>
-<p>2.邻边投影<br>技巧1:我们不应该把投影缩得太小，而是只需把阴影藏进一侧，另一侧自然露出就好。因此，扩张半径不应设为模糊半径的相反值，而应该是这个相反值的一半。<br>技巧2: 需要指定两个偏移量，因为我们希望投影在水平和垂直方向上同时移动。它们的值需要大于或等于模糊半径的一半，因为我们希望把投影藏进另外两条边之内。如Demo图三。  </p>
-<p>3.双侧投影<br>因为扩张半径在四个方向上的作用是均等的（也就是说，我们无法指定投影在水平方向上放大，而在垂直方向上缩小）<br>唯一的办法是用两块投影（每边各一块）来达到目的。然后基本上就是把“单侧投影”中的技巧运用两次。如Demo图四。</p>
+        <h4 id="单侧投影"><a href="#单侧投影" class="headerlink" title="单侧投影"></a>单侧投影</h4><p>(<a href="http://runjs.cn/code/akcvaqy1" target="_blank" rel="external">Demo点这里</a>)<br>1.单边投影<br>对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?<br>最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。<br>这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。<br>举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。<br>辣么把扩张半径设为负的模糊值不就看不见投影啦。再用偏移量来移动，不就形成单边投影啦。</p>
+<p>2.邻边投影<br>技巧1:我们不应该把投影缩得太小，而是只需把阴影藏进一侧，另一侧自然露出就好。因此，扩张半径不应设为模糊半径的相反值，而应该是这个相反值的一半。<br>技巧2: 需要指定两个偏移量，因为我们希望投影在水平和垂直方向上同时移动。它们的值需要大于或等于模糊半径的一半，因为我们希望把投影藏进另外两条边之内。 </p>
+<p>3.双侧投影<br>因为扩张半径在四个方向上的作用是均等的（也就是说，我们无法指定投影在水平方向上放大，而在垂直方向上缩小）<br>唯一的办法是用两块投影（每边各一块）来达到目的。然后基本上就是把“单侧投影”中的技巧运用两次。</p>
 <hr>
-<h4 id="不规则投影"><a href="#不规则投影" class="headerlink" title="不规则投影"></a>不规则投影</h4><p>(<a href="http://runjs.cn/code/rwlu3nsx" target="_blank" rel="external">Demo点这里</a>)<br>1.box-shadow不支持不规则投影。（元素添加了一些伪元素或半透明的装饰之后）具体情形如下：<br>半透明图像、背景图像、或者 border-image （比如老式的金质像框）;<br>元素设置了点状、虚线或半透明的边框，但没有背景（或者当background-clip 不是 border-box 时）;<br>对话气泡，它的小尾巴通常是用伪元素生成的;<br>我们在“切角效果”一节中见过的切角形状;<br>几乎所有的折角效果，包括“折角效果”一节将提到的例子;<br>通过 clip-path 生成的形状，比如“菱形图片”一节中提到的菱形图像。  </p>
+<h4 id="不规则投影"><a href="#不规则投影" class="headerlink" title="不规则投影"></a>不规则投影</h4><p>(<a href="http://runjs.cn/code/yipe0lk1" target="_blank" rel="external">Demo点这里</a>)<br>1.box-shadow不支持不规则投影。（元素添加了一些伪元素或半透明的装饰之后）具体情形如下：<br>半透明图像、背景图像、或者 border-image （比如老式的金质像框）;<br>元素设置了点状、虚线或半透明的边框，但没有背景（或者当background-clip 不是 border-box 时）;<br>对话气泡，它的小尾巴通常是用伪元素生成的;<br>我们在“切角效果”一节中见过的切角形状;<br>几乎所有的折角效果，包括“折角效果”一节将提到的例子;<br>通过 clip-path 生成的形状，比如“菱形图片”一节中提到的菱形图像。  </p>
 <p>2、解决方案 （使用CSS滤镜）<br>例如drop-shadow() 滤镜可接受的参数基本上跟 box-shadow 属性是一样的，但不包括扩张半径，不包括 inset 关键字，也不支持逗号分割的多层投<br>影语法。<br>举个例子，box-shadow: 2px 2px 10px rgba(0,0,0,.5); 可以这样写  filter: drop-shadow(2px 2px 10px rgba(0,0,0,.5));<br>CSS 滤镜最大的好处：它们可以平稳退化：当浏览器不支持时，不会出现问题，只不过没有任何效果而已。<br>如果你确实需要这个效果在尽可能多的浏览器中显示出来，可以同时附上一个 SVG 滤镜，这样可以得到稍微好一些的浏览器支持度。  </p>
 <hr>
-<h4 id="染色效果"><a href="#染色效果" class="headerlink" title="染色效果"></a>染色效果</h4><p>(<a href="http://runjs.cn/code/6iynubsr" target="_blank" rel="external">Demo点这里</a>)<br>1.使用滤镜<br>sepia()会给图片增加一种降饱和度的橙黄色染色效果，几乎所有像素的色相值会被收敛到 35~40。<br>如果我们想要的主色调的饱和度比这更高，可以用saturate()滤镜来给每个像素提升饱和度。<br>hue-roatate()滤镜，把每个像素的色相以指定的度数进行偏移。为了把原有的色相值40改变为335，需要增加大约295度(335-40)。<br>2.基于混合模式的方案<br>“混合模式”控制了上层元素的颜色与下层颜色进行混合的方式。<br>用它来实现染色效果时，需要用到的混合模式是luminosity。<br>这种luminosity混合模式会保留上层元素的HSL亮度信息，并从它的下层吸取色相和饱和度信息。<br>要对一个元素设置混合模式，有两个属性可以派上用场：<br>mix-blend-mode可以为整个元素设置混合模式，background-blend-mode可以为每层背景单独指定混合模式。<br>使用这种策略有两种选择模式：<br>第一种选择：需要把图片包裹在一个容器中，并把容器的背景色设置为我们想要的主色调。<br>第二种选择：不用图片元素，而是用div元素——把这个元素的第一层背景设置为要染色的图片，并把第二层的背景设置为我们想要的主色调。</p>
+<h4 id="染色效果"><a href="#染色效果" class="headerlink" title="染色效果"></a>染色效果</h4><p>(<a href="http://runjs.cn/code/5oan2unq" target="_blank" rel="external">Demo点这里</a>)<br>1.使用滤镜<br>sepia()会给图片增加一种降饱和度的橙黄色染色效果，几乎所有像素的色相值会被收敛到 35~40。<br>如果我们想要的主色调的饱和度比这更高，可以用saturate()滤镜来给每个像素提升饱和度。<br>hue-roatate()滤镜，把每个像素的色相以指定的度数进行偏移。为了把原有的色相值40改变为335，需要增加大约295度(335-40)。<br>2.基于混合模式的方案<br>“混合模式”控制了上层元素的颜色与下层颜色进行混合的方式。<br>用它来实现染色效果时，需要用到的混合模式是luminosity。<br>这种luminosity混合模式会保留上层元素的HSL亮度信息，并从它的下层吸取色相和饱和度信息。<br>要对一个元素设置混合模式，有两个属性可以派上用场：<br>mix-blend-mode可以为整个元素设置混合模式，background-blend-mode可以为每层背景单独指定混合模式。<br>使用这种策略有两种选择模式：<br>第一种选择：需要把图片包裹在一个容器中，并把容器的背景色设置为我们想要的主色调。<br>第二种选择：不用图片元素，而是用div元素——把这个元素的第一层背景设置为要染色的图片，并把第二层的背景设置为我们想要的主色调。</p>
 
       
     </div>
@@ -407,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/27/css优先级/" rel="next" title="css优先级">
-                <i class="fa fa-chevron-left"></i> css优先级
+              <a href="/2016/12/30/css揭秘-字体排印/" rel="next" title="css揭秘-字体排印">
+                <i class="fa fa-chevron-left"></i> css揭秘-字体排印
               </a>
             
           </div>
@@ -491,7 +491,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -502,7 +502,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -513,7 +513,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
