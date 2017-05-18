@@ -258,7 +258,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/css和文档/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/css基础一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -280,8 +280,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/12/css和文档/" itemprop="url">
-                  css权威指南第三版读书笔记
+                <a class="post-title-link" href="/2017/05/12/css基础一/" itemprop="url">
+                  css基础一
                 </a>
               
             
@@ -363,7 +363,10 @@
 <h5 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h5><p>1.分组选择器<br><code>h2,p{color:grey}</code>这样就将h2和p分到一个组啦。h2和p颜色都是灰色啦。</p>
 <p>2.多类选择器<br><code>.warning.urgent{color:grey}</code> 这样就可以给元素增加样式<code>class=&quot;warning urgent&quot;</code>。元素既紧急又有警告了。<br><code>.warning.help{color:red}</code> 这个选择器只匹配class包含warning、help的元素。</p>
 <p>3.属性选择器<br><code>p[class~=&quot;warning&quot;]{font-weight:bold};</code> 这样就可以选择class属性中包含warning的元素。<br><code>[foo^=&quot;ch&quot;]</code> 选择foo属性值以”ch”开头的所有元素<br><code>[foo$=&quot;le&quot;]</code> 选择foo属性值以”le”结尾的所有元素<br><code>[foo*=&quot;l&quot;]</code> 选择foo属性值包含子串”l”的所有元素<br><code>[lang|=&#39;en&#39;]</code> 选择foo属性值等于en或者以en-开头的元素</p>
-<p>4.伪类选择器<br>静态伪类：第一次显示之后不会再改变文档的样式，例如:link、:visited<br>动态伪类：例如:hover、:active、:focus<br>选择第一个子元素：:first-child来选择元素的第一个子元素</p>
+<p>4.伪类选择器<br>静态伪类：第一次显示之后不会再改变文档的样式，例如:link、:visited<br>动态伪类：例如:hover、:active、:focus<br>选择第一个子元素：:first-child来选择元素的第一个子元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">	&lt;p&gt;&lt;/p&gt;</div><div class="line">	&lt;em&gt;&lt;/em&gt;</div><div class="line">	&lt;li&gt;&lt;/li&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>如代码，元素的第一个子元素包括第一个p，第一个em，第一个li。<br>p:first-child{ font-weight:bold;}<br>li:first-child{ text-transform:uppercase;}<br>第一个规则将作为某元素的第一个子元素的所有p元素设置为粗体。<br>第二个规则将作为某元素的第一个子元素额所有li元素变成大写。</p>
+<p>5.伪元素选择器<br>:first-letter{color:red;}  用于设置一个块级元素首字母的样式。<br>:first-line{ color:red;} 用来影响元素中的第一个文本行。</p>
+<p>注意点: :first-letter和:first-line只能运用于标记或者段落之类的块级元素，而不能运用于超链接等行内元素。</p>
 
           
         
@@ -507,6 +510,157 @@
         
           
             <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/响应式Web设计/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/10/响应式Web设计/" itemprop="url">
+                  响应式web设计
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="视口和屏幕尺寸"><a href="#视口和屏幕尺寸" class="headerlink" title="视口和屏幕尺寸"></a>视口和屏幕尺寸</h5><p>视口和屏幕尺寸不是同一视口是指浏览器窗口内的内容区域，不包含工具栏、标签栏等。也就是网页实际显示的区域。个概念。</p>
+<p>屏幕尺寸指的是设备的物理显示区域。<br>需要注意的是有些浏览器调整工具显示的尺寸包含浏览器的其他元素，诸如地址栏、标签栏和搜索栏，而有些工具则不是这样。</p>
+<h5 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h5><p><code>&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait)&quot; href=&quot;portrait-screen.css&quot; /&gt;</code><br>媒体查询表达式询问了媒体类型（你是一块显示屏吗？），然后询问了媒体特性（显示屏是纵向放置的吗？）。<br>任何纵向放置的显示屏设备都会加载 portrait-screen.css样式表，其他设备则会忽略该文件。<br>在媒体查询的开头追加not则会颠倒该查询的逻辑。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait) and (min-width:800px)&quot; </div><div class="line">href=&quot;800wide-portrait-screen.css&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>限制只有视口宽度大于800像素的显示屏设备才能加载文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait) and (min-width:</div><div class="line">800px), projection&quot; href=&quot;800wide-portrait-screen.css&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>有两点需要注意。<br>第一，媒体查询之间使用逗号分隔。<br>第二，你会注意到在projection之后，没有and，也没有任何特性/值的组合。<br>没有后续表达式，意味着只要是projection就满足条件。本例中，样式会应用于所有的投影仪。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media screen and (max-device-width: 400px) &#123;</div><div class="line">	h1 &#123; color: green &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在屏幕宽度小于等于400像素的设备上,h1元素的文字颜色就会变成绿色。<br><code>@import url(&quot;phone.css&quot;) screen and (max-width:360px);</code></p>
+<p>CSS的@import指令在当前样式表中按条件引入其他样式表。<br>如上代码会给视口最大宽度为360像素的显示屏设备加载一个名为 phone.css的样式表。<br>切记，使用CSS的@import方式会增加HTTP请求(这会影响加载速度),所以请谨慎使用该方法。</p>
+<p>媒体查询能检测那些特性<br><img src="/img/11.png" alt="这些特性"></p>
 
           
         
@@ -1255,7 +1409,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/css实现用户体验/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/css用户体验/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -1277,8 +1431,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/05/css实现用户体验/" itemprop="url">
-                  css实现用户体验
+                <a class="post-title-link" href="/2017/01/05/css用户体验/" itemprop="url">
+                  css用户体验
                 </a>
               
             
@@ -1412,7 +1566,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/30/css实现字体排印/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/30/css字体排印/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -1434,8 +1588,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/30/css实现字体排印/" itemprop="url">
-                  css实现字体排印
+                <a class="post-title-link" href="/2016/12/30/css字体排印/" itemprop="url">
+                  css字体排印
                 </a>
               
             
@@ -1565,7 +1719,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/14/css实现视觉效果/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/14/css视觉效果/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -1587,8 +1741,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/14/css实现视觉效果/" itemprop="url">
-                  css实现视觉效果
+                <a class="post-title-link" href="/2016/12/14/css视觉效果/" itemprop="url">
+                  css视觉效果
                 </a>
               
             
@@ -1706,169 +1860,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/05/css实现形状/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/05/css实现形状/" itemprop="url">
-                  css实现形状
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-05T21:22:07+08:00">
-                2016-12-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css揭秘/" itemprop="url" rel="index">
-                    <span itemprop="name">css揭秘</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="自适应的椭圆"><a href="#自适应的椭圆" class="headerlink" title="自适应的椭圆"></a>自适应的椭圆</h4><p>(<a href="http://runjs.cn/code/ltgrlo4v" target="_blank" rel="external">Demo点这里</a>)<br>1、如何实现自适应椭圆<br><code>border-radius: 50% / 50%;</code><br>border-radius 这个属性它不仅可以接受长度值，还可以接受百分比值。<br>这个百分比值会基于元素的尺寸进行解析，即宽度用于水平半径的解析，而高度用于垂直半径的解析。<br>这意味着相同的百分比可能会计算出不同的水平和垂直半径。  </p>
-<hr>
-<p>2、如何实现半椭圆<br><img src="/img/5.png" alt="border-radius实现"><br>真正简洁的方法还是使用 border-radius 这个简写属性，因为我们可以向它一次性提供用空格分开的多个值。<br>如果我们传给它四个值，这四个值就会被分别从左上角开始以顺时针顺序应用到元素的各个拐角。<br>如果我们提供的值少于四个，则它们会以 CSS 的常规方式重复。<br>如果只提供了三个值，则意味着第四个值与第二值相同。<br>如果只有两个值，则意味着第三个值与第一个相同。<br>我们甚至可以为所有四个角提供完全不同的水平和垂直半径，方法是在斜杠前指定 1~4 个值，在斜杠后指定另外 1~4 个值。请注意这两组值是单独展开为四个值的。<br>举例来说，当 border-radius 的值为10px / 5px 20px 时，其效果相当于 10px 10px 10px 10px / 5px 20px 5px 20px 。  </p>
-<hr>
-<p>3、如何实现四分之一椭圆<br>思路：其中一个角的水平和垂直半径值都需要是100%，而其他三个角都不能设为圆角。<br>代码实现：<code>border-radius: 100% 0 0 0;</code></p>
-<hr>
-<h4 id="平行四边形"><a href="#平行四边形" class="headerlink" title="平行四边形"></a>平行四边形</h4><p>(<a href="http://runjs.cn/code/3knysf8r" target="_blank" rel="external">Demo点这里</a>)<br>1、如何实现平行四边形<br>很简单tranform-skew扭曲即可。但是外形扭曲后，里面的文字也相应的扭曲了。文字反扭曲即可实现效果。<br>缺点:文字也要使用扭曲，不添加额外的HTML元素。<br>2、伪元素方案实现平行四边形<br>思路:把所有样式（背景、边框等）应用到伪元素上，然后再对伪元素进行变形。<br>因为我们的内容并不是包含在伪元素里的，所以内容并不会受到变形的影响。<br>做法：<br>我们希望伪元素保持良好的灵活性，可以自动继承其宿主元素的尺寸，甚至当宿主元素的尺寸是由其内容来决定时仍然如此。<br>一个简单的办法是给宿主元素应用 position: relative 样式，并为伪元素设置 position:absolute 。<br>然后再把所有偏移量设置为零，以便让它在水平和垂直方向上都被拉伸至宿主元素的尺寸。<br>此时，用伪元素生成的方块是重叠在内容之上的，一旦给它设置背景就会遮住内容。<br>为了修复这个问题，我们可以给伪元素设置z-index: -1 样式，这样它的堆叠层次就会被推到宿主元素之后。</p>
-<hr>
-<h4 id="菱形图片"><a href="#菱形图片" class="headerlink" title="菱形图片"></a>菱形图片</h4><p>(<a href="http://runjs.cn/code/a263mx5i" target="_blank" rel="external">Demo点这里</a>)<br>如何实现菱形图片   </p>
-<h5 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h5><p>把图片用一个div包裹起来，然后对其应用相反的rotate()变形样式。<br><img src="/img/6.png" alt="失败图"><br>嗯哼，这主要是因为max-width:100%这条声明，被解析为容器.picture的边长。<br>要想让图片在容器里正确显示，那就得<strong>图片的宽度等于容器的对角线</strong>。<br><img src="/img/7.png" alt="懂了么"><br>解决方式：1.算出图片的边长。2.调整图片的大小。</p>
-<h5 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h5><p>使用clip-path用一系列（以逗号分隔的）坐标点来指定任意的多边形。我们甚至可以使用百分比值，它们会解析为元素自身的尺寸。<br><code>clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);</code><br>这个属性甚至可以参与动画，只要我们的动画是在同一种形状函数(比如这里是polygon())之间进行的，而且点的数量是相同的。  </p>
-<hr>
-<h4 id="切角效果"><a href="#切角效果" class="headerlink" title="切角效果"></a>切角效果</h4><p>(<a href="http://runjs.cn/code/9aev9kjh" target="_blank" rel="external">Demo点这里</a>)</p>
-<p>1.使用线性渐变实现<br>渐变可以接受一个角度(比如45deg)作为方向，而且色标的位置信息也可以是绝对的长度值，这一点丝毫不受容器尺寸的影响。<br>注意点：<br>线性渐变的角度(<a href="http://www.zhangxinxu.com/wordpress/2013/09/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3css3-gradient%E6%96%9C%E5%90%91%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98/" target="_blank" rel="external">可以参考这里</a>)<br>多个切角用多个渐变会出现覆盖的情况，可以使用background-size解决。同时应注意background-repeat。</p>
-<p>2.使用border-image实现<br><img src="/img/8.png" alt="使用的svg图像"> </p>
-<h5 id="裁剪路径方案"><a href="#裁剪路径方案" class="headerlink" title="裁剪路径方案"></a>裁剪路径方案</h5><p>可以使用任意类型的背景，甚至可以对替换元素(比如图片)进行裁切</p>
-<p>3.关于未来<br>corner-shape可以直接实现切角效果</p>
-<hr>
-<h4 id="梯形标签页"><a href="#梯形标签页" class="headerlink" title="梯形标签页"></a>梯形标签页</h4><p>(<a href="http://runjs.cn/code/ynqjfvlg" target="_blank" rel="external">使用3D旋转实现</a>)<br>(<a href="http://runjs.cn/code/nfr2mwal" target="_blank" rel="external">使用伪元素实现</a>) </p>
-<hr>
-<h4 id="简单的饼图"><a href="#简单的饼图" class="headerlink" title="简单的饼图"></a>简单的饼图</h4><hr>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1918,7 +1909,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1929,7 +1920,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

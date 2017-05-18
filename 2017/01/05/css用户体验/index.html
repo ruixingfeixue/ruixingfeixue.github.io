@@ -85,17 +85,19 @@
 
 
 
-<meta name="description" content="单侧投影(Demo点这里)1.单边投影对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。辣么把扩张半径设为">
+<meta name="description" content="用户体验选用合适的鼠标光标(Demo点这里)  CSS3光标 VS CSS2.1光标 cell光标，它用于提示当前位置有一个或一组单元格可以被选中。not-allowed光标，它用于提示某个控件因为某些原因而变得无法交互(即控件已被禁用)  扩大可点击区域(Demo点这里)想在按钮四周扩大点击范围方式一：为它设置一圈透明边框，因为鼠标对元素边框的交互也会触发鼠标事件。方式二：使用伪元素来扩大范围。">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css实现视觉效果">
-<meta property="og:url" content="http://yoursite.com/2016/12/14/css实现视觉效果/index.html">
+<meta property="og:title" content="css用户体验">
+<meta property="og:url" content="http://yoursite.com/2017/01/05/css用户体验/index.html">
 <meta property="og:site_name" content="瑞的指南针">
-<meta property="og:description" content="单侧投影(Demo点这里)1.单边投影对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。辣么把扩张半径设为">
-<meta property="og:updated_time" content="2017-05-12T08:44:40.981Z">
+<meta property="og:description" content="用户体验选用合适的鼠标光标(Demo点这里)  CSS3光标 VS CSS2.1光标 cell光标，它用于提示当前位置有一个或一组单元格可以被选中。not-allowed光标，它用于提示某个控件因为某些原因而变得无法交互(即控件已被禁用)  扩大可点击区域(Demo点这里)想在按钮四周扩大点击范围方式一：为它设置一圈透明边框，因为鼠标对元素边框的交互也会触发鼠标事件。方式二：使用伪元素来扩大范围。">
+<meta property="og:image" content="http://yoursite.com/img/10.png">
+<meta property="og:updated_time" content="2017-05-15T02:23:54.436Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css实现视觉效果">
-<meta name="twitter:description" content="单侧投影(Demo点这里)1.单边投影对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。辣么把扩张半径设为">
+<meta name="twitter:title" content="css用户体验">
+<meta name="twitter:description" content="用户体验选用合适的鼠标光标(Demo点这里)  CSS3光标 VS CSS2.1光标 cell光标，它用于提示当前位置有一个或一组单元格可以被选中。not-allowed光标，它用于提示某个控件因为某些原因而变得无法交互(即控件已被禁用)  扩大可点击区域(Demo点这里)想在按钮四周扩大点击范围方式一：为它设置一圈透明边框，因为鼠标对元素边框的交互也会触发鼠标事件。方式二：使用伪元素来扩大范围。">
+<meta name="twitter:image" content="http://yoursite.com/img/10.png">
 
 
 
@@ -123,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/14/css实现视觉效果/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/05/css用户体验/"/>
 
 
 
 
 
-  <title> css实现视觉效果 | 瑞的指南针 </title>
+  <title> css用户体验 | 瑞的指南针 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/14/css实现视觉效果/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/css用户体验/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -279,7 +281,7 @@
             
             
               
-                css实现视觉效果
+                css用户体验
               
             
           </h1>
@@ -294,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-14T18:12:52+08:00">
-                2016-12-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-05T18:12:52+08:00">
+                2017-01-05
               </time>
             
 
@@ -352,14 +354,21 @@
       
 
       
-        <h4 id="单侧投影"><a href="#单侧投影" class="headerlink" title="单侧投影"></a>单侧投影</h4><p>(<a href="http://runjs.cn/code/akcvaqy1" target="_blank" rel="external">Demo点这里</a>)<br>1.单边投影<br>对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?<br>最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。<br>这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。<br>举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。<br>辣么把扩张半径设为负的模糊值不就看不见投影啦。再用偏移量来移动，不就形成单边投影啦。</p>
-<p>2.邻边投影<br>技巧1:我们不应该把投影缩得太小，而是只需把阴影藏进一侧，另一侧自然露出就好。因此，扩张半径不应设为模糊半径的相反值，而应该是这个相反值的一半。<br>技巧2: 需要指定两个偏移量，因为我们希望投影在水平和垂直方向上同时移动。它们的值需要大于或等于模糊半径的一半，因为我们希望把投影藏进另外两条边之内。 </p>
-<p>3.双侧投影<br>因为扩张半径在四个方向上的作用是均等的（也就是说，我们无法指定投影在水平方向上放大，而在垂直方向上缩小）<br>唯一的办法是用两块投影（每边各一块）来达到目的。然后基本上就是把“单侧投影”中的技巧运用两次。</p>
+        <h4 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h4><h5 id="选用合适的鼠标光标"><a href="#选用合适的鼠标光标" class="headerlink" title="选用合适的鼠标光标"></a>选用合适的鼠标光标</h5><p>(<a href="http://runjs.cn/code/bic2mi2i" target="_blank" rel="external">Demo点这里</a>) </p>
+<p>CSS3光标 VS CSS2.1光标<br><img src="/img/10.png" alt="光标"></p>
+<p>cell光标，它用于提示当前位置有一个或一组单元格可以被选中。<br>not-allowed光标，它用于提示某个控件因为某些原因而变得无法交互(即控件已被禁用)</p>
 <hr>
-<h4 id="不规则投影"><a href="#不规则投影" class="headerlink" title="不规则投影"></a>不规则投影</h4><p>(<a href="http://runjs.cn/code/yipe0lk1" target="_blank" rel="external">Demo点这里</a>)<br>1.box-shadow不支持不规则投影。（元素添加了一些伪元素或半透明的装饰之后）具体情形如下：<br>半透明图像、背景图像、或者 border-image （比如老式的金质像框）;<br>元素设置了点状、虚线或半透明的边框，但没有背景（或者当background-clip 不是 border-box 时）;<br>对话气泡，它的小尾巴通常是用伪元素生成的;<br>我们在“切角效果”一节中见过的切角形状;<br>几乎所有的折角效果，包括“折角效果”一节将提到的例子;<br>通过 clip-path 生成的形状，比如“菱形图片”一节中提到的菱形图像。  </p>
-<p>2、解决方案 （使用CSS滤镜）<br>例如drop-shadow() 滤镜可接受的参数基本上跟 box-shadow 属性是一样的，但不包括扩张半径，不包括 inset 关键字，也不支持逗号分割的多层投<br>影语法。<br>举个例子，box-shadow: 2px 2px 10px rgba(0,0,0,.5); 可以这样写  filter: drop-shadow(2px 2px 10px rgba(0,0,0,.5));<br>CSS 滤镜最大的好处：它们可以平稳退化：当浏览器不支持时，不会出现问题，只不过没有任何效果而已。<br>如果你确实需要这个效果在尽可能多的浏览器中显示出来，可以同时附上一个 SVG 滤镜，这样可以得到稍微好一些的浏览器支持度。  </p>
+<h5 id="扩大可点击区域"><a href="#扩大可点击区域" class="headerlink" title="扩大可点击区域"></a>扩大可点击区域</h5><p>(<a href="http://runjs.cn/code/b78sk8qf" target="_blank" rel="external">Demo点这里</a>)<br>想在按钮四周扩大点击范围<br>方式一：为它设置一圈透明边框，因为鼠标对元素边框的交互也会触发鼠标事件。<br>方式二：使用伪元素来扩大范围。</p>
+<h5 id="自定义复选框"><a href="#自定义复选框" class="headerlink" title="自定义复选框"></a>自定义复选框</h5><p>(<a href="http://runjs.cn/code/ozk7oto8" target="_blank" rel="external">Demo点这里</a>)<br>替换元素： 据CSS2.1规范所述：“替换元素的特征在于，其内容超出了CSS格式化模型的范畴，比如图片、嵌入的文档或小应用程序等。”。<br>原则上我们无法为替换元素添加生成性内容，尽管某些浏览器可能会允许这样做。</p>
+<p>由于label不是复选框那样的替换元素，我们可以为它添加生成性内容（伪元素），并基于复选框的状态来为其设置样式。<br>然后，就可以把真正的复选框隐藏起来（但不能把它从tab键切换焦点的队列中完全删除），再把生成性内容美化一番，用来顶替原来的复选框！</p>
+<p>这个创意的名字叫做“复选框hack”</p>
+<h5 id="开关式按钮"><a href="#开关式按钮" class="headerlink" title="开关式按钮"></a>开关式按钮</h5><p>(<a href="http://runjs.cn/code/jbs6uzgz" target="_blank" rel="external">Demo点这里</a>)<br>同样使用“复选框hack”的技巧<br>可以用来切换某个选项的开关状态：启用时，它是被按下的状态；停用时，它就是浮起的状态。<br>在使用开关式按钮时仍需慎重。在绝大多数场景下，开关式按钮对可用性有负面作用，<br>因为它们很容易与普通按钮混淆，让人误以为按下它会触发某个动作。</p>
+<h5 id="通过阴影来弱化背景"><a href="#通过阴影来弱化背景" class="headerlink" title="通过阴影来弱化背景"></a>通过阴影来弱化背景</h5><p>一、box-shadow方案<br>(<a href="http://runjs.cn/code/mzigb7zs" target="_blank" rel="external">Demo点这里</a>)<br>使用大外延值实现 <code>box-shadow: 0 0 0 999px rgba(0,0,0,.8);</code><br>这个初步的解决方案有一个明显的问题，就是它无法在较大的屏幕分辨率（&gt;2000px）下正常工作。<br>视口单位: vmax。1vmax相当1vw和1vh两者中的较大值。<br>100vw等于整个视口的宽度，100vh就是视口的高度。因此，满足我们需求的最小值就是50vmax 。<br>由于投影是同时向四个方向扩展的，这个遮罩层的最终尺寸将是100vmax 加上元素本身的尺寸。<br>酱汁：<code>box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);</code></p>
+<p>缺点：<br>1.由于遮罩层的尺寸是与视口相关，而不是与页面相关的，当我们滚动页面时，遮罩层的边缘就露出来了，<br>除非给它加上 position: fixed;这个样式，或者页面并没有长到需要滚动的程度。<br>此外，由于页面很可能真的很长，为了规避这个缺陷而扩大投影的扩张半径就不太明智了。<br>相反，我推荐有限度地应用这个技巧，比如配合固定定位来使用，或者当页面没有滚动条时再用。<br>2.当使用一个独立的元素（或伪元素）来实现遮罩层时，这个遮罩层不仅可以从视觉上把用户的注意力引导到关键元素上，<br>还可以防止用户的鼠标与页面的其他部分发生交互，因为遮罩层会捕获所有指针事件。<br>box-shadow 并没有这种能力，因此它只能在视觉上起到引导注意力的作用，却无法阻止鼠标交互。<br>这一点是否可以接受，取决于你的具体需求。</p>
+<p>二、backdrop方案<br>(<a href="http://runjs.cn/code/t6syixt3" target="_blank" rel="external">Demo点这里</a>)<br>如果你想引导用户关注的元素就是一个模态的<code>&lt;dialog&gt;</code>元素<br>（<code>&lt;dialog&gt;</code>元素可以由它的 showModal()方法显示出来），<br>那么根据浏览器的默认样式，它会自带一个遮罩层。<br>借助 ::backdrop伪元素，这个原生的遮罩层也是可以设置样式的，比如可以把它变得更暗一些。</p>
 <hr>
-<h4 id="染色效果"><a href="#染色效果" class="headerlink" title="染色效果"></a>染色效果</h4><p>(<a href="http://runjs.cn/code/5oan2unq" target="_blank" rel="external">Demo点这里</a>)<br>1.使用滤镜<br>sepia()会给图片增加一种降饱和度的橙黄色染色效果，几乎所有像素的色相值会被收敛到 35~40。<br>如果我们想要的主色调的饱和度比这更高，可以用saturate()滤镜来给每个像素提升饱和度。<br>hue-roatate()滤镜，把每个像素的色相以指定的度数进行偏移。为了把原有的色相值40改变为335，需要增加大约295度(335-40)。<br>2.基于混合模式的方案<br>“混合模式”控制了上层元素的颜色与下层颜色进行混合的方式。<br>用它来实现染色效果时，需要用到的混合模式是luminosity。<br>这种luminosity混合模式会保留上层元素的HSL亮度信息，并从它的下层吸取色相和饱和度信息。<br>要对一个元素设置混合模式，有两个属性可以派上用场：<br>mix-blend-mode可以为整个元素设置混合模式，background-blend-mode可以为每层背景单独指定混合模式。<br>使用这种策略有两种选择模式：<br>第一种选择：需要把图片包裹在一个容器中，并把容器的背景色设置为我们想要的主色调。<br>第二种选择：不用图片元素，而是用div元素——把这个元素的第一层背景设置为要染色的图片，并把第二层的背景设置为我们想要的主色调。</p>
+<h5 id="通过模糊来弱化背景"><a href="#通过模糊来弱化背景" class="headerlink" title="通过模糊来弱化背景"></a>通过模糊来弱化背景</h5><p>(<a href="http://runjs.cn/code/eyxhobws" target="_blank" rel="external">Demo点这里</a>)<br>解决方案：用一个html元素把页面上除了关键元素之外的一切都包裹起来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;main&gt;I&apos;m groot&lt;/main&gt;</div><div class="line">&lt;dialog&gt;</div><div class="line">	I&apos;m a dialog. Click on me to dismiss.</div><div class="line">&lt;/dialog&gt;</div><div class="line">&lt;!-- 其他对话框都写在这里 --&gt;</div></pre></td></tr></table></figure></p>
+<p>每当弹出一个对话框，都需要给<code>&lt;main&gt;</code>元素增加一个类，以便对它应用模糊滤镜。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">main.de-emphasized &#123;</div><div class="line">	filter: blur(5px);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -407,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/30/css实现字体排印/" rel="next" title="css实现字体排印">
-                <i class="fa fa-chevron-left"></i> css实现字体排印
+              <a href="/2017/02/27/css优先级/" rel="next" title="css优先级">
+                <i class="fa fa-chevron-left"></i> css优先级
               </a>
             
           </div>
@@ -417,8 +426,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/05/css实现形状/" rel="prev" title="css实现形状">
-                css实现形状 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/30/css字体排印/" rel="prev" title="css字体排印">
+                css字体排印 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -491,7 +500,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -502,7 +511,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -548,7 +557,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#单侧投影"><span class="nav-number">1.</span> <span class="nav-text">单侧投影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不规则投影"><span class="nav-number">2.</span> <span class="nav-text">不规则投影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#染色效果"><span class="nav-number">3.</span> <span class="nav-text">染色效果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#用户体验"><span class="nav-number">1.</span> <span class="nav-text">用户体验</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#选用合适的鼠标光标"><span class="nav-number">1.1.</span> <span class="nav-text">选用合适的鼠标光标</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#扩大可点击区域"><span class="nav-number">1.2.</span> <span class="nav-text">扩大可点击区域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义复选框"><span class="nav-number">1.3.</span> <span class="nav-text">自定义复选框</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#开关式按钮"><span class="nav-number">1.4.</span> <span class="nav-text">开关式按钮</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#通过阴影来弱化背景"><span class="nav-number">1.5.</span> <span class="nav-text">通过阴影来弱化背景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#通过模糊来弱化背景"><span class="nav-number">1.6.</span> <span class="nav-text">通过模糊来弱化背景</span></a></li></ol></li></ol></div>
             
 
           </div>
