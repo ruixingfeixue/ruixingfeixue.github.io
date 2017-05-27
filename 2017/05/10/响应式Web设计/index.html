@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="瑞的指南针">
 <meta property="og:description" content="视口和屏幕尺寸视口和屏幕尺寸不是同一视口是指浏览器窗口内的内容区域，不包含工具栏、标签栏等。也就是网页实际显示的区域。个概念。 屏幕尺寸指的是设备的物理显示区域。需要注意的是有些浏览器调整工具显示的尺寸包含浏览器的其他元素，诸如地址栏、标签栏和搜索栏，而有些工具则不是这样。 媒体查询&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;screen and">
 <meta property="og:image" content="http://yoursite.com/img/11.png">
-<meta property="og:updated_time" content="2017-05-15T10:03:18.752Z">
+<meta property="og:updated_time" content="2017-05-19T09:19:48.460Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="响应式web设计">
 <meta name="twitter:description" content="视口和屏幕尺寸视口和屏幕尺寸不是同一视口是指浏览器窗口内的内容区域，不包含工具栏、标签栏等。也就是网页实际显示的区域。个概念。 屏幕尺寸指的是设备的物理显示区域。需要注意的是有些浏览器调整工具显示的尺寸包含浏览器的其他元素，诸如地址栏、标签栏和搜索栏，而有些工具则不是这样。 媒体查询&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;screen and">
@@ -363,6 +363,8 @@
 <p>在屏幕宽度小于等于400像素的设备上,h1元素的文字颜色就会变成绿色。<br><code>@import url(&quot;phone.css&quot;) screen and (max-width:360px);</code></p>
 <p>CSS的@import指令在当前样式表中按条件引入其他样式表。<br>如上代码会给视口最大宽度为360像素的显示屏设备加载一个名为 phone.css的样式表。<br>切记，使用CSS的@import方式会增加HTTP请求(这会影响加载速度),所以请谨慎使用该方法。</p>
 <p>媒体查询能检测那些特性<br><img src="/img/11.png" alt="这些特性"></p>
+<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。\下载地址是 <a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包（在 Mac App Store中免费下载）的一部分，只能在Mac OS X上使用。<br>一旦安装了 Xcode，你就可以在这个路径下找到模拟器：~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
+<h5 id="阻止移动浏览器自动调整页面大小"><a href="#阻止移动浏览器自动调整页面大小" class="headerlink" title="阻止移动浏览器自动调整页面大小"></a>阻止移动浏览器自动调整页面大小</h5><p><code>&lt;meta&gt;</code>标签还可以控制页面可缩放的范围<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=3, minimum-scale=0.5&quot; /&gt;</code><br>上面的代码允许用户将页面最多放大至设备宽度的3倍，最小压缩至设备宽度的一半。<br><code>user-scalable=no</code>即是禁止缩放</p>
 
       
     </div>
@@ -410,8 +412,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/12/css基础一/" rel="next" title="css基础一">
-                <i class="fa fa-chevron-left"></i> css基础一
+              <a href="/2017/05/12/css选择器和字体/" rel="next" title="css选择器和字体">
+                <i class="fa fa-chevron-left"></i> css选择器和字体
               </a>
             
           </div>
@@ -494,7 +496,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -551,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#视口和屏幕尺寸"><span class="nav-number">1.</span> <span class="nav-text">视口和屏幕尺寸</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#媒体查询"><span class="nav-number">2.</span> <span class="nav-text">媒体查询</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#视口和屏幕尺寸"><span class="nav-number">1.</span> <span class="nav-text">视口和屏幕尺寸</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#媒体查询"><span class="nav-number">2.</span> <span class="nav-text">媒体查询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装iOS模拟器和Android模拟器"><span class="nav-number">3.</span> <span class="nav-text">安装iOS模拟器和Android模拟器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#阻止移动浏览器自动调整页面大小"><span class="nav-number">4.</span> <span class="nav-text">阻止移动浏览器自动调整页面大小</span></a></li></ol></div>
             
 
           </div>

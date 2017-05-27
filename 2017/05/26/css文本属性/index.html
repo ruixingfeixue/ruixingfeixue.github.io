@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css揭秘," />
+  <meta name="keywords" content="css," />
 
 
 
@@ -85,17 +85,21 @@
 
 
 
-<meta name="description" content="css编码技巧尽量减少代码重复当某些值相互依赖时，应该把它们的相互关系用代码表达出来。如： font-size: 20px;line-height: 30px;font-size: 20px;line-height: 1.5; 做按钮时应考虑到底哪些效果应该跟着按钮一起放大，而哪些效果是保持不变的。 Q：怎样解决不能颜色背景的按钮？(Demo点这里)A：把半透明的黑色或白色叠加在主色调上，即可产生">
-<meta name="keywords" content="css揭秘">
+<meta name="description" content="行高line-height属性是文本行间基线之间的距离。line-height控制了行间距，这是文本行之间超出字体大小的额外空间。换句话说，line-height值和字体大小之差就是行间距。 构造文本行文本行的每个元素都会生成一个内容区，这由字体的大小决定。这个内容区则会产生一个行内框(line-box)。要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css编码技巧">
-<meta property="og:url" content="http://yoursite.com/2016/11/20/css编码技巧/index.html">
+<meta property="og:title" content="css文本属性">
+<meta property="og:url" content="http://yoursite.com/2017/05/26/css文本属性/index.html">
 <meta property="og:site_name" content="瑞的指南针">
-<meta property="og:description" content="css编码技巧尽量减少代码重复当某些值相互依赖时，应该把它们的相互关系用代码表达出来。如： font-size: 20px;line-height: 30px;font-size: 20px;line-height: 1.5; 做按钮时应考虑到底哪些效果应该跟着按钮一起放大，而哪些效果是保持不变的。 Q：怎样解决不能颜色背景的按钮？(Demo点这里)A：把半透明的黑色或白色叠加在主色调上，即可产生">
-<meta property="og:updated_time" content="2017-05-12T08:42:18.500Z">
+<meta property="og:description" content="行高line-height属性是文本行间基线之间的距离。line-height控制了行间距，这是文本行之间超出字体大小的额外空间。换句话说，line-height值和字体大小之差就是行间距。 构造文本行文本行的每个元素都会生成一个内容区，这由字体的大小决定。这个内容区则会产生一个行内框(line-box)。要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算">
+<meta property="og:image" content="http://yoursite.com/img/14.png">
+<meta property="og:image" content="http://yoursite.com/img/15.png">
+<meta property="og:image" content="http://yoursite.com/img/16.png">
+<meta property="og:updated_time" content="2017-05-27T06:57:40.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css编码技巧">
-<meta name="twitter:description" content="css编码技巧尽量减少代码重复当某些值相互依赖时，应该把它们的相互关系用代码表达出来。如： font-size: 20px;line-height: 30px;font-size: 20px;line-height: 1.5; 做按钮时应考虑到底哪些效果应该跟着按钮一起放大，而哪些效果是保持不变的。 Q：怎样解决不能颜色背景的按钮？(Demo点这里)A：把半透明的黑色或白色叠加在主色调上，即可产生">
+<meta name="twitter:title" content="css文本属性">
+<meta name="twitter:description" content="行高line-height属性是文本行间基线之间的距离。line-height控制了行间距，这是文本行之间超出字体大小的额外空间。换句话说，line-height值和字体大小之差就是行间距。 构造文本行文本行的每个元素都会生成一个内容区，这由字体的大小决定。这个内容区则会产生一个行内框(line-box)。要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算">
+<meta name="twitter:image" content="http://yoursite.com/img/14.png">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/20/css编码技巧/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/26/css文本属性/"/>
 
 
 
 
 
-  <title> css编码技巧 | 瑞的指南针 </title>
+  <title> css文本属性 | 瑞的指南针 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +262,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/20/css编码技巧/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/26/css文本属性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -279,7 +283,7 @@
             
             
               
-                css编码技巧
+                css文本属性
               
             
           </h1>
@@ -294,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-20T18:06:14+08:00">
-                2016-11-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-26T17:19:09+08:00">
+                2017-05-26
               </time>
             
 
@@ -317,8 +321,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css揭秘/" itemprop="url" rel="index">
-                    <span itemprop="name">css揭秘</span>
+                  <a href="/categories/css权威指南第三版/" itemprop="url" rel="index">
+                    <span itemprop="name">css权威指南第三版</span>
                   </a>
                 </span>
 
@@ -352,13 +356,21 @@
       
 
       
-        <h4 id="css编码技巧"><a href="#css编码技巧" class="headerlink" title="css编码技巧"></a>css编码技巧</h4><h5 id="尽量减少代码重复"><a href="#尽量减少代码重复" class="headerlink" title="尽量减少代码重复"></a>尽量减少代码重复</h5><p>当某些值相互依赖时，应该把它们的相互关系用代码表达出来。如：</p>
-<p><code>font-size: 20px;line-height: 30px;</code><br><code>font-size: 20px;line-height: 1.5;</code></p>
-<p>做按钮时应考虑到底哪些效果应该跟着按钮一起放大，而哪些效果是保持不变的。</p>
-<p>Q：怎样解决不能颜色背景的按钮？(<a href="http://runjs.cn/code/gi75vrzv" target="_blank" rel="external">Demo点这里</a>)<br>A：把半透明的黑色或白色叠加在主色调上，即可产生主色调的亮色和暗色变体。<br>说人话，加入透明色。</p>
-<h5 id="代码变得更DRY的方法"><a href="#代码变得更DRY的方法" class="headerlink" title="代码变得更DRY的方法"></a>代码变得更DRY的方法</h5><p>代码易维护 vs. 代码量少<br>代码易维护和代码量少不可兼得，应该根据实际情况取舍</p>
-<p>currentColor<br>CSS中有史以来的第一个变量,会自动地从文本颜色那里得到颜色。</p>
-<h5 id="合理使用简写"><a href="#合理使用简写" class="headerlink" title="合理使用简写"></a>合理使用简写</h5><h6 id="我应该使用预处理器吗"><a href="#我应该使用预处理器吗" class="headerlink" title="我应该使用预处理器吗"></a>我应该使用预处理器吗</h6><p>如果使用得当，它们在大型项目中可以让代码更加灵活<br>CSS 的文件体积和复杂度可能会失控。<br>调试难度会增加，因为你在开发工具中看到的CSS代码并不是你写的源代码。<br>预处理器在开发过程中引入了一定程度的延时。<br>很多受预处理器启发的特性都已经以各种方式融入到原生CSS中了。</p>
+        <h5 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h5><p>line-height属性是文本行间基线之间的距离。<br>line-height控制了行间距，这是文本行之间超出字体大小的额外空间。<br>换句话说，line-height值和字体大小之差就是行间距。</p>
+<h5 id="构造文本行"><a href="#构造文本行" class="headerlink" title="构造文本行"></a>构造文本行</h5><p>文本行的每个元素都会生成一个内容区，这由字体的大小决定。<br>这个内容区则会产生一个行内框(line-box)。<br>要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算值。<br>这个值是总的行间距。</p>
+<p><img src="/img/14.png" alt="行框图"><br>举个栗子：<br>假设font-size为14px(相应的，内容区的高度也是14px)，而且line-height为18px。<br>其差(4像素)除以2，将其一半应用到内容区的顶部和底部。这会得到一个18像素高的行内框。<br>在内容区的上面和下面分别有2个额外的像素。</p>
+<h5 id="指定line-height值"><a href="#指定line-height值" class="headerlink" title="指定line-height值"></a>指定line-height值</h5><p>line-height的可取值，如果使用默认值normal，用户代理必须计算行间的垂直空间。<br>不同的用户代理计算出来的值可能不同，不过通常都是字体大小的1.2倍。<br>这使得行框要高于给定元素的font-size值。</p>
+<h5 id="垂直对齐文本"><a href="#垂直对齐文本" class="headerlink" title="垂直对齐文本"></a>垂直对齐文本</h5><p>CSS的属性vertical-align用来指定行内元素(inline)或表格单元格(table-cell)元素的垂直对齐方式。</p>
+<ol>
+<li>vertical-align:baseline<br>要求一个元素的基线与其父元素的基线对齐。<br>如果一个垂直对齐元素没有基线-比如是一个图像或者表单输入元素-那么该元素的底端与其父元素的基线对齐。<br><img src="/img/15.png" alt="baseline"></li>
+<li>vertical-align:sub<br>声明会使一个元素变成下标，这意味着其基线相对于其父元素的基线降低。<br>规范并没有规定降低的距离，所以对于不同的用户代理，可能距离会有所不同。</li>
+<li>vertical-align:super<br>声明会使一个元素变成上标，这意味着其基线相对于其父元素的基线升高。<br>规范并没有规定升高的距离，所以对于不同的用户代理，可能距离会有所不同。<br>注意：sub和super不会改变元素的字体大小。所以下标和上标文本不会变小或变大。所有文本都与父元素的文本大小相同。</li>
+<li>vertical-align:bottom<br>将元素行内框的底端与行框的底端对齐。</li>
+<li>vertical-align:middle<br>会把行内元素框的中点与父元素基线上方0.5ex处的一个点对齐。这里的1ex相对于父元素的font-size定义。<br><a href="http://www.zhangxinxu.com/wordpress/2010/05/%E6%88%91%E5%AF%B9css-vertical-align%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%86%E8%A7%A3%E4%B8%8E%E8%AE%A4%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/" target="_blank" rel="external">具体的用法点这里</a></li>
+</ol>
+<h5 id="字间隔"><a href="#字间隔" class="headerlink" title="字间隔"></a>字间隔</h5><p>word-spacing用于修改字间间隔。可能会受text-align影响。</p>
+<h5 id="字母间隔"><a href="#字母间隔" class="headerlink" title="字母间隔"></a>字母间隔</h5><p>letter-spacing用于修改字母间隔。不会受text-align影响。</p>
+<h5 id="处理空白符"><a href="#处理空白符" class="headerlink" title="处理空白符"></a>处理空白符</h5><p>white-space可以影响浏览器处理字之间和文本行之间的空白符的方式。<br>默认的xhtml处理会把所有的空白符合并为一个空格。<br><img src="/img/16.png" alt="white-space"></p>
 
       
     </div>
@@ -393,7 +405,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css揭秘/" rel="tag"># css揭秘</a>
+            <a href="/tags/css/" rel="tag"># css</a>
           
         </div>
       
@@ -406,8 +418,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/26/css背景与边框/" rel="next" title="css背景与边框">
-                <i class="fa fa-chevron-left"></i> css背景与边框
+              <a href="/2017/05/27/css基本视觉格式化/" rel="next" title="css基本视觉格式化">
+                <i class="fa fa-chevron-left"></i> css基本视觉格式化
               </a>
             
           </div>
@@ -416,8 +428,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/03/css设计指南读书笔记/" rel="prev" title="css设计指南读书笔记">
-                css设计指南读书笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/12/css选择器和字体/" rel="prev" title="css选择器和字体">
+                css选择器和字体 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -547,7 +559,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#css编码技巧"><span class="nav-number">1.</span> <span class="nav-text">css编码技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#尽量减少代码重复"><span class="nav-number">1.1.</span> <span class="nav-text">尽量减少代码重复</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码变得更DRY的方法"><span class="nav-number">1.2.</span> <span class="nav-text">代码变得更DRY的方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#合理使用简写"><span class="nav-number">1.3.</span> <span class="nav-text">合理使用简写</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#我应该使用预处理器吗"><span class="nav-number">1.3.1.</span> <span class="nav-text">我应该使用预处理器吗</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#行高"><span class="nav-number">1.</span> <span class="nav-text">行高</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造文本行"><span class="nav-number">2.</span> <span class="nav-text">构造文本行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#指定line-height值"><span class="nav-number">3.</span> <span class="nav-text">指定line-height值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垂直对齐文本"><span class="nav-number">4.</span> <span class="nav-text">垂直对齐文本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字间隔"><span class="nav-number">5.</span> <span class="nav-text">字间隔</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字母间隔"><span class="nav-number">6.</span> <span class="nav-text">字母间隔</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#处理空白符"><span class="nav-number">7.</span> <span class="nav-text">处理空白符</span></a></li></ol></div>
             
 
           </div>

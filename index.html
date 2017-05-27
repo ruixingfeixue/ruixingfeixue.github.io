@@ -258,7 +258,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/css基础一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/27/css基本视觉格式化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -280,8 +280,340 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/12/css基础一/" itemprop="url">
-                  css基础一
+                <a class="post-title-link" href="/2017/05/27/css基本视觉格式化/" itemprop="url">
+                  css基本视觉格式化
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-27T17:19:09+08:00">
+                2017-05-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css权威指南第三版/" itemprop="url" rel="index">
+                    <span itemprop="name">css权威指南第三版</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="行内布局基础术语"><a href="#行内布局基础术语" class="headerlink" title="行内布局基础术语"></a>行内布局基础术语</h5><blockquote>
+<p>匿名文本：<br>是指所有未包含在行内元素中的字符串。<br>在标记<code>&lt;p&gt;I&#39;m&lt;em&gt;so&lt;/em&gt;happy&lt;/p&gt;</code>中，序列”I’m”和”happy”都是匿名文本。<br>注意：空格也是匿名文本的一部分，因为空格和其它元素一样都是字符。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>em框:<br>在字体中定义。也成为字符框(character box)。实际的字形可能比其em框更高或更矮。<br>在css中，font-size的值决定了各个em框的高度。<br><img src="/img/17.png" alt="em图"></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>内容区:<br>在非替换元素中，内容区可能有两种：css2.1规范允许用户代理选择其中任意一种。<br>内容区可以是元素中各字符的em框串在一起构成的框，也可以是由元素中字符字形描述的框。<br>在替换元素中，内容区就是元素的固有高度再加上可能有的外边框，边框或内边距。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>行间距:<br>行间距(leading)是font-size值和line-height值之差。这个差实际上要分为两半，分别应用到内容区的顶部和底部。<br>为内容区增加的这两部分分别称为半间距(half-leading)。行间距只适用于非替换元素。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>行内框:<br>这个框通过向内容区增加行间距来描述。<br>对于非替换元素，元素行内框的高度刚好等于line-height的值。<br>对于替换元素，元素行内框的高度恰好等于内容区的高度，因为行间距不应用到替换元素。<br><img src="/img/18.png" alt="em图"></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>行框:<br>这是包含该行中出现行内框的最高点和最低点的最小框。<br>换句话说，行框的上边界要位于最高行内框的上边界，而行框的底边要放在最低行内框的下边界。</p>
+</blockquote>
+<hr>
+<p>行为和有用的概念：</p>
+<ul>
+<li>内容区类似于一个块级元素的内容框。</li>
+<li>行内元素的背景应用于内容区及所有内边距。</li>
+<li>行内元素的边框要包围内容区及所有内边距和边距。</li>
+<li>非替换元素的内边距、边框和外边距对行内元素或其生成的框没有垂直效果，<br>也就是说，它们不会影响元素行内框的高度。(也不会影响包含该元素的行框的高度)</li>
+<li>替换元素的外边距和边框确实会影响该元素行内框的高度，相应的，也可能影响包含该元素的行框的高度。</li>
+<li>行内框在行中根据其vertical-align属性值垂直对齐。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/26/css文本属性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/26/css文本属性/" itemprop="url">
+                  css文本属性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-26T17:19:09+08:00">
+                2017-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css权威指南第三版/" itemprop="url" rel="index">
+                    <span itemprop="name">css权威指南第三版</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h5><p>line-height属性是文本行间基线之间的距离。<br>line-height控制了行间距，这是文本行之间超出字体大小的额外空间。<br>换句话说，line-height值和字体大小之差就是行间距。</p>
+<h5 id="构造文本行"><a href="#构造文本行" class="headerlink" title="构造文本行"></a>构造文本行</h5><p>文本行的每个元素都会生成一个内容区，这由字体的大小决定。<br>这个内容区则会产生一个行内框(line-box)。<br>要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算值。<br>这个值是总的行间距。</p>
+<p><img src="/img/14.png" alt="行框图"><br>举个栗子：<br>假设font-size为14px(相应的，内容区的高度也是14px)，而且line-height为18px。<br>其差(4像素)除以2，将其一半应用到内容区的顶部和底部。这会得到一个18像素高的行内框。<br>在内容区的上面和下面分别有2个额外的像素。</p>
+<h5 id="指定line-height值"><a href="#指定line-height值" class="headerlink" title="指定line-height值"></a>指定line-height值</h5><p>line-height的可取值，如果使用默认值normal，用户代理必须计算行间的垂直空间。<br>不同的用户代理计算出来的值可能不同，不过通常都是字体大小的1.2倍。<br>这使得行框要高于给定元素的font-size值。</p>
+<h5 id="垂直对齐文本"><a href="#垂直对齐文本" class="headerlink" title="垂直对齐文本"></a>垂直对齐文本</h5><p>CSS的属性vertical-align用来指定行内元素(inline)或表格单元格(table-cell)元素的垂直对齐方式。</p>
+<ol>
+<li>vertical-align:baseline<br>要求一个元素的基线与其父元素的基线对齐。<br>如果一个垂直对齐元素没有基线-比如是一个图像或者表单输入元素-那么该元素的底端与其父元素的基线对齐。<br><img src="/img/15.png" alt="baseline"></li>
+<li>vertical-align:sub<br>声明会使一个元素变成下标，这意味着其基线相对于其父元素的基线降低。<br>规范并没有规定降低的距离，所以对于不同的用户代理，可能距离会有所不同。</li>
+<li>vertical-align:super<br>声明会使一个元素变成上标，这意味着其基线相对于其父元素的基线升高。<br>规范并没有规定升高的距离，所以对于不同的用户代理，可能距离会有所不同。<br>注意：sub和super不会改变元素的字体大小。所以下标和上标文本不会变小或变大。所有文本都与父元素的文本大小相同。</li>
+<li>vertical-align:bottom<br>将元素行内框的底端与行框的底端对齐。</li>
+<li>vertical-align:middle<br>会把行内元素框的中点与父元素基线上方0.5ex处的一个点对齐。这里的1ex相对于父元素的font-size定义。<br><a href="http://www.zhangxinxu.com/wordpress/2010/05/%E6%88%91%E5%AF%B9css-vertical-align%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%86%E8%A7%A3%E4%B8%8E%E8%AE%A4%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/" target="_blank" rel="external">具体的用法点这里</a></li>
+</ol>
+<h5 id="字间隔"><a href="#字间隔" class="headerlink" title="字间隔"></a>字间隔</h5><p>word-spacing用于修改字间间隔。可能会受text-align影响。</p>
+<h5 id="字母间隔"><a href="#字母间隔" class="headerlink" title="字母间隔"></a>字母间隔</h5><p>letter-spacing用于修改字母间隔。不会受text-align影响。</p>
+<h5 id="处理空白符"><a href="#处理空白符" class="headerlink" title="处理空白符"></a>处理空白符</h5><p>white-space可以影响浏览器处理字之间和文本行之间的空白符的方式。<br>默认的xhtml处理会把所有的空白符合并为一个空格。<br><img src="/img/16.png" alt="white-space"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/css选择器和字体/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/12/css选择器和字体/" itemprop="url">
+                  css选择器和字体
                 </a>
               
             
@@ -363,10 +695,18 @@
 <h5 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h5><p>1.分组选择器<br><code>h2,p{color:grey}</code>这样就将h2和p分到一个组啦。h2和p颜色都是灰色啦。</p>
 <p>2.多类选择器<br><code>.warning.urgent{color:grey}</code> 这样就可以给元素增加样式<code>class=&quot;warning urgent&quot;</code>。元素既紧急又有警告了。<br><code>.warning.help{color:red}</code> 这个选择器只匹配class包含warning、help的元素。</p>
 <p>3.属性选择器<br><code>p[class~=&quot;warning&quot;]{font-weight:bold};</code> 这样就可以选择class属性中包含warning的元素。<br><code>[foo^=&quot;ch&quot;]</code> 选择foo属性值以”ch”开头的所有元素<br><code>[foo$=&quot;le&quot;]</code> 选择foo属性值以”le”结尾的所有元素<br><code>[foo*=&quot;l&quot;]</code> 选择foo属性值包含子串”l”的所有元素<br><code>[lang|=&#39;en&#39;]</code> 选择foo属性值等于en或者以en-开头的元素</p>
-<p>4.伪类选择器<br>静态伪类：第一次显示之后不会再改变文档的样式，例如:link、:visited<br>动态伪类：例如:hover、:active、:focus<br>选择第一个子元素：:first-child来选择元素的第一个子元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">	&lt;p&gt;&lt;/p&gt;</div><div class="line">	&lt;em&gt;&lt;/em&gt;</div><div class="line">	&lt;li&gt;&lt;/li&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>如代码，元素的第一个子元素包括第一个p，第一个em，第一个li。<br>p:first-child{ font-weight:bold;}<br>li:first-child{ text-transform:uppercase;}<br>第一个规则将作为某元素的第一个子元素的所有p元素设置为粗体。<br>第二个规则将作为某元素的第一个子元素额所有li元素变成大写。</p>
+<p>4、选择子元素<br><code>h1&gt;strong {color:red;}</code> 选择h1元素的第一个strong元素。第二个不受影响。</p>
+<p>5、选择相邻兄弟元素<br><code>h1+p{ margin-top:0}</code> 选择紧连在一个h1元素后出现的所有段落,h1要与p元素有共同的父元素。<br>注意：一个选择符只能选择两个相邻兄弟中的第二个元素。<br><code>li+li{font-weight:bold}</code> 会把第二个和第三个li字体变粗。</p>
+<p>6.伪类选择器<br>静态伪类：第一次显示之后不会再改变文档的样式，例如:link、:visited<br>动态伪类：可以根据用户行为改变文档的外观。例如:hover、:active、:focus<br>选择第一个子元素：:first-child来选择元素的第一个子元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">	&lt;p&gt;&lt;/p&gt;</div><div class="line">	&lt;em&gt;&lt;/em&gt;</div><div class="line">	&lt;li&gt;&lt;/li&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>如代码，元素的第一个子元素包括第一个p，第一个em，第一个li。<br>p:first-child{ font-weight:bold;}<br>li:first-child{ text-transform:uppercase;}<br>第一个规则将作为某元素的第一个子元素的所有p元素设置为粗体。<br>第二个规则将作为某元素的第一个子元素的所有li元素变成大写。</p>
 <p>5.伪元素选择器<br>:first-letter{color:red;}  用于设置一个块级元素首字母的样式。<br>:first-line{ color:red;} 用来影响元素中的第一个文本行。</p>
 <p>注意点: :first-letter和:first-line只能运用于标记或者段落之类的块级元素，而不能运用于超链接等行内元素。</p>
+<h5 id="元素继承性"><a href="#元素继承性" class="headerlink" title="元素继承性"></a>元素继承性</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*&#123; color:grey&#125;</div><div class="line">h1&#123; color:black;&#125;</div><div class="line">&lt;h1&gt;market&lt;em&gt;center&lt;/em&gt;&lt;/h1&gt;</div></pre></td></tr></table></figure>
+<p>不仅正常的h1会变成灰色，连em文本也会变成灰色。因为继承的值没有特殊性，甚至连0特殊性都没有。而通配符选择器适用于所有元素，而且有0特殊性。其颜色声明指定的值gray要优先于继承值。</p>
+<h5 id="字体大小和继承"><a href="#字体大小和继承" class="headerlink" title="字体大小和继承"></a>字体大小和继承</h5><p>在CSS中font-size是可以继承的。不过继承的是计算值而不是百分数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">p&#123; font-size:12px;&#125;</div><div class="line">em&#123; font-size:120%;&#125;</div><div class="line">strong&#123;	font-size:135%;&#125;</div><div class="line">&lt;p&gt;我是font-size(12px)&lt;strong&gt;我是font-size(120%)&lt;/strong&gt;&lt;em&gt;我是font-size(135%)&lt;/em&gt;&lt;/p&gt;</div></pre></td></tr></table></figure></p>
+<p>strong元素的大小值就算如下：<br>12px × 120% =14.4px ≈ 14px<br>14.4px × 135% = 19.44px ≈ 19px</p>
+<h5 id="字体变形"><a href="#字体变形" class="headerlink" title="字体变形"></a>字体变形</h5><p>font-varient有两个非继承值:默认值normal和small-caps。<br>normal描述正常文本。small=caps要求使用小型大写字母文本。</p>
+<h5 id="字体匹配的原理"><a href="#字体匹配的原理" class="headerlink" title="字体匹配的原理"></a>字体匹配的原理</h5><p><img src="/img/13.png" alt="字体匹配的原理"></p>
 
           
         
@@ -518,6 +858,8 @@
 <p>在屏幕宽度小于等于400像素的设备上,h1元素的文字颜色就会变成绿色。<br><code>@import url(&quot;phone.css&quot;) screen and (max-width:360px);</code></p>
 <p>CSS的@import指令在当前样式表中按条件引入其他样式表。<br>如上代码会给视口最大宽度为360像素的显示屏设备加载一个名为 phone.css的样式表。<br>切记，使用CSS的@import方式会增加HTTP请求(这会影响加载速度),所以请谨慎使用该方法。</p>
 <p>媒体查询能检测那些特性<br><img src="/img/11.png" alt="这些特性"></p>
+<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。\下载地址是 <a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包（在 Mac App Store中免费下载）的一部分，只能在Mac OS X上使用。<br>一旦安装了 Xcode，你就可以在这个路径下找到模拟器：~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
+<h5 id="阻止移动浏览器自动调整页面大小"><a href="#阻止移动浏览器自动调整页面大小" class="headerlink" title="阻止移动浏览器自动调整页面大小"></a>阻止移动浏览器自动调整页面大小</h5><p><code>&lt;meta&gt;</code>标签还可以控制页面可缩放的范围<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=3, minimum-scale=0.5&quot; /&gt;</code><br>上面的代码允许用户将页面最多放大至设备宽度的3倍，最小压缩至设备宽度的一半。<br><code>user-scalable=no</code>即是禁止缩放</p>
 
           
         
@@ -1300,7 +1642,16 @@
       
         
           
-            <h5 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h5><p>a-行内样式   1000<br>b-ID选择器的数量   100<br>c-类、伪类和属性选择器的数量   10<br>d-标签选择器和伪元素选择器的数量  1  </p>
+            <h5 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h5><p><img src="/img/12.png" alt="css2.1层叠规则"></p>
+<p>说人话：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p&#123; color:grey; !important;&#125;</div><div class="line">&lt;p style=&quot;color:black&quot;&gt;hello&lt;/p&gt;</div></pre></td></tr></table></figure></p>
+<p>如上有!important规则的样式会胜出。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p&#123; color:black;&#125;  /* author&apos;s style sheet */</div><div class="line">p&#123; color:yellow;&#125;  /* reader&apos;s style sheet */</div></pre></td></tr></table></figure></p>
+<p>这种情况下文本为黑色，因为有正常权重的创作人员样式要优先于正常权重的读者样式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p&#123; color:black;!important;&#125;  /* author&apos;s style sheet */</div><div class="line">p&#123; color:yellow;!important;&#125;  /* reader&apos;s style sheet */</div></pre></td></tr></table></figure></p>
+<p>如果都含有!important; 将会是黄色胜出。</p>
+<p>总结一下：<br>在声明权重方面要考虑5级。权重由大到小的顺序依次为：<br>1、读者的重要声明<br>2、创作人员的重要声明<br>3、创作人员的正常声明<br>4、读者的正常声明<br>5、用户代理声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p&#123; color:black;&#125;  /* from imported style sheet */</div><div class="line">p&#123; color:yellow;&#125;  /* rule contained with the document */</div></pre></td></tr></table></figure>
+<p>这种情况下第二个规则会胜过导入的规则，因为第二个规则是文档样式表的一部分。</p>
+<p>css每个选择器都有其特殊性。如果一个元素有两个或者多个冲突的属性声明，那么有最高特殊性的声明就会胜出。</p>
+<p>a-行内样式   1000<br>b-ID选择器的数量   100<br>c-类、伪类和属性选择器的数量   10<br>d-标签选择器和伪元素选择器的数量  1<br>通配选择器对特殊性没有贡献。其特殊性为0。 </p>
 <p><code>value=a*1000+b*100+c*10+d</code></p>
 <table>
 <thead>
@@ -1557,309 +1908,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/30/css字体排印/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/30/css字体排印/" itemprop="url">
-                  css字体排印
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-30T18:12:52+08:00">
-                2016-12-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css揭秘/" itemprop="url" rel="index">
-                    <span itemprop="name">css揭秘</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="字体排印"><a href="#字体排印" class="headerlink" title="字体排印"></a>字体排印</h4><p>1.连字符断行<br>(<a href="http://runjs.cn/code/sdnfbh9a" target="_blank" rel="external">Demo点这里</a>)<br><code>text-align:justify;</code>可以实现两端对齐。但是效果不佳。<br><code>hyphens: auto;</code>可以解决长单词换行时的尴尬问题，使用-链接。<br>使用注意点：在 HTML 标签的lang属性中指定合适的语言，可以通过一些软连字符<code>&amp;shy;</code>来辅助浏览器进行断词<br>但是目前没有任何浏览器支持。<br><img src="/img/9.png" alt="对比图"> </p>
-<hr>
-<p>2.插入换行<br>(<a href="http://runjs.cn/code/fr6ok8nv" target="_blank" rel="external">Demo点这里</a>)<br>有一个 Unicode 字符是专门代表换行符的： 0x000A。<br>在 CSS 中，这个字符可以写作 “\000A” ，或简化为 “\A” 。<br>我们可以用它来作为::after伪元素的内容，并将其添加到需要换行的元素尾部。</p>
-<hr>
-<p>3.文本行的斑马条纹<br>(<a href="http://runjs.cn/code/5parkbev" target="_blank" rel="external">Demo点这里</a>)<br>对背景设置统一的背景图像，再使用渐变生成背景图像。使用em来设定背景尺寸。这样可以适应font-size的变化。<br>注意点：background-size 需要设置为 line-height 的两倍，因为每个背景贴片需要覆盖两行代码。</p>
-<hr>
-<p>4.调整tab的宽度<br><code>pre { tab-size: 2;}</code> 可以调节缩进的宽度</p>
-<hr>
-<p>5.连字<br>(<a href="http://runjs.cn/code/yrzp6npk" target="_blank" rel="external">Demo点这里</a>)<br>font-variant 被升级成了一个简写属性，由很多新的展开式属性组合而成。<br>其中font-variant-ligatures专门用来控制连字效果的开启和关闭。<br>如果要启用所有可能的连字，需要同时指定这三个标识符：<br><code>font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;</code></p>
-<hr>
-<p>6.华丽的&amp;符号<br>通常会在 font-family 声明中同时指定多个字体（即字体队列）。<br>这样，即使我们指定的最优先字体不可用，浏览器还可以回退到其他符合整体设计风格的字体。<br>但是，很多开发者都忽略了一点：这个机制对单个字符来说也是有效的。<br>如果某款字体可用，但仅包括某几个字符，那它就只会用来显示这几个字符；<br>而在显示其他字符时，浏览器就会回退到其他字体。这个规则对本地字体和通过@font-face规则引入的嵌入字体都是有效的。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/14/css视觉效果/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/14/css视觉效果/" itemprop="url">
-                  css视觉效果
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-14T18:12:52+08:00">
-                2016-12-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css揭秘/" itemprop="url" rel="index">
-                    <span itemprop="name">css揭秘</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="单侧投影"><a href="#单侧投影" class="headerlink" title="单侧投影"></a>单侧投影</h4><p>(<a href="http://runjs.cn/code/akcvaqy1" target="_blank" rel="external">Demo点这里</a>)<br>1.单边投影<br>对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?<br>最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。<br>这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。<br>举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。<br>辣么把扩张半径设为负的模糊值不就看不见投影啦。再用偏移量来移动，不就形成单边投影啦。</p>
-<p>2.邻边投影<br>技巧1:我们不应该把投影缩得太小，而是只需把阴影藏进一侧，另一侧自然露出就好。因此，扩张半径不应设为模糊半径的相反值，而应该是这个相反值的一半。<br>技巧2: 需要指定两个偏移量，因为我们希望投影在水平和垂直方向上同时移动。它们的值需要大于或等于模糊半径的一半，因为我们希望把投影藏进另外两条边之内。 </p>
-<p>3.双侧投影<br>因为扩张半径在四个方向上的作用是均等的（也就是说，我们无法指定投影在水平方向上放大，而在垂直方向上缩小）<br>唯一的办法是用两块投影（每边各一块）来达到目的。然后基本上就是把“单侧投影”中的技巧运用两次。</p>
-<hr>
-<h4 id="不规则投影"><a href="#不规则投影" class="headerlink" title="不规则投影"></a>不规则投影</h4><p>(<a href="http://runjs.cn/code/yipe0lk1" target="_blank" rel="external">Demo点这里</a>)<br>1.box-shadow不支持不规则投影。（元素添加了一些伪元素或半透明的装饰之后）具体情形如下：<br>半透明图像、背景图像、或者 border-image （比如老式的金质像框）;<br>元素设置了点状、虚线或半透明的边框，但没有背景（或者当background-clip 不是 border-box 时）;<br>对话气泡，它的小尾巴通常是用伪元素生成的;<br>我们在“切角效果”一节中见过的切角形状;<br>几乎所有的折角效果，包括“折角效果”一节将提到的例子;<br>通过 clip-path 生成的形状，比如“菱形图片”一节中提到的菱形图像。  </p>
-<p>2、解决方案 （使用CSS滤镜）<br>例如drop-shadow() 滤镜可接受的参数基本上跟 box-shadow 属性是一样的，但不包括扩张半径，不包括 inset 关键字，也不支持逗号分割的多层投<br>影语法。<br>举个例子，box-shadow: 2px 2px 10px rgba(0,0,0,.5); 可以这样写  filter: drop-shadow(2px 2px 10px rgba(0,0,0,.5));<br>CSS 滤镜最大的好处：它们可以平稳退化：当浏览器不支持时，不会出现问题，只不过没有任何效果而已。<br>如果你确实需要这个效果在尽可能多的浏览器中显示出来，可以同时附上一个 SVG 滤镜，这样可以得到稍微好一些的浏览器支持度。  </p>
-<hr>
-<h4 id="染色效果"><a href="#染色效果" class="headerlink" title="染色效果"></a>染色效果</h4><p>(<a href="http://runjs.cn/code/5oan2unq" target="_blank" rel="external">Demo点这里</a>)<br>1.使用滤镜<br>sepia()会给图片增加一种降饱和度的橙黄色染色效果，几乎所有像素的色相值会被收敛到 35~40。<br>如果我们想要的主色调的饱和度比这更高，可以用saturate()滤镜来给每个像素提升饱和度。<br>hue-roatate()滤镜，把每个像素的色相以指定的度数进行偏移。为了把原有的色相值40改变为335，需要增加大约295度(335-40)。<br>2.基于混合模式的方案<br>“混合模式”控制了上层元素的颜色与下层颜色进行混合的方式。<br>用它来实现染色效果时，需要用到的混合模式是luminosity。<br>这种luminosity混合模式会保留上层元素的HSL亮度信息，并从它的下层吸取色相和饱和度信息。<br>要对一个元素设置混合模式，有两个属性可以派上用场：<br>mix-blend-mode可以为整个元素设置混合模式，background-blend-mode可以为每层背景单独指定混合模式。<br>使用这种策略有两种选择模式：<br>第一种选择：需要把图片包裹在一个容器中，并把容器的背景色设置为我们想要的主色调。<br>第二种选择：不用图片元素，而是用div元素——把这个元素的第一层背景设置为要染色的图片，并把第二层的背景设置为我们想要的主色调。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1909,7 +1957,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
