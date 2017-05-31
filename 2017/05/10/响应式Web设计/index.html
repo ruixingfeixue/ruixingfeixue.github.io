@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="瑞的指南针">
 <meta property="og:description" content="视口和屏幕尺寸视口和屏幕尺寸不是同一视口是指浏览器窗口内的内容区域，不包含工具栏、标签栏等。也就是网页实际显示的区域。个概念。 屏幕尺寸指的是设备的物理显示区域。需要注意的是有些浏览器调整工具显示的尺寸包含浏览器的其他元素，诸如地址栏、标签栏和搜索栏，而有些工具则不是这样。 媒体查询&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;screen and">
 <meta property="og:image" content="http://yoursite.com/img/11.png">
-<meta property="og:updated_time" content="2017-05-31T10:04:34.049Z">
+<meta property="og:updated_time" content="2017-05-31T10:06:25.450Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="响应式web设计">
 <meta name="twitter:description" content="视口和屏幕尺寸视口和屏幕尺寸不是同一视口是指浏览器窗口内的内容区域，不包含工具栏、标签栏等。也就是网页实际显示的区域。个概念。 屏幕尺寸指的是设备的物理显示区域。需要注意的是有些浏览器调整工具显示的尺寸包含浏览器的其他元素，诸如地址栏、标签栏和搜索栏，而有些工具则不是这样。 媒体查询&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;screen and">
@@ -367,27 +367,27 @@
 <h5 id="阻止移动浏览器自动调整页面大小"><a href="#阻止移动浏览器自动调整页面大小" class="headerlink" title="阻止移动浏览器自动调整页面大小"></a>阻止移动浏览器自动调整页面大小</h5><p><code>&lt;meta&gt;</code>标签还可以控制页面可缩放的范围<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=3, minimum-scale=0.5&quot; /&gt;</code><br>上面的代码允许用户将页面最多放大至设备宽度的3倍，最小压缩至设备宽度的一半。<br><code>user-scalable=no</code>即是禁止缩放</p>
 <h5 id="需要牢记的公式"><a href="#需要牢记的公式" class="headerlink" title="需要牢记的公式"></a>需要牢记的公式</h5><p>目标元素宽度÷上下文元素宽度=百分比宽度</p>
 <h5 id="HTML5的全新语义化元素"><a href="#HTML5的全新语义化元素" class="headerlink" title="HTML5的全新语义化元素"></a>HTML5的全新语义化元素</h5><blockquote>
-<p><nav>元素用来定义文档的主导航区域，其中的链接指向其他页面或当前页面的某些区域。</nav></p>
+<p><code>&lt;nav&gt;</code>元素用来定义文档的主导航区域，其中的链接指向其他页面或当前页面的某些区域。</p>
 </blockquote>
 <hr>
 <blockquote>
-<p><article>元素用来包裹独立的内容片段。<br>当搭建一个页面时，想想你准备放入<article>标签的内容能否作为一个整块而被复制粘贴到另外一个完全不<br>同的网站且能保持完整的意义？<br>另一种办法是，想想包裹在<article>中的内容能否在RSS订阅源中独立成为一篇文章？<br>应该使用<article>标签包裹的内容，最明显的例子就是博客正文。<br>注意，如果出现嵌套的<article>元素，那内层<article>元素内容应该和外层文章内容直接有关。</article></article></article></article></article></article></p>
+<p><code>&lt;article&gt;</code>元素用来包裹独立的内容片段。<br>当搭建一个页面时，想想你准备放入<article>标签的内容能否作为一个整块而被复制粘贴到另外一个完全不<br>同的网站且能保持完整的意义？<br>另一种办法是，想想包裹在<article>中的内容能否在RSS订阅源中独立成为一篇文章？<br>应该使用<article>标签包裹的内容，最明显的例子就是博客正文。<br>注意，如果出现嵌套的<article>元素，那内层<article>元素内容应该和外层文章内容直接有关。</article></article></article></article></article></p>
 </blockquote>
 <hr>
 <blockquote>
-<p><aside>元素用来表示与页面主内容松散相关的内容。在实践中，我经常将其用作侧边栏(当它包含合适的内容时)。<br>另外，引文、广告以及导航元素(如友情链接等)也可以使用它。</aside></p>
+<p><code>&lt;aside&gt;</code>元素用来表示与页面主内容松散相关的内容。在实践中，我经常将其用作侧边栏(当它包含合适的内容时)。<br>另外，引文、广告以及导航元素(如友情链接等)也可以使用它。</p>
 </blockquote>
 <hr>
 <blockquote>
-<p><hgroup>如果页面中有一组使用<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code>、<code>&lt;h3&gt;</code>等标签的标题、标语和副标题，则可以考虑使用<hgroup>将它们包裹起来。</hgroup></hgroup></p>
+<p><code>&lt;hgroup&gt;</code>如果页面中有一组使用<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code>、<code>&lt;h3&gt;</code>等标签的标题、标语和副标题，则可以考虑使用<code>&lt;hgroup&gt;</code>将它们包裹起来。</p>
 </blockquote>
 <hr>
 <blockquote>
-<p><header>元素不计入大纲结构，所以不能用它来划分内容结构，而是应该用它来包含对区域内容的介绍说明。<br>实际使用中，<header>可用作网站头部的“刊头”区域，也可用作对其他内容如<article>元素的简要介绍。</article></header></header></p>
+<p><code>&lt;header&gt;</code>元素不计入大纲结构，所以不能用它来划分内容结构，而是应该用它来包含对区域内容的介绍说明。<br>实际使用中，<code>&lt;header&gt;</code>可用作网站头部的“刊头”区域，也可用作对其他内容如<code>&lt;article&gt;</code>元素的简要介绍。</p>
 </blockquote>
 <hr>
 <blockquote>
-<p><footer>元素也不计入大纲结构，所以也不能用于划分内容结构。<br>应该用它来包含其所在区域的辅助信息。例如可以用它包含一组指向其他页面的超链接，或者用它包含版权信息。<br>例如博客网站的页脚可以用它，同时博客正文<article>元素内的文脚也可以用它。<br>不过规范指出，博文作者的联系信息应该使用<address>元素来包裹。</address></article></footer></p>
+<p><code>&lt;footer&gt;</code>元素也不计入大纲结构，所以也不能用于划分内容结构。<br>应该用它来包含其所在区域的辅助信息。例如可以用它包含一组指向其他页面的超链接，或者用它包含版权信息。<br>例如博客网站的页脚可以用它，同时博客正文<code>&lt;article&gt;</code>元素内的文脚也可以用它。<br>不过规范指出，博文作者的联系信息应该使用<code>&lt;address&gt;</code>元素来包裹。</p>
 </blockquote>
 
       
