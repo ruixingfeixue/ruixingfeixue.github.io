@@ -542,8 +542,10 @@
 <li>vertical-align:sub<br>声明会使一个元素变成下标，这意味着其基线相对于其父元素的基线降低。<br>规范并没有规定降低的距离，所以对于不同的用户代理，可能距离会有所不同。</li>
 <li>vertical-align:super<br>声明会使一个元素变成上标，这意味着其基线相对于其父元素的基线升高。<br>规范并没有规定升高的距离，所以对于不同的用户代理，可能距离会有所不同。<br>注意：sub和super不会改变元素的字体大小。所以下标和上标文本不会变小或变大。所有文本都与父元素的文本大小相同。</li>
 <li>vertical-align:bottom<br>将元素行内框的底端与行框的底端对齐。</li>
-<li>vertical-align:middle<br>会把行内元素框的中点与父元素基线上方0.5ex处的一个点对齐。这里的1ex相对于父元素的font-size定义。<br><a href="http://www.zhangxinxu.com/wordpress/2010/05/%E6%88%91%E5%AF%B9css-vertical-align%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%86%E8%A7%A3%E4%B8%8E%E8%AE%A4%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/" target="_blank" rel="external">具体的用法点这里</a></li>
+<li>vertical-align:middle<br>会把行内元素框的中点与父元素基线上方0.5ex处的一个点对齐。这里的1ex相对于父元素的font-size定义。</li>
+<li>vertical-align:top<br>将元素行内框的顶端与包含该元素的行框的顶端对齐。<br>7、vertical-align:text-top<br>将元素行内框的顶端与包含该元素的内容区的底端对齐。<br>8、<code>&lt;percentage&gt;</code><br>将元素上移或下移一定距离，这个距离由相对于元素line-height值指定的一个百分数确定。</li>
 </ol>
+<p><a href="http://www.zhangxinxu.com/wordpress/2010/05/%E6%88%91%E5%AF%B9css-vertical-align%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%86%E8%A7%A3%E4%B8%8E%E8%AE%A4%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/" target="_blank" rel="external">具体的用法点这里</a></p>
 <h5 id="字间隔"><a href="#字间隔" class="headerlink" title="字间隔"></a>字间隔</h5><p>word-spacing用于修改字间间隔。可能会受text-align影响。</p>
 <h5 id="字母间隔"><a href="#字母间隔" class="headerlink" title="字母间隔"></a>字母间隔</h5><p>letter-spacing用于修改字母间隔。不会受text-align影响。</p>
 <h5 id="处理空白符"><a href="#处理空白符" class="headerlink" title="处理空白符"></a>处理空白符</h5><p>white-space可以影响浏览器处理字之间和文本行之间的空白符的方式。<br>默认的xhtml处理会把所有的空白符合并为一个空格。<br><img src="/img/16.png" alt="white-space"></p>
@@ -750,6 +752,149 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/html5标记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/10/html5标记/" itemprop="url">
+                  html5标记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5实战/" itemprop="url" rel="index">
+                    <span itemprop="name">html5实战</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/响应式Web设计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -858,151 +1003,8 @@
 <p>在屏幕宽度小于等于400像素的设备上,h1元素的文字颜色就会变成绿色。<br><code>@import url(&quot;phone.css&quot;) screen and (max-width:360px);</code></p>
 <p>CSS的@import指令在当前样式表中按条件引入其他样式表。<br>如上代码会给视口最大宽度为360像素的显示屏设备加载一个名为 phone.css的样式表。<br>切记，使用CSS的@import方式会增加HTTP请求(这会影响加载速度),所以请谨慎使用该方法。</p>
 <p>媒体查询能检测那些特性<br><img src="/img/11.png" alt="这些特性"></p>
-<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。\下载地址是 <a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包（在 Mac App Store中免费下载）的一部分，只能在Mac OS X上使用。<br>一旦安装了 Xcode，你就可以在这个路径下找到模拟器：~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
+<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。<br>下载地址是 <a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包（在 Mac App Store中免费下载）的一部分，只能在Mac OS X上使用。<br>一旦安装了 Xcode，你就可以在这个路径下找到模拟器：~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
 <h5 id="阻止移动浏览器自动调整页面大小"><a href="#阻止移动浏览器自动调整页面大小" class="headerlink" title="阻止移动浏览器自动调整页面大小"></a>阻止移动浏览器自动调整页面大小</h5><p><code>&lt;meta&gt;</code>标签还可以控制页面可缩放的范围<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=3, minimum-scale=0.5&quot; /&gt;</code><br>上面的代码允许用户将页面最多放大至设备宽度的3倍，最小压缩至设备宽度的一半。<br><code>user-scalable=no</code>即是禁止缩放</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/html5标记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/10/html5标记/" itemprop="url">
-                  html5标记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/html5实战/" itemprop="url" rel="index">
-                    <span itemprop="name">html5实战</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
 
           
         
