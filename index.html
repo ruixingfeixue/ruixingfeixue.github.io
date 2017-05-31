@@ -752,6 +752,149 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/html5标记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/10/html5标记/" itemprop="url">
+                  html5标记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5实战/" itemprop="url" rel="index">
+                    <span itemprop="name">html5实战</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/响应式Web设计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -858,153 +1001,12 @@
 <p>有两点需要注意。<br>第一，媒体查询之间使用逗号分隔。<br>第二，你会注意到在projection之后，没有and，也没有任何特性/值的组合。<br>没有后续表达式，意味着只要是projection就满足条件。本例中，样式会应用于所有的投影仪。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media screen and (max-device-width: 400px) &#123;</div><div class="line">	h1 &#123; color: green &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>在屏幕宽度小于等于400像素的设备上,h1元素的文字颜色就会变成绿色。<br><code>@import url(&quot;phone.css&quot;) screen and (max-width:360px);</code></p>
-<p>CSS的@import指令在当前样式表中按条件引入其他样式表。<br>如上代码会给视口最大宽度为360像素的显示屏设备加载一个名为 phone.css的样式表。<br>切记，使用CSS的@import方式会增加HTTP请求(这会影响加载速度),所以请谨慎使用该方法。</p>
+<p>CSS的@import指令在当前样式表中按条件引入其他样式表。<br>如上代码会给视口最大宽度为360像素的显示屏设备加载一个名为phone.css的样式表。<br>切记，使用CSS的@import方式会增加HTTP请求(这会影响加载速度),所以请谨慎使用该方法。</p>
 <p>媒体查询能检测那些特性<br><img src="/img/11.png" alt="这些特性"></p>
-<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。<br>下载地址是<a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包(在MacAppStore中免费下载)的一部分，只能在MacOSX上使用。<br>一旦安装了Xcode,你就可以在这个路径下找到模拟器：~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
+<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。<br>下载地址是<a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包在MacAppStore中免费下载)的一部分，只能在MacOSX上使用。<br>一旦安装了Xcode你就可以在这个路径下找到模拟器：~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
 <h5 id="阻止移动浏览器自动调整页面大小"><a href="#阻止移动浏览器自动调整页面大小" class="headerlink" title="阻止移动浏览器自动调整页面大小"></a>阻止移动浏览器自动调整页面大小</h5><p><code>&lt;meta&gt;</code>标签还可以控制页面可缩放的范围<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=3, minimum-scale=0.5&quot; /&gt;</code><br>上面的代码允许用户将页面最多放大至设备宽度的3倍，最小压缩至设备宽度的一半。<br><code>user-scalable=no</code>即是禁止缩放</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/html5标记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/10/html5标记/" itemprop="url">
-                  html5标记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/html5实战/" itemprop="url" rel="index">
-                    <span itemprop="name">html5实战</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
+<h5 id="需要牢记的公式"><a href="#需要牢记的公式" class="headerlink" title="需要牢记的公式"></a>需要牢记的公式</h5><p>目标元素宽度÷上下文元素宽度=百分比宽度</p>
+<h5 id="HTML5的全新语义化元素"><a href="#HTML5的全新语义化元素" class="headerlink" title="HTML5的全新语义化元素"></a>HTML5的全新语义化元素</h5><p><code>&lt;nav&gt;</code>元素用来定义文档的主导航区域，其中的链接指向其他页面或当前页面的某些区域。<br><code>&lt;article&gt;</code>元素用来包裹独立的内容片段。<br>当搭建一个页面时，想想你准备放入<code>&lt;article&gt;</code>标签的内容能否作为一个整块而被复制粘贴到另外一个完全不<br>同的网站且能保持完整的意义？<br>另一种办法是，想想包裹在<code>&lt;article&gt;</code>中的内容能否在RSS订阅源中独立成为一篇文章？<br>应该使用<code>&lt;article&gt;</code>标签包裹的内容，最明显的例子就是博客正文。<br>注意，如果出现嵌套的<code>&lt;article&gt;</code>元素，那内层的<code>&lt;article&gt;</code>元素内容<br>应该和外层文章内容直接有关<br><code>&lt;aside&gt;</code>元素用来表示与页面主内容松散相关的内容。在实践中，我经常将其用作侧边栏(当它包含合适的内容时)。<br>另外，引文、广告以及导航元素(如友情链接等)也可以使用它。<br><code>&lt;hgroup&gt;</code>如果页面中有一组使用<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code>、<code>&lt;h3&gt;</code>等标签的标题、标语和副标题，则可以考虑使用<code>&lt;hgroup&gt;</code>将它们包裹起来。<br><code>&lt;header&gt;</code>元素不计入大纲结构，所以不能用它来划分内容结构，而是应该用它来包含对区域内容的介绍说明。<br>实际使用中，<code>&lt;header&gt;</code>可用作网站头部的“刊头”区域，也可用作对其他内容如<code>&lt;article&gt;</code>元素的简要介绍。<br><code>&lt;footer&gt;</code>元素也不计入大纲结构，所以也不能用于划分内容结构。<br>应该用它来包含其所在区域的辅助信息。例如可以用它包含一组指向其他页面的超链接，或者用它包含版权信息。<br>例如博客网站的页脚可以用它，同时博客正文<code>&lt;article&gt;</code>元素内的文脚也可以用它。<br>不过规范指出，博文作者的联系信息应该使用<code>&lt;address&gt;</code>元素来包裹。</p>
 
           
         
