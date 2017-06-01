@@ -258,6 +258,162 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/01/离线web应用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/01/离线web应用/" itemprop="url">
+                  离线web应用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-01T15:05:22+08:00">
+                2017-06-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/响应式web设计/" itemprop="url" rel="index">
+                    <span itemprop="name">响应式web设计</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="离线Web应用概述"><a href="#离线Web应用概述" class="headerlink" title="离线Web应用概述"></a>离线Web应用概述</h5><p>离线Web应用的运行机制是每个需要离线使用的网页都指定一个后缀名为.manifest的文本文件。<br>这个文本文件罗列了该网页离线使用时所需的所有资源文件(HTML、图片JavaScript 等等)。<br>支持离线Web应用的浏览器会自动读取.manifest 文件，下载文件中所罗列的资源文件，并将其缓存在本地以备网络断开时使用。</p>
+<p>在HTML的开始标签中，我们指定一个.manifest 文件：<br><code>&lt;html lang=&quot;en&quot; manifest=&quot;/offline.manifest&quot;</code> 该文件的文件名随意，但后缀名建议使用.manifest。<br>你必须在每一个准备离线使用的页面的HTML标签中都追加 manifest=”/offline.manifest”属性。<br>如果使用的是 Apache 服务器，你可能还需要修改一下.htaccess 文件，追加一行代码：<br><code>AddType text/cache-manifest .manifest</code><br>这样就保证了.manifest 文件拥有正确的 MIME 类型，即 text/cache-manifest。<br>在.htaccess 文件中还可以加入以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;Files offline.manifest&gt;</div><div class="line">ExpiresActive On</div><div class="line">ExpiresDefault &quot;access&quot;</div><div class="line">&lt;/Files&gt;</div></pre></td></tr></table></figure></p>
+<p>添加上面这几行代码，可以阻止浏览器缓存缓存文件。你没看错。<br>因为 offline.manifest是一个静态文件，浏览器默认就会缓存offline.manifest文件。<br>所以上面这几行代码就是让服务器告诉浏览器不要这么干！</p>
+<hr>
+<h5 id="理解manifest文件"><a href="#理解manifest文件" class="headerlink" title="理解manifest文件"></a>理解manifest文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">CACHE MANIFEST</div><div class="line">#v1</div><div class="line">CACHE:</div><div class="line">basic_page_layout_ch4.html</div><div class="line">css/main.css</div><div class="line">img/atwiNavBg.png</div><div class="line">img/kingHong.jpg</div><div class="line">img/midnightRun.jpg</div><div class="line">img/moulinRouge.jpg</div><div class="line">img/oscar.png</div><div class="line">img/wyattEarp.jpg</div><div class="line">img/buntingSlice3Invert.png</div><div class="line">img/buntingSlice3.png</div><div class="line">NETWORK:</div><div class="line">*</div><div class="line">FALLBACK:</div><div class="line">//offline.html</div></pre></td></tr></table></figure>
+<p>manifest文件必须以CACHE MANIFEST开头。<br>第二行就是一句注释，注明了manifest文件的版本号。</p>
+<p>CACHE:部分罗列了所有离线使用所需的文件。<br>这些文件的路径都是相对 offline.manifest而言的，所以文件路径可能需要根据情况稍作修改。使用绝对路径也是可以的。</p>
+<p>NETWORK:部分罗列了所有不需要被缓存的文件。你可以将其看成是一个“在线白名单”。<br>此处罗列的文件在网络畅通的情况下都会直接跳过缓存。<br>如果你想网站内容在网络畅通的情况下及时更新（而不是仅在离线缓存中查找），可以在此处使用*。星号被称为在线白名单通配符。</p>
+<p>FALLBACK:部分使用/字符定义了一个 URL模板。它的作用是访问每个页面时都会问“缓存<br>中有这个页面吗？”，如果有则显示缓存页面，如果没有则显示指定的 offline.html 文件。</p>
+<hr>
+<h5 id="页面被自动加载到离线缓存"><a href="#页面被自动加载到离线缓存" class="headerlink" title="页面被自动加载到离线缓存"></a>页面被自动加载到离线缓存</h5><p>任何指定了离线manifest文件的页面(就是在标签中追加了manifest=”/offline.manifest”的页面)在被用户访问时都会被自动加入到本地缓存。<br>浏览器会缓存用户访问过的每一个网页以确保这些网页在离线状态下仍可访问。<br>简化的manifest文件如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">CACHE MANIFEST</div><div class="line"># Cache Manifest v1</div><div class="line">FALLBACK:</div><div class="line">//offline.html</div><div class="line">NETWORK:</div><div class="line">*</div></pre></td></tr></table></figure></p>
+<p>选择使用这个方法时有一点需要注意，这种方法只会下载和缓存用户访问的 HTML 页面，<br>不会缓存页面内引入的图片、 JavaScript 或者其他资源文件。<br>如果这些资源文件是必需的，那么请按照上节中的方法在CACHE:部分专门声明这类文件。</p>
+<hr>
+<h5 id="版本注释的用途"><a href="#版本注释的用途" class="headerlink" title="版本注释的用途"></a>版本注释的用途</h5><p>对网站内容或任何资源文件做了修改之后，你必须得对offline.manifest文件也做点修改并将其重新上传服务器。<br>这样就能让服务器为浏览器提供新版本文件，而浏览器则会下载该新版本文件并再次触发离线存储进程。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/27/css基本视觉格式化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -814,8 +970,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css/" itemprop="url" rel="index">
-                    <span itemprop="name">css</span>
+                  <a href="/categories/响应式web设计/" itemprop="url" rel="index">
+                    <span itemprop="name">响应式web设计</span>
                   </a>
                 </span>
 
@@ -860,7 +1016,7 @@
 <p>在屏幕宽度小于等于400像素的设备上,h1元素的文字颜色就会变成绿色。<br><code>@import url(&quot;phone.css&quot;) screen and (max-width:360px);</code></p>
 <p>CSS的@import指令在当前样式表中按条件引入其他样式表。<br>如上代码会给视口最大宽度为360像素的显示屏设备加载一个名为phone.css的样式表。<br>切记，使用CSS的@import方式会增加HTTP请求(这会影响加载速度),所以请谨慎使用该方法。</p>
 <p>媒体查询能检测那些特性<br><img src="/img/11.png" alt="这些特性"></p>
-<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。<br>下载地址是<a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包在MacAppStore中免费下载)的一部分，只能在MacOSX上使用。<br>一旦安装了Xcode你就可以在这个路径下找到模拟器：~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
+<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。<br>下载地址是<a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包在MacAppStore中免费下载)的一部分，只能在MacOSX上使用。<br>一旦安装了Xcode你就可以在这个路径下找到模拟器：<br>~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
 <h5 id="阻止移动浏览器自动调整页面大小"><a href="#阻止移动浏览器自动调整页面大小" class="headerlink" title="阻止移动浏览器自动调整页面大小"></a>阻止移动浏览器自动调整页面大小</h5><p><code>&lt;meta&gt;</code>标签还可以控制页面可缩放的范围<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=3, minimum-scale=0.5&quot; /&gt;</code><br>上面的代码允许用户将页面最多放大至设备宽度的3倍，最小压缩至设备宽度的一半。<br><code>user-scalable=no</code>即是禁止缩放</p>
 <h5 id="需要牢记的公式"><a href="#需要牢记的公式" class="headerlink" title="需要牢记的公式"></a>需要牢记的公式</h5><p>目标元素宽度÷上下文元素宽度=百分比宽度</p>
 <h5 id="HTML5的全新语义化元素"><a href="#HTML5的全新语义化元素" class="headerlink" title="HTML5的全新语义化元素"></a>HTML5的全新语义化元素</h5><blockquote>
@@ -890,6 +1046,36 @@
 <blockquote>
 <p><code>&lt;address&gt;</code>元素用于明确地标注离其最近的<code>&lt;article&gt;</code>或<code>&lt;body&gt;</code>祖先元素的联系信息。<br>为避免产生混淆，请记住<code>&lt;address&gt;</code>中一般不放具体的邮政地址，除非相应内容确实需要联系地址。<br>而邮政地址和其他可能会改变的联系信息应该使用<code>&lt;p&gt;</code>标签来包裹。</p>
 </blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;b&gt;</code>过去，人们通常利用<code>&lt;b&gt;</code>元素为文本添加样式，但它的实际用途其实是“给文本加粗”。<br>不过现在你可以正式地将其仅用作样式钩子了，因为现在 HTML5 标准对<b>的定义是：<br>一小段文本，纯粹为了吸引人的注意，除此之外不传达任何重要性，也不暗示其他语态或语气，<br>如文档摘要中的关键词、评论中的产品名称、交互式文本软件中的可操作单词，或者文章的导语。</b></p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;em&gt;</code>强调内容中的重点。除非你确实想强调标签中的内容，否则的话可以考虑使用<code>&lt;b&gt;</code>标签或者可以的话使<br>用<code>&lt;i&gt;</code>标签。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;i&gt;</code>一小段有不同语态或语气的文字，或者是样子上与普通文章有所差异以便标明不同特点的文字。</p>
+</blockquote>
+<h5 id="遵循WAI-ARIA实现无障碍站点"><a href="#遵循WAI-ARIA实现无障碍站点" class="headerlink" title="遵循WAI-ARIA实现无障碍站点"></a>遵循WAI-ARIA实现无障碍站点</h5><p>WAI-ARIA是Web Accessibility Initiative - Accessible Rich Internet Applications的缩写，<br>指无障碍网页应用技术，它主要解决一个问题：让残障人士能无障碍地访问网页上的动态内容。<br>我们可以让导航区域在支持无障碍网页应用技术的屏幕阅读器上轻松地定位，<br>只需为其追加一个地标角色属性 role 即可，如下面的代码片段所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;nav role=&quot;navigation&quot;&gt;</div><div class="line">&lt;ul&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Why?&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Synopsis&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Stills/Photos&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Videos/clips&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Quotes&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Quiz&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">&lt;/nav&gt;</div></pre></td></tr></table></figure></p>
+<p>够简单吧？针对文档结构的各部分分别有如下的地标角色。</p>
+<ul>
+<li>application：用来定义用作网页应用的区域。</li>
+<li>banner：用来定义一个站点级别（而不是某个特定文档的）的区域。如网站的头部和logo。</li>
+<li>complementary：用来定义一个对页面主要区域进行补充说明的区域。<br>在And thewinner isn’t…这个网站中,UNSUNG HEROES和OVERHYPED NONSENSE区域就可以定义为complementary。</li>
+<li>contentinfo：用来定义与页面主要内容相关的信息区域。例如页脚的网站版权信息区域。</li>
+<li>form：你猜都能猜到，定义表单！但注意，如果表单用于搜索，则请使用search来替代。</li>
+<li>main：定义页面的主体内容。</li>
+<li>navigation：用来定义链向当前文档或相关文档的导航链接。</li>
+<li>search：用来定义一个用于搜索的区域。</li>
+</ul>
+<p>为使用了无障碍技术的元素设置样式<br>和其他属性一样，可以直接使用属性选择器来为其设置样式。如，使用nav[role=”navigation”] {}可以为导航区域设置样式。</p>
+<h5 id="使用非可视桌面阅读器（NVDA）免费测试网站可访问性"><a href="#使用非可视桌面阅读器（NVDA）免费测试网站可访问性" class="headerlink" title="使用非可视桌面阅读器（NVDA）免费测试网站可访问性"></a>使用非可视桌面阅读器（NVDA）免费测试网站可访问性</h5><p>如果你是在 Windows 平台上开发且想使用屏幕阅读器测试网站的可访问性，可以免费使用 NVDA。<br>软件的官方地址如下：<a href="http://www.nvdaproject.org/。" target="_blank" rel="external">http://www.nvdaproject.org/。</a></p>
+<h5 id="提供备用的媒体源文件"><a href="#提供备用的媒体源文件" class="headerlink" title="提供备用的媒体源文件"></a>提供备用的媒体源文件</h5><p>最初的HTML5规范呼吁所有浏览器内置支持使用Ogg格式直接播放视频或音频(无需插件)<br>但是由于HTML5工作组的内部争议，曾经作为基线标准的支持Ogg(包括 Theora video和Vorbis audio)的主张<br>在最近更新的HTML5规范中被放弃。因此目前的情况是，一些浏览器支持某一套视频和音频文件格式，<br>而另一些浏览器则支持其他格式。例如Safari只允许在<code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>元素中使用MP4/H.264/AAC媒体文件，<br>而Firefox和Opera则只支持Ogg和WebM。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;video width=&quot;640&quot; height=&quot;480&quot; controls autoplay preload=&quot;auto&quot; loop</div><div class="line">poster=&quot;myVideoPoster.jpg&quot;&gt;</div><div class="line">&lt;source src=&quot;video/myVideo.ogv&quot; type=&quot;video/ogg&quot;&gt;</div><div class="line">&lt;source src=&quot;video/myVideo.mp4&quot; type=&quot;video/mp4&quot;&gt;</div><div class="line">What, do you mean you don&apos;t understand HTML5?</div><div class="line">&lt;/video&gt;</div></pre></td></tr></table></figure></p>
+<p>如果浏览器支持 Ogg 格式，则使用第一个文件；否则它会继续往下解析下一个<code>&lt;source&gt;</code>标签。</p>
+<p><code>&lt;audio&gt;</code>标签的用法与<code>&lt;video&gt;</code>基本一致，除了width、height和poster之外其他属性基本相同。<br>你甚至可以将<code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>标签互换使用。两者之间的最大差别就是<code>&lt;audio&gt;</code>没有可视内容的播放区域。</p>
+<h5 id="响应式视频"><a href="#响应式视频" class="headerlink" title="响应式视频"></a>响应式视频</h5><p>对于HTML5式嵌入视频，修正方法很简单。<br>只需删除视频标签中的height和width属性(如删除width=”640” height=”480”)，<br>然后在CSS中追加如下代码：<code>video { max-width: 100%; height: auto; }</code><br>这种方法对本页面中的视频文件很有用，但它不能解决使用iframe嵌入的视频的响应问题。<br>可以使用一个名为FitVids的jQuery小插件。</p>
 
           
         
@@ -1781,163 +1967,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/css用户体验/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/05/css用户体验/" itemprop="url">
-                  css用户体验
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-05T18:12:52+08:00">
-                2017-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css揭秘/" itemprop="url" rel="index">
-                    <span itemprop="name">css揭秘</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h4><h5 id="选用合适的鼠标光标"><a href="#选用合适的鼠标光标" class="headerlink" title="选用合适的鼠标光标"></a>选用合适的鼠标光标</h5><p>(<a href="http://runjs.cn/code/bic2mi2i" target="_blank" rel="external">Demo点这里</a>) </p>
-<p>CSS3光标 VS CSS2.1光标<br><img src="/img/10.png" alt="光标"></p>
-<p>cell光标，它用于提示当前位置有一个或一组单元格可以被选中。<br>not-allowed光标，它用于提示某个控件因为某些原因而变得无法交互(即控件已被禁用)</p>
-<hr>
-<h5 id="扩大可点击区域"><a href="#扩大可点击区域" class="headerlink" title="扩大可点击区域"></a>扩大可点击区域</h5><p>(<a href="http://runjs.cn/code/b78sk8qf" target="_blank" rel="external">Demo点这里</a>)<br>想在按钮四周扩大点击范围<br>方式一：为它设置一圈透明边框，因为鼠标对元素边框的交互也会触发鼠标事件。<br>方式二：使用伪元素来扩大范围。</p>
-<h5 id="自定义复选框"><a href="#自定义复选框" class="headerlink" title="自定义复选框"></a>自定义复选框</h5><p>(<a href="http://runjs.cn/code/ozk7oto8" target="_blank" rel="external">Demo点这里</a>)<br>替换元素： 据CSS2.1规范所述：“替换元素的特征在于，其内容超出了CSS格式化模型的范畴，比如图片、嵌入的文档或小应用程序等。”。<br>原则上我们无法为替换元素添加生成性内容，尽管某些浏览器可能会允许这样做。</p>
-<p>由于label不是复选框那样的替换元素，我们可以为它添加生成性内容（伪元素），并基于复选框的状态来为其设置样式。<br>然后，就可以把真正的复选框隐藏起来（但不能把它从tab键切换焦点的队列中完全删除），再把生成性内容美化一番，用来顶替原来的复选框！</p>
-<p>这个创意的名字叫做“复选框hack”</p>
-<h5 id="开关式按钮"><a href="#开关式按钮" class="headerlink" title="开关式按钮"></a>开关式按钮</h5><p>(<a href="http://runjs.cn/code/jbs6uzgz" target="_blank" rel="external">Demo点这里</a>)<br>同样使用“复选框hack”的技巧<br>可以用来切换某个选项的开关状态：启用时，它是被按下的状态；停用时，它就是浮起的状态。<br>在使用开关式按钮时仍需慎重。在绝大多数场景下，开关式按钮对可用性有负面作用，<br>因为它们很容易与普通按钮混淆，让人误以为按下它会触发某个动作。</p>
-<h5 id="通过阴影来弱化背景"><a href="#通过阴影来弱化背景" class="headerlink" title="通过阴影来弱化背景"></a>通过阴影来弱化背景</h5><p>一、box-shadow方案<br>(<a href="http://runjs.cn/code/mzigb7zs" target="_blank" rel="external">Demo点这里</a>)<br>使用大外延值实现 <code>box-shadow: 0 0 0 999px rgba(0,0,0,.8);</code><br>这个初步的解决方案有一个明显的问题，就是它无法在较大的屏幕分辨率（&gt;2000px）下正常工作。<br>视口单位: vmax。1vmax相当1vw和1vh两者中的较大值。<br>100vw等于整个视口的宽度，100vh就是视口的高度。因此，满足我们需求的最小值就是50vmax 。<br>由于投影是同时向四个方向扩展的，这个遮罩层的最终尺寸将是100vmax 加上元素本身的尺寸。<br>酱汁：<code>box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);</code></p>
-<p>缺点：<br>1.由于遮罩层的尺寸是与视口相关，而不是与页面相关的，当我们滚动页面时，遮罩层的边缘就露出来了，<br>除非给它加上 position: fixed;这个样式，或者页面并没有长到需要滚动的程度。<br>此外，由于页面很可能真的很长，为了规避这个缺陷而扩大投影的扩张半径就不太明智了。<br>相反，我推荐有限度地应用这个技巧，比如配合固定定位来使用，或者当页面没有滚动条时再用。<br>2.当使用一个独立的元素（或伪元素）来实现遮罩层时，这个遮罩层不仅可以从视觉上把用户的注意力引导到关键元素上，<br>还可以防止用户的鼠标与页面的其他部分发生交互，因为遮罩层会捕获所有指针事件。<br>box-shadow 并没有这种能力，因此它只能在视觉上起到引导注意力的作用，却无法阻止鼠标交互。<br>这一点是否可以接受，取决于你的具体需求。</p>
-<p>二、backdrop方案<br>(<a href="http://runjs.cn/code/t6syixt3" target="_blank" rel="external">Demo点这里</a>)<br>如果你想引导用户关注的元素就是一个模态的<code>&lt;dialog&gt;</code>元素<br>（<code>&lt;dialog&gt;</code>元素可以由它的 showModal()方法显示出来），<br>那么根据浏览器的默认样式，它会自带一个遮罩层。<br>借助 ::backdrop伪元素，这个原生的遮罩层也是可以设置样式的，比如可以把它变得更暗一些。</p>
-<hr>
-<h5 id="通过模糊来弱化背景"><a href="#通过模糊来弱化背景" class="headerlink" title="通过模糊来弱化背景"></a>通过模糊来弱化背景</h5><p>(<a href="http://runjs.cn/code/eyxhobws" target="_blank" rel="external">Demo点这里</a>)<br>解决方案：用一个html元素把页面上除了关键元素之外的一切都包裹起来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;main&gt;I&apos;m groot&lt;/main&gt;</div><div class="line">&lt;dialog&gt;</div><div class="line">	I&apos;m a dialog. Click on me to dismiss.</div><div class="line">&lt;/dialog&gt;</div><div class="line">&lt;!-- 其他对话框都写在这里 --&gt;</div></pre></td></tr></table></figure></p>
-<p>每当弹出一个对话框，都需要给<code>&lt;main&gt;</code>元素增加一个类，以便对它应用模糊滤镜。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">main.de-emphasized &#123;</div><div class="line">	filter: blur(5px);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1987,7 +2016,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1998,7 +2027,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

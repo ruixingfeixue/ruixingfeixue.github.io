@@ -258,6 +258,163 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/css用户体验/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/05/css用户体验/" itemprop="url">
+                  css用户体验
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-05T18:12:52+08:00">
+                2017-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css揭秘/" itemprop="url" rel="index">
+                    <span itemprop="name">css揭秘</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h4><h5 id="选用合适的鼠标光标"><a href="#选用合适的鼠标光标" class="headerlink" title="选用合适的鼠标光标"></a>选用合适的鼠标光标</h5><p>(<a href="http://runjs.cn/code/bic2mi2i" target="_blank" rel="external">Demo点这里</a>) </p>
+<p>CSS3光标 VS CSS2.1光标<br><img src="/img/10.png" alt="光标"></p>
+<p>cell光标，它用于提示当前位置有一个或一组单元格可以被选中。<br>not-allowed光标，它用于提示某个控件因为某些原因而变得无法交互(即控件已被禁用)</p>
+<hr>
+<h5 id="扩大可点击区域"><a href="#扩大可点击区域" class="headerlink" title="扩大可点击区域"></a>扩大可点击区域</h5><p>(<a href="http://runjs.cn/code/b78sk8qf" target="_blank" rel="external">Demo点这里</a>)<br>想在按钮四周扩大点击范围<br>方式一：为它设置一圈透明边框，因为鼠标对元素边框的交互也会触发鼠标事件。<br>方式二：使用伪元素来扩大范围。</p>
+<h5 id="自定义复选框"><a href="#自定义复选框" class="headerlink" title="自定义复选框"></a>自定义复选框</h5><p>(<a href="http://runjs.cn/code/ozk7oto8" target="_blank" rel="external">Demo点这里</a>)<br>替换元素： 据CSS2.1规范所述：“替换元素的特征在于，其内容超出了CSS格式化模型的范畴，比如图片、嵌入的文档或小应用程序等。”。<br>原则上我们无法为替换元素添加生成性内容，尽管某些浏览器可能会允许这样做。</p>
+<p>由于label不是复选框那样的替换元素，我们可以为它添加生成性内容（伪元素），并基于复选框的状态来为其设置样式。<br>然后，就可以把真正的复选框隐藏起来（但不能把它从tab键切换焦点的队列中完全删除），再把生成性内容美化一番，用来顶替原来的复选框！</p>
+<p>这个创意的名字叫做“复选框hack”</p>
+<h5 id="开关式按钮"><a href="#开关式按钮" class="headerlink" title="开关式按钮"></a>开关式按钮</h5><p>(<a href="http://runjs.cn/code/jbs6uzgz" target="_blank" rel="external">Demo点这里</a>)<br>同样使用“复选框hack”的技巧<br>可以用来切换某个选项的开关状态：启用时，它是被按下的状态；停用时，它就是浮起的状态。<br>在使用开关式按钮时仍需慎重。在绝大多数场景下，开关式按钮对可用性有负面作用，<br>因为它们很容易与普通按钮混淆，让人误以为按下它会触发某个动作。</p>
+<h5 id="通过阴影来弱化背景"><a href="#通过阴影来弱化背景" class="headerlink" title="通过阴影来弱化背景"></a>通过阴影来弱化背景</h5><p>一、box-shadow方案<br>(<a href="http://runjs.cn/code/mzigb7zs" target="_blank" rel="external">Demo点这里</a>)<br>使用大外延值实现 <code>box-shadow: 0 0 0 999px rgba(0,0,0,.8);</code><br>这个初步的解决方案有一个明显的问题，就是它无法在较大的屏幕分辨率（&gt;2000px）下正常工作。<br>视口单位: vmax。1vmax相当1vw和1vh两者中的较大值。<br>100vw等于整个视口的宽度，100vh就是视口的高度。因此，满足我们需求的最小值就是50vmax 。<br>由于投影是同时向四个方向扩展的，这个遮罩层的最终尺寸将是100vmax 加上元素本身的尺寸。<br>酱汁：<code>box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);</code></p>
+<p>缺点：<br>1.由于遮罩层的尺寸是与视口相关，而不是与页面相关的，当我们滚动页面时，遮罩层的边缘就露出来了，<br>除非给它加上 position: fixed;这个样式，或者页面并没有长到需要滚动的程度。<br>此外，由于页面很可能真的很长，为了规避这个缺陷而扩大投影的扩张半径就不太明智了。<br>相反，我推荐有限度地应用这个技巧，比如配合固定定位来使用，或者当页面没有滚动条时再用。<br>2.当使用一个独立的元素（或伪元素）来实现遮罩层时，这个遮罩层不仅可以从视觉上把用户的注意力引导到关键元素上，<br>还可以防止用户的鼠标与页面的其他部分发生交互，因为遮罩层会捕获所有指针事件。<br>box-shadow 并没有这种能力，因此它只能在视觉上起到引导注意力的作用，却无法阻止鼠标交互。<br>这一点是否可以接受，取决于你的具体需求。</p>
+<p>二、backdrop方案<br>(<a href="http://runjs.cn/code/t6syixt3" target="_blank" rel="external">Demo点这里</a>)<br>如果你想引导用户关注的元素就是一个模态的<code>&lt;dialog&gt;</code>元素<br>（<code>&lt;dialog&gt;</code>元素可以由它的 showModal()方法显示出来），<br>那么根据浏览器的默认样式，它会自带一个遮罩层。<br>借助 ::backdrop伪元素，这个原生的遮罩层也是可以设置样式的，比如可以把它变得更暗一些。</p>
+<hr>
+<h5 id="通过模糊来弱化背景"><a href="#通过模糊来弱化背景" class="headerlink" title="通过模糊来弱化背景"></a>通过模糊来弱化背景</h5><p>(<a href="http://runjs.cn/code/eyxhobws" target="_blank" rel="external">Demo点这里</a>)<br>解决方案：用一个html元素把页面上除了关键元素之外的一切都包裹起来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;main&gt;I&apos;m groot&lt;/main&gt;</div><div class="line">&lt;dialog&gt;</div><div class="line">	I&apos;m a dialog. Click on me to dismiss.</div><div class="line">&lt;/dialog&gt;</div><div class="line">&lt;!-- 其他对话框都写在这里 --&gt;</div></pre></td></tr></table></figure></p>
+<p>每当弹出一个对话框，都需要给<code>&lt;main&gt;</code>元素增加一个类，以便对它应用模糊滤镜。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">main.de-emphasized &#123;</div><div class="line">	filter: blur(5px);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/30/css字体排印/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -825,7 +982,9 @@
           
             <h4 id="半透明边框"><a href="#半透明边框" class="headerlink" title="半透明边框"></a>半透明边框</h4><p>(<a href="http://runjs.cn/code/iobax1rr" target="_blank" rel="external">Demo点这里</a>)</p>
 <h5 id="科普RGBA和HSLA背景知识"><a href="#科普RGBA和HSLA背景知识" class="headerlink" title="科普RGBA和HSLA背景知识"></a>科普RGBA和HSLA背景知识</h5><p>RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )<br>R：红色值。正整数 | 百分数<br>G：绿色值。正整数 | 百分数<br>B：蓝色值。正整数 | 百分数<br>A：Alpha透明度。取值0~1之间。</p>
-<p>HSLA(H,S,L,A)取值:<br>H：Hue(色调)。0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值为：0-360<br>S：Saturation(饱和度)。取值为：0.0% - 100.0%<br>L：Lightness(亮度)。取值为：0.0% - 100.0%<br>A：Alpha透明度。取值0~1之间。    </p>
+<p>HSLA(H,S,L,A)<br>HSL模式是基于一个360°的色相环。<br>取值:<br>H：Hue(色调)。60°时为黄色,120°时为绿色,180°时为青色,240°时为蓝色,300°时为洋红色,360°时为红色。<br>S：Saturation(饱和度)。取值为：0.0% - 100.0%<br>L：Lightness(亮度)。取值为：0.0% - 100.0%<br>A：Alpha透明度。取值0~1之间。  </p>
+<p>HSL和RGB与十六进制颜色值最大的区别，是它们支持透明通道。这意味着可以让元素透明，使其下方的元素可见。 </p>
+<h5 id="为什么不使用opacity"><a href="#为什么不使用opacity" class="headerlink" title="为什么不使用opacity"></a>为什么不使用opacity</h5><p>CSS3 还允许通过opacity声明来设置元素的透明度。<br>该透明度的值也是一个介于0到1之间的小数(如将opacity设置为0.1表示为10%透明)。<br>但是这种透明度与RGBA及HSLA有所不同，这种方式设置的透明度会对整个元素产生影响(元素的内容都会透明)。<br>反之，使用HSLA或RGBA则可以仅让元素的某些部分有透明效果。<br>这样，一个元素可以带有HSLA透明背景，但内部的文字仍然不透明。</p>
 <h5 id="如何给容器加上透明边框"><a href="#如何给容器加上透明边框" class="headerlink" title="如何给容器加上透明边框"></a>如何给容器加上透明边框</h5><p><code>border: 10px solid hsla(0,0%,100%,.5) background: white;</code><br>使用如上代码来实现结果会发现透明边框没有显示出来。因为默认背景会覆盖边框。<br>解决方案：设置background-clip: padding-box;即可。默认的是border-box。</p>
 <hr>
 <h4 id="多重边框"><a href="#多重边框" class="headerlink" title="多重边框"></a>多重边框</h4><p>(<a href="http://runjs.cn/code/uddyuvxi" target="_blank" rel="external">Demo点这里</a>)</p>
@@ -1285,7 +1444,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1296,7 +1455,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
