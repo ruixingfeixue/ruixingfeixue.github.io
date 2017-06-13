@@ -85,17 +85,21 @@
 
 
 
-<meta name="description" content="CSS水平居中的实现方式1.利用text-align和display属性text-align作用于块状元素，属性值center可使内容居中对齐。">
+<meta name="description" content="如何使子元素Demo水平居中于父元素中呢？ 水平一：利用text-align和display属性text-align作用于块状元素，属性值center可使内容居中对齐。可为父元素设置text-align:center;子元素display:inline实现。  水平二：利用display:table和margin属性display:table表示指定对象作为块元素级的表格。类同于html标签&amp;lt">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css布局">
-<meta property="og:url" content="http://yoursite.com/2017/06/12/css布局/index.html">
+<meta property="og:title" content="CSS居中的实现方式">
+<meta property="og:url" content="http://yoursite.com/2017/06/12/CSS居中的实现方式/index.html">
 <meta property="og:site_name" content="瑞的指南针">
-<meta property="og:description" content="CSS水平居中的实现方式1.利用text-align和display属性text-align作用于块状元素，属性值center可使内容居中对齐。">
-<meta property="og:updated_time" content="2017-06-12T08:25:14.801Z">
+<meta property="og:description" content="如何使子元素Demo水平居中于父元素中呢？ 水平一：利用text-align和display属性text-align作用于块状元素，属性值center可使内容居中对齐。可为父元素设置text-align:center;子元素display:inline实现。  水平二：利用display:table和margin属性display:table表示指定对象作为块元素级的表格。类同于html标签&amp;lt">
+<meta property="og:image" content="http://yoursite.com/img/20.png">
+<meta property="og:image" content="http://yoursite.com/img/21.png">
+<meta property="og:image" content="http://yoursite.com/img/22.png">
+<meta property="og:updated_time" content="2017-06-13T03:15:12.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css布局">
-<meta name="twitter:description" content="CSS水平居中的实现方式1.利用text-align和display属性text-align作用于块状元素，属性值center可使内容居中对齐。">
+<meta name="twitter:title" content="CSS居中的实现方式">
+<meta name="twitter:description" content="如何使子元素Demo水平居中于父元素中呢？ 水平一：利用text-align和display属性text-align作用于块状元素，属性值center可使内容居中对齐。可为父元素设置text-align:center;子元素display:inline实现。  水平二：利用display:table和margin属性display:table表示指定对象作为块元素级的表格。类同于html标签&amp;lt">
+<meta name="twitter:image" content="http://yoursite.com/img/20.png">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/12/css布局/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/12/CSS居中的实现方式/"/>
 
 
 
 
 
-  <title> css布局 | 瑞的指南针 </title>
+  <title> CSS居中的实现方式 | 瑞的指南针 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +262,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/12/css布局/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/12/CSS居中的实现方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ruixingfeixue">
@@ -279,7 +283,7 @@
             
             
               
-                css布局
+                CSS居中的实现方式
               
             
           </h1>
@@ -352,7 +356,28 @@
       
 
       
-        <h5 id="CSS水平居中的实现方式"><a href="#CSS水平居中的实现方式" class="headerlink" title="CSS水平居中的实现方式"></a>CSS水平居中的实现方式</h5><p>1.利用text-align和display属性<br>text-align作用于块状元素，属性值center可使内容居中对齐。</p>
+        <p>如何使子元素Demo水平居中于父元素中呢？<br><img src="/img/20.png" alt="水平居中"></p>
+<h5 id="水平一：利用text-align和display属性"><a href="#水平一：利用text-align和display属性" class="headerlink" title="水平一：利用text-align和display属性"></a>水平一：利用text-align和display属性</h5><p>text-align作用于块状元素，属性值center可使内容居中对齐。<br>可为父元素设置text-align:center;子元素display:inline实现。</p>
+<hr>
+<h5 id="水平二：利用display-table和margin属性"><a href="#水平二：利用display-table和margin属性" class="headerlink" title="水平二：利用display:table和margin属性"></a>水平二：利用display:table和margin属性</h5><p>display:table表示指定对象作为块元素级的表格。类同于html标签<code>&lt;table&gt;</code><br>直接给子元素设置display:table;margin:0 auto实现。</p>
+<hr>
+<h5 id="水平三：利用定位属性"><a href="#水平三：利用定位属性" class="headerlink" title="水平三：利用定位属性"></a>水平三：利用定位属性</h5><p>设置父元素position: relative;子元素position: absolute;left: 50%;transform: translateX(-50%);</p>
+<hr>
+<h5 id="水平四：利用display-flex属性"><a href="#水平四：利用display-flex属性" class="headerlink" title="水平四：利用display:flex属性"></a>水平四：利用display:flex属性</h5><p>设置父元素display:flex;justify-content:center实现。</p>
+<hr>
+<p>如何使子元素Demo垂直居中于父元素中呢？<br><img src="/img/21.png" alt="垂直居中"></p>
+<h5 id="垂直一：利用display-table-cell和vertical-align-middle属性"><a href="#垂直一：利用display-table-cell和vertical-align-middle属性" class="headerlink" title="垂直一：利用display:table-cell和vertical-align:middle属性"></a>垂直一：利用display:table-cell和vertical-align:middle属性</h5><p>可为父元素设置display:table-cell和vertical-align:middle。</p>
+<hr>
+<h5 id="垂直二：利用定位属性"><a href="#垂直二：利用定位属性" class="headerlink" title="垂直二：利用定位属性"></a>垂直二：利用定位属性</h5><p>设置父元素position: relative;子元素position: absolute;top: 50%;transform: translateY(-50%);</p>
+<hr>
+<h5 id="垂直三：利用display-flex属性"><a href="#垂直三：利用display-flex属性" class="headerlink" title="垂直三：利用display:flex属性"></a>垂直三：利用display:flex属性</h5><p>设置父元素display:flex;align-items:center;实现。</p>
+<hr>
+<p>如何使子元素Demo垂直且水平居中于父元素中呢？<br><img src="/img/22.png" alt="水平垂直居中"><br>把以上结合起来使用即可。</p>
+<h5 id="全居中一"><a href="#全居中一" class="headerlink" title="全居中一"></a>全居中一</h5><p>可为父元素设置display:table-cell、vertical-align:middle和text-align: center;</p>
+<hr>
+<h5 id="全居中二"><a href="#全居中二" class="headerlink" title="全居中二"></a>全居中二</h5><p>可为父元素设置position: relative;子元素设置position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);</p>
+<hr>
+<h5 id="全居中三"><a href="#全居中三" class="headerlink" title="全居中三"></a>全居中三</h5><p>设置父元素display:flex;align-items:center;justify-content: center;实现。</p>
 
       
     </div>
@@ -537,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS水平居中的实现方式"><span class="nav-number">1.</span> <span class="nav-text">CSS水平居中的实现方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#水平一：利用text-align和display属性"><span class="nav-number">1.</span> <span class="nav-text">水平一：利用text-align和display属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#水平二：利用display-table和margin属性"><span class="nav-number">2.</span> <span class="nav-text">水平二：利用display:table和margin属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#水平三：利用定位属性"><span class="nav-number">3.</span> <span class="nav-text">水平三：利用定位属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#水平四：利用display-flex属性"><span class="nav-number">4.</span> <span class="nav-text">水平四：利用display:flex属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垂直一：利用display-table-cell和vertical-align-middle属性"><span class="nav-number">5.</span> <span class="nav-text">垂直一：利用display:table-cell和vertical-align:middle属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垂直二：利用定位属性"><span class="nav-number">6.</span> <span class="nav-text">垂直二：利用定位属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垂直三：利用display-flex属性"><span class="nav-number">7.</span> <span class="nav-text">垂直三：利用display:flex属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全居中一"><span class="nav-number">8.</span> <span class="nav-text">全居中一</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全居中二"><span class="nav-number">9.</span> <span class="nav-text">全居中二</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全居中三"><span class="nav-number">10.</span> <span class="nav-text">全居中三</span></a></li></ol></div>
             
 
           </div>
