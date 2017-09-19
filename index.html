@@ -258,6 +258,158 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/14/html5新增标签/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/14/html5新增标签/" itemprop="url">
+                  html5新增标签
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-14T18:19:09+08:00">
+                2017-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="文档声明"><a href="#文档声明" class="headerlink" title="文档声明"></a>文档声明</h4><p>定义和用法<br><code>&lt;!DOCTYPE&gt;</code> 声明必须位于HTML5文档中的第一行，也就是位于<code>&lt;html&gt;</code>标签之前。该标签告知浏览器文档所使用的HTML规范。<br>doctype声明不属于HTML标签; 它是一条指令，告诉浏览器编写页面所用的标记的版本。<br>在所有HTML文档中规定doctype是非常重要的，这样浏览器就能了解预期的文档类型。<br>HTML4.01中的doctype需要对DTD进行引用，因为HTML4.01基于SGML,而HTML5不基于SGML，因此不需要对DTD进行引用，<br>但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行。）。</p>
+<hr>
+<h4 id="结构性标签"><a href="#结构性标签" class="headerlink" title="结构性标签"></a>结构性标签</h4><p>结构性标签（construct tag）主要负责Web的上下文结构的定义，确保  HTML文档的完整性，这类标签包括以下几个。<br><code>section</code>：用于表达书的一部分或一章，或者一章内的一节。在Web页面应用中，该标签也可以用于区域的章节表述。<br><code>hgroup</code>：对网页或区段（section）的标题进行组合。<br><code>header</code>：页面主体上的头部，注意区别于head标签。<br><code>footer</code>：页面的底部（页脚）。通常，人们会在这里标出网站的一些相关信息，例如关于我们、法律申明、邮件信息、管理入口等。<br><code>nav</code>：是专门用于菜单导航、链接导航的标签，是navigator的缩写。<br><code>article</code>：用于表示一篇文章的主体内容，一般为文字集中显示的区域。</p>
+<hr>
+<h4 id="块性标签"><a href="#块性标签" class="headerlink" title="块性标签"></a>块性标签</h4><p>级块性标签（block tag）主要完成Web页面区域的划分，确保内容的有效分隔，这类标签包括以下几个。</p>
+<p><code>aside</code>：用以表达注记、贴士、侧栏、摘要、插入的引用等作为补充主体的内容。从一个简单页面显示上看，就是侧边栏，可以在左边，也可以在右边。从一个页面的局部看，就是摘要。<br><code>figure</code>：标签规定独立的流内容，通常与figcaption联合使用。<br><code>code</code>：表示一段代码块。<br><code>dialog</code>：对话标签 配合dt dd标签使用</p>
+<h4 id="行内标签"><a href="#行内标签" class="headerlink" title="行内标签"></a>行内标签</h4><p>行内语义性标签（in-line tag）主要完成Web页面具体内容的引用和表述，是丰富内容展示的基础，这类标签包括以下几个。<br><code>meter</code>：表示特定范围内的数值，可用于工资、数量、百分比等 max表示最大值，min表示最小值，value代表当前值。<br><code>time</code>：表示时间值，属性datetime强调时间<br><code>progress</code>：用来表示进度条</p>
+<h4 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h4><p><code>video</code>：视频标签，用于支持和实现视频（含视频流）文件的直接播放，支持缓冲预载和多种视频媒体格式，例如MPEG-4、OggV和WebM等。<br><code>audio</code>：音频标签，用于支持和实现音频（音频流）文件的直接播放，支持缓冲预载和多种音频媒体格式。</p>
+<h4 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h4><p><code>&lt;datalist&gt;</code>标签定义选项列表。请与input元素配合使用该元素，来定义input可能的值。datalist及其选项不会被显示出来，它仅仅是合法的输入值列表。</p>
+<h4 id="交互性标签"><a href="#交互性标签" class="headerlink" title="交互性标签"></a>交互性标签</h4><p>交互性标签（interactive tag）主要用于功能性的内容表达，会有一定的内容和数据的关联，是各种事件的基础，这类标签包括以下几个。<br><code>menu</code>：主要用于交互菜单（这是一个曾被废弃现在又被重新启用的标签）。<br><code>command</code>：用来处理命令按钮。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/13/html5概述/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -320,8 +472,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
                   </a>
                 </span>
 
@@ -1787,223 +1939,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/27/css优先级/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/27/css优先级/" itemprop="url">
-                  css优先级
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-27T17:19:09+08:00">
-                2017-02-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h5><p><img src="/img/12.png" alt="css2.1层叠规则"></p>
-<p>说人话：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p&#123; color:grey; !important;&#125;</div><div class="line">&lt;p style=&quot;color:black&quot;&gt;hello&lt;/p&gt;</div></pre></td></tr></table></figure></p>
-<p>如上有!important规则的样式会胜出。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p&#123; color:black;&#125;  /* author&apos;s style sheet */</div><div class="line">p&#123; color:yellow;&#125;  /* reader&apos;s style sheet */</div></pre></td></tr></table></figure></p>
-<p>这种情况下文本为黑色，因为有正常权重的创作人员样式要优先于正常权重的读者样式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p&#123; color:black;!important;&#125;  /* author&apos;s style sheet */</div><div class="line">p&#123; color:yellow;!important;&#125;  /* reader&apos;s style sheet */</div></pre></td></tr></table></figure></p>
-<p>如果都含有!important; 将会是黄色胜出。</p>
-<p>总结一下：<br>在声明权重方面要考虑5级。权重由大到小的顺序依次为：<br>1、读者的重要声明<br>2、创作人员的重要声明<br>3、创作人员的正常声明<br>4、读者的正常声明<br>5、用户代理声明</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p&#123; color:black;&#125;  /* from imported style sheet */</div><div class="line">p&#123; color:yellow;&#125;  /* rule contained with the document */</div></pre></td></tr></table></figure>
-<p>这种情况下第二个规则会胜过导入的规则，因为第二个规则是文档样式表的一部分。</p>
-<p>css每个选择器都有其特殊性。如果一个元素有两个或者多个冲突的属性声明，那么有最高特殊性的声明就会胜出。</p>
-<p>a-行内样式   1000<br>b-ID选择器的数量   100<br>c-类、伪类和属性选择器的数量   10<br>d-标签选择器和伪元素选择器的数量  1<br>通配选择器对特殊性没有贡献。其特殊性为0。 </p>
-<p><code>value=a*1000+b*100+c*10+d</code></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">选择器</th>
-<th style="text-align:center">a</th>
-<th style="text-align:center">b</th>
-<th style="text-align:center">c</th>
-<th style="text-align:center">d</th>
-<th style="text-align:center">value </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">    h1</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">1  </td>
-</tr>
-<tr>
-<td style="text-align:center">  p&gt;em</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">2   </td>
-</tr>
-<tr>
-<td style="text-align:center">style:””</td>
-<td style="text-align:center">1000</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1000 </td>
-</tr>
-<tr>
-<td style="text-align:center">.common p</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">10</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">11 </td>
-</tr>
-<tr>
-<td style="text-align:center">div#content</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">100</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">101</td>
-</tr>
-<tr>
-<td style="text-align:center">a:link</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">10</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">11</td>
-</tr>
-</tbody>
-</table>
-<p>假设优先级相同，使用css层叠。<br>优先级高的覆盖优先级低的，后面的覆盖前面的，不同属性会合并。<br>a:link{ color:blue}      11<br>a[href^=”#”]{ color:grey}    11</p>
-<p>改变优先级：<br>1、改变位置<br>2、提升选择器优先级<br>3、使用!important</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2053,7 +1988,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
