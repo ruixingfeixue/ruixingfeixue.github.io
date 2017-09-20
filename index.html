@@ -258,6 +258,155 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/15/html5新增属性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/15/html5新增属性/" itemprop="url">
+                  html5新增属性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-15T18:19:09+08:00">
+                2017-06-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="contextmenu"><a href="#contextmenu" class="headerlink" title="contextmenu"></a>contextmenu</h4><p>contextmenu 是上下文菜单，即鼠标右击元素会出现一个菜单。<br>menu要实现鼠标右击元素会出现一个菜单还必须配合menu标签<br>menu元素属性： type有三个值<br>1）context：上下文； 2）toolbar：工具栏；3）list：列表<br><code>&lt;menu&gt;&lt;/menu&gt;</code>内部可以嵌入一个一个菜单项，即<code>&lt;menuitem&gt;&lt;/menuitem&gt;</code>。</p>
+<p>menuitem 属性：<br>label：菜单项显示的名称<br>icon：在菜单项左侧显示的图标<br>onclick：点击菜单项触发的事件<br>只支持火狐浏览器</p>
+<hr>
+<h4 id="contenteditable"><a href="#contenteditable" class="headerlink" title="contenteditable"></a>contenteditable</h4><p>规定是否可编辑元素的内容<br>属性值：<br>true   —–可以编辑元素的内容<br>false  —–无法编辑元素的内容<br>inherit —–继承父元素的contenteditable属性<br>当为空字符串时，效果和true一致。<br>当一个元素的contenteditable状态为true（contenteditable属性为空字符串，或为true，或为inherit且其父元素状态为true）时，意味着该元素是可编辑的。否则，该元素不可编辑。</p>
+<hr>
+<h4 id="draggable"><a href="#draggable" class="headerlink" title="draggable"></a>draggable</h4><p>规定元素是否可拖拽<br>3个枚举值<br>true     规定元素是可拖动的。<br>false     规定元素是不可拖动的。<br>auto     使用浏览器的默认特性。</p>
+<h4 id="hidden"><a href="#hidden" class="headerlink" title="hidden"></a>hidden</h4><p>hidden属性用于隐藏该元素。一旦使用了此属性，则该元素就不会在浏览器中被显示<br>2个布尔值<br>true     规定元素是可见。<br>false 规定元素是不可见</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/14/html5新增标签/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -320,8 +469,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
                   </a>
                 </span>
 
@@ -359,14 +508,14 @@
           
             <h4 id="文档声明"><a href="#文档声明" class="headerlink" title="文档声明"></a>文档声明</h4><p>定义和用法<br><code>&lt;!DOCTYPE&gt;</code> 声明必须位于HTML5文档中的第一行，也就是位于<code>&lt;html&gt;</code>标签之前。该标签告知浏览器文档所使用的HTML规范。<br>doctype声明不属于HTML标签; 它是一条指令，告诉浏览器编写页面所用的标记的版本。<br>在所有HTML文档中规定doctype是非常重要的，这样浏览器就能了解预期的文档类型。<br>HTML4.01中的doctype需要对DTD进行引用，因为HTML4.01基于SGML,而HTML5不基于SGML，因此不需要对DTD进行引用，<br>但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行。）。</p>
 <hr>
-<h4 id="结构性标签"><a href="#结构性标签" class="headerlink" title="结构性标签"></a>结构性标签</h4><p>结构性标签（construct tag）主要负责Web的上下文结构的定义，确保  HTML文档的完整性，这类标签包括以下几个。<br><code>section</code>：用于表达书的一部分或一章，或者一章内的一节。在Web页面应用中，该标签也可以用于区域的章节表述。<br><code>hgroup</code>：对网页或区段（section）的标题进行组合。<br><code>header</code>：页面主体上的头部，注意区别于head标签。<br><code>footer</code>：页面的底部（页脚）。通常，人们会在这里标出网站的一些相关信息，例如关于我们、法律申明、邮件信息、管理入口等。<br><code>nav</code>：是专门用于菜单导航、链接导航的标签，是navigator的缩写。<br><code>article</code>：用于表示一篇文章的主体内容，一般为文字集中显示的区域。</p>
+<h4 id="结构性标签"><a href="#结构性标签" class="headerlink" title="结构性标签"></a>结构性标签</h4><p>结构性标签（construct tag）主要负责Web的上下文结构的定义，确保HTML文档的完整性，这类标签包括以下几个。<br><code>section</code>：用于表达书的一部分或一章，或者一章内的一节。在Web页面应用中，该标签也可以用于区域的章节表述。<br><code>hgroup</code>：对网页或区段（section）的标题进行组合。<br><code>header</code>：页面主体上的头部，注意区别于head标签。<br><code>footer</code>：页面的底部（页脚）。通常，人们会在这里标出网站的一些相关信息，例如关于我们、法律申明、邮件信息、管理入口等。<br><code>nav</code>：是专门用于菜单导航、链接导航的标签，是navigator的缩写。<br><code>article</code>：用于表示一篇文章的主体内容，一般为文字集中显示的区域。</p>
 <hr>
 <h4 id="块性标签"><a href="#块性标签" class="headerlink" title="块性标签"></a>块性标签</h4><p>级块性标签（block tag）主要完成Web页面区域的划分，确保内容的有效分隔，这类标签包括以下几个。</p>
 <p><code>aside</code>：用以表达注记、贴士、侧栏、摘要、插入的引用等作为补充主体的内容。从一个简单页面显示上看，就是侧边栏，可以在左边，也可以在右边。从一个页面的局部看，就是摘要。<br><code>figure</code>：标签规定独立的流内容，通常与figcaption联合使用。<br><code>code</code>：表示一段代码块。<br><code>dialog</code>：对话标签 配合dt dd标签使用</p>
 <h4 id="行内标签"><a href="#行内标签" class="headerlink" title="行内标签"></a>行内标签</h4><p>行内语义性标签（in-line tag）主要完成Web页面具体内容的引用和表述，是丰富内容展示的基础，这类标签包括以下几个。<br><code>meter</code>：表示特定范围内的数值，可用于工资、数量、百分比等 max表示最大值，min表示最小值，value代表当前值。<br><code>time</code>：表示时间值，属性datetime强调时间<br><code>progress</code>：用来表示进度条</p>
 <h4 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h4><p><code>video</code>：视频标签，用于支持和实现视频（含视频流）文件的直接播放，支持缓冲预载和多种视频媒体格式，例如MPEG-4、OggV和WebM等。<br><code>audio</code>：音频标签，用于支持和实现音频（音频流）文件的直接播放，支持缓冲预载和多种音频媒体格式。</p>
 <h4 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h4><p><code>&lt;datalist&gt;</code>标签定义选项列表。请与input元素配合使用该元素，来定义input可能的值。datalist及其选项不会被显示出来，它仅仅是合法的输入值列表。</p>
-<h4 id="交互性标签"><a href="#交互性标签" class="headerlink" title="交互性标签"></a>交互性标签</h4><p>交互性标签（interactive tag）主要用于功能性的内容表达，会有一定的内容和数据的关联，是各种事件的基础，这类标签包括以下几个。<br><code>menu</code>：主要用于交互菜单（这是一个曾被废弃现在又被重新启用的标签）。<br><code>command</code>：用来处理命令按钮。</p>
+<h4 id="交互性标签"><a href="#交互性标签" class="headerlink" title="交互性标签"></a>交互性标签</h4><p>交互性标签（interactive tag）主要用于功能性的内容表达，会有一定的内容和数据的关联，是各种事件的基础，<br>这类标签包括以下几个。<br><code>menu</code>：主要用于交互菜单（这是一个曾被废弃现在又被重新启用的标签）。<br><code>command</code>：用来处理命令按钮。</p>
 
           
         
@@ -1776,169 +1925,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/12/常用的hexo指令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/12/常用的hexo指令/" itemprop="url">
-                  常用的hexo指令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-12T16:10:18+08:00">
-                2017-03-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HEXO/" itemprop="url" rel="index">
-                    <span itemprop="name">HEXO</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="init"><a href="#init" class="headerlink" title="init"></a>init</h4><p><code>$ hexo init [folder]</code><br>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
-<hr>
-<h4 id="new"><a href="#new" class="headerlink" title="new"></a>new</h4><p><code>$ hexo new [layout] &lt;title&gt;</code><br>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<hr>
-<h4 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h4><p><code>$ hexo generate</code><br>生成静态文件。</p>
-<p>选项    描述<br>-d, –deploy    文件生成后立即部署网站<br>-w, –watch    监视文件变动<br>该命令可以简写为</p>
-<p><code>$ hexo g</code></p>
-<hr>
-<h4 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h4><p><code>$ hexo publish [layout] &lt;filename&gt;</code><br>发表草稿。</p>
-<hr>
-<h4 id="server"><a href="#server" class="headerlink" title="server"></a>server</h4><p><code>$ hexo server</code><br>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="external">http://localhost:4000/。</a></p>
-<p>选项    描述<br>-p, –port    重设端口<br>-s, –static    只使用静态文件<br>-l, –log    启动日记记录，使用覆盖记录格式</p>
-<hr>
-<h4 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h4><p><code>$ hexo deploy</code><br>部署网站。</p>
-<p>参数    描述<br>-g, –generate    部署之前预先生成静态文件<br>该命令可以简写为：</p>
-<p><code>$ hexo d</code></p>
-<hr>
-<h4 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h4><p><code>$ hexo clean</code><br>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<hr>
-<h4 id="version"><a href="#version" class="headerlink" title="version"></a>version</h4><p><code>$ hexo version</code><br>显示 Hexo 版本。</p>
-<p>更多指令请参考 <a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="external">Hexo指令</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1988,7 +1974,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1999,7 +1985,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
