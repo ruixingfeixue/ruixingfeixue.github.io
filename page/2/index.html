@@ -258,6 +258,536 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/响应式Web设计/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/10/响应式Web设计/" itemprop="url">
+                  响应式web设计
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="视口和屏幕尺寸"><a href="#视口和屏幕尺寸" class="headerlink" title="视口和屏幕尺寸"></a>视口和屏幕尺寸</h5><p>视口和屏幕尺寸不是同一视口是指浏览器窗口内的内容区域，不包含工具栏、标签栏等。也就是网页实际显示的区域。个概念。</p>
+<p>屏幕尺寸指的是设备的物理显示区域。<br>需要注意的是有些浏览器调整工具显示的尺寸包含浏览器的其他元素，诸如地址栏、标签栏和搜索栏，而有些工具则不是这样。</p>
+<h5 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h5><p><code>&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait)&quot; href=&quot;portrait-screen.css&quot; /&gt;</code><br>媒体查询表达式询问了媒体类型（你是一块显示屏吗？），然后询问了媒体特性（显示屏是纵向放置的吗？）。<br>任何纵向放置的显示屏设备都会加载 portrait-screen.css样式表，其他设备则会忽略该文件。<br>在媒体查询的开头追加not则会颠倒该查询的逻辑。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait) and (min-width:800px)&quot; </div><div class="line">href=&quot;800wide-portrait-screen.css&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>限制只有视口宽度大于800像素的显示屏设备才能加载文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait) and (min-width:</div><div class="line">800px), projection&quot; href=&quot;800wide-portrait-screen.css&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>有两点需要注意。<br>第一，媒体查询之间使用逗号分隔。<br>第二，你会注意到在projection之后，没有and，也没有任何特性/值的组合。<br>没有后续表达式，意味着只要是projection就满足条件。本例中，样式会应用于所有的投影仪。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media screen and (max-device-width: 400px) &#123;</div><div class="line">	h1 &#123; color: green &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在屏幕宽度小于等于400像素的设备上,h1元素的文字颜色就会变成绿色。<br><code>@import url(&quot;phone.css&quot;) screen and (max-width:360px);</code></p>
+<p>CSS的@import指令在当前样式表中按条件引入其他样式表。<br>如上代码会给视口最大宽度为360像素的显示屏设备加载一个名为phone.css的样式表。<br>切记，使用CSS的@import方式会增加HTTP请求(这会影响加载速度),所以请谨慎使用该方法。</p>
+<p>媒体查询能检测那些特性<br><img src="/img/11.png" alt="这些特性"></p>
+<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。<br>下载地址是<a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包在MacAppStore中免费下载)的一部分，只能在MacOSX上使用。<br>一旦安装了Xcode你就可以在这个路径下找到模拟器：<br>~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
+<h5 id="阻止移动浏览器自动调整页面大小"><a href="#阻止移动浏览器自动调整页面大小" class="headerlink" title="阻止移动浏览器自动调整页面大小"></a>阻止移动浏览器自动调整页面大小</h5><p><code>&lt;meta&gt;</code>标签还可以控制页面可缩放的范围<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=3, minimum-scale=0.5&quot; /&gt;</code><br>上面的代码允许用户将页面最多放大至设备宽度的3倍，最小压缩至设备宽度的一半。<br><code>user-scalable=no</code>即是禁止缩放</p>
+<h5 id="需要牢记的公式"><a href="#需要牢记的公式" class="headerlink" title="需要牢记的公式"></a>需要牢记的公式</h5><p>目标元素宽度÷上下文元素宽度=百分比宽度</p>
+<h5 id="HTML5的全新语义化元素"><a href="#HTML5的全新语义化元素" class="headerlink" title="HTML5的全新语义化元素"></a>HTML5的全新语义化元素</h5><blockquote>
+<p><code>&lt;nav&gt;</code>元素用来定义文档的主导航区域，其中的链接指向其他页面或当前页面的某些区域。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;article&gt;</code>元素用来包裹独立的内容片段。<br>当搭建一个页面时，想想你准备放入<article>标签的内容能否作为一个整块而被复制粘贴到另外一个完全不<br>同的网站且能保持完整的意义？<br>另一种办法是，想想包裹在<article>中的内容能否在RSS订阅源中独立成为一篇文章？<br>应该使用<article>标签包裹的内容，最明显的例子就是博客正文。<br>注意，如果出现嵌套的<article>元素，那内层<article>元素内容应该和外层文章内容直接有关。</article></article></article></article></article></p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;aside&gt;</code>元素用来表示与页面主内容松散相关的内容。在实践中，我经常将其用作侧边栏(当它包含合适的内容时)。<br>另外，引文、广告以及导航元素(如友情链接等)也可以使用它。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;hgroup&gt;</code>如果页面中有一组使用<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code>、<code>&lt;h3&gt;</code>等标签的标题、标语和副标题，则可以考虑使用<code>&lt;hgroup&gt;</code>将它们包裹起来。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;header&gt;</code>元素不计入大纲结构，所以不能用它来划分内容结构，而是应该用它来包含对区域内容的介绍说明。<br>实际使用中，<code>&lt;header&gt;</code>可用作网站头部的“刊头”区域，也可用作对其他内容如<code>&lt;article&gt;</code>元素的简要介绍。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;footer&gt;</code>元素也不计入大纲结构，所以也不能用于划分内容结构。<br>应该用它来包含其所在区域的辅助信息。例如可以用它包含一组指向其他页面的超链接，或者用它包含版权信息。<br>例如博客网站的页脚可以用它，同时博客正文<code>&lt;article&gt;</code>元素内的文脚也可以用它。<br>不过规范指出，博文作者的联系信息应该使用<code>&lt;address&gt;</code>元素来包裹。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;address&gt;</code>元素用于明确地标注离其最近的<code>&lt;article&gt;</code>或<code>&lt;body&gt;</code>祖先元素的联系信息。<br>为避免产生混淆，请记住<code>&lt;address&gt;</code>中一般不放具体的邮政地址，除非相应内容确实需要联系地址。<br>而邮政地址和其他可能会改变的联系信息应该使用<code>&lt;p&gt;</code>标签来包裹。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;b&gt;</code>过去，人们通常利用<code>&lt;b&gt;</code>元素为文本添加样式，但它的实际用途其实是“给文本加粗”。<br>不过现在你可以正式地将其仅用作样式钩子了，因为现在 HTML5 标准对<b>的定义是：<br>一小段文本，纯粹为了吸引人的注意，除此之外不传达任何重要性，也不暗示其他语态或语气，<br>如文档摘要中的关键词、评论中的产品名称、交互式文本软件中的可操作单词，或者文章的导语。</b></p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;em&gt;</code>强调内容中的重点。除非你确实想强调标签中的内容，否则的话可以考虑使用<code>&lt;b&gt;</code>标签或者可以的话使<br>用<code>&lt;i&gt;</code>标签。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><code>&lt;i&gt;</code>一小段有不同语态或语气的文字，或者是样子上与普通文章有所差异以便标明不同特点的文字。</p>
+</blockquote>
+<h5 id="遵循WAI-ARIA实现无障碍站点"><a href="#遵循WAI-ARIA实现无障碍站点" class="headerlink" title="遵循WAI-ARIA实现无障碍站点"></a>遵循WAI-ARIA实现无障碍站点</h5><p>WAI-ARIA是Web Accessibility Initiative - Accessible Rich Internet Applications的缩写，<br>指无障碍网页应用技术，它主要解决一个问题：让残障人士能无障碍地访问网页上的动态内容。<br>我们可以让导航区域在支持无障碍网页应用技术的屏幕阅读器上轻松地定位，<br>只需为其追加一个地标角色属性 role 即可，如下面的代码片段所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;nav role=&quot;navigation&quot;&gt;</div><div class="line">&lt;ul&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Why?&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Synopsis&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Stills/Photos&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Videos/clips&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Quotes&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Quiz&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">&lt;/nav&gt;</div></pre></td></tr></table></figure></p>
+<p>够简单吧？针对文档结构的各部分分别有如下的地标角色。</p>
+<ul>
+<li>application：用来定义用作网页应用的区域。</li>
+<li>banner：用来定义一个站点级别（而不是某个特定文档的）的区域。如网站的头部和logo。</li>
+<li>complementary：用来定义一个对页面主要区域进行补充说明的区域。<br>在And thewinner isn’t…这个网站中,UNSUNG HEROES和OVERHYPED NONSENSE区域就可以定义为complementary。</li>
+<li>contentinfo：用来定义与页面主要内容相关的信息区域。例如页脚的网站版权信息区域。</li>
+<li>form：你猜都能猜到，定义表单！但注意，如果表单用于搜索，则请使用search来替代。</li>
+<li>main：定义页面的主体内容。</li>
+<li>navigation：用来定义链向当前文档或相关文档的导航链接。</li>
+<li>search：用来定义一个用于搜索的区域。</li>
+</ul>
+<p>为使用了无障碍技术的元素设置样式<br>和其他属性一样，可以直接使用属性选择器来为其设置样式。如，使用nav[role=”navigation”] {}可以为导航区域设置样式。</p>
+<h5 id="使用非可视桌面阅读器（NVDA）免费测试网站可访问性"><a href="#使用非可视桌面阅读器（NVDA）免费测试网站可访问性" class="headerlink" title="使用非可视桌面阅读器（NVDA）免费测试网站可访问性"></a>使用非可视桌面阅读器（NVDA）免费测试网站可访问性</h5><p>如果你是在 Windows 平台上开发且想使用屏幕阅读器测试网站的可访问性，可以免费使用 NVDA。<br>软件的官方地址如下：<a href="http://www.nvdaproject.org/。" target="_blank" rel="external">http://www.nvdaproject.org/。</a></p>
+<h5 id="提供备用的媒体源文件"><a href="#提供备用的媒体源文件" class="headerlink" title="提供备用的媒体源文件"></a>提供备用的媒体源文件</h5><p>最初的HTML5规范呼吁所有浏览器内置支持使用Ogg格式直接播放视频或音频(无需插件)<br>但是由于HTML5工作组的内部争议，曾经作为基线标准的支持Ogg(包括 Theora video和Vorbis audio)的主张<br>在最近更新的HTML5规范中被放弃。因此目前的情况是，一些浏览器支持某一套视频和音频文件格式，<br>而另一些浏览器则支持其他格式。例如Safari只允许在<code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>元素中使用MP4/H.264/AAC媒体文件，<br>而Firefox和Opera则只支持Ogg和WebM。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;video width=&quot;640&quot; height=&quot;480&quot; controls autoplay preload=&quot;auto&quot; loop</div><div class="line">poster=&quot;myVideoPoster.jpg&quot;&gt;</div><div class="line">&lt;source src=&quot;video/myVideo.ogv&quot; type=&quot;video/ogg&quot;&gt;</div><div class="line">&lt;source src=&quot;video/myVideo.mp4&quot; type=&quot;video/mp4&quot;&gt;</div><div class="line">What, do you mean you don&apos;t understand HTML5?</div><div class="line">&lt;/video&gt;</div></pre></td></tr></table></figure></p>
+<p>如果浏览器支持 Ogg 格式，则使用第一个文件；否则它会继续往下解析下一个<code>&lt;source&gt;</code>标签。</p>
+<p><code>&lt;audio&gt;</code>标签的用法与<code>&lt;video&gt;</code>基本一致，除了width、height和poster之外其他属性基本相同。<br>你甚至可以将<code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>标签互换使用。两者之间的最大差别就是<code>&lt;audio&gt;</code>没有可视内容的播放区域。</p>
+<h5 id="响应式视频"><a href="#响应式视频" class="headerlink" title="响应式视频"></a>响应式视频</h5><p>对于HTML5式嵌入视频，修正方法很简单。<br>只需删除视频标签中的height和width属性(如删除width=”640” height=”480”)，<br>然后在CSS中追加如下代码：<code>video { max-width: 100%; height: auto; }</code><br>这种方法对本页面中的视频文件很有用，但它不能解决使用iframe嵌入的视频的响应问题。<br>可以使用一个名为FitVids的jQuery小插件。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/html5标记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/10/html5标记/" itemprop="url">
+                  html5标记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5实战/" itemprop="url" rel="index">
+                    <span itemprop="name">html5实战</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/试试markdown的使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/试试markdown的使用/" itemprop="url">
+                  试试markdown的使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-24T15:28:46+08:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MarkDown/" itemprop="url" rel="index">
+                    <span itemprop="name">MarkDown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>小瑞想试试在博客和公众号之间实现文章互通。无间隙共享。那么问题来了。博客使用的是hexo搭建的，使用markdown语言。但是公众微信号貌似还不支持呢。</p>
+<p>所以，铛铛铛铛。小瑞来教你怎么实现在微信公众号使用markdown。</p>
+<ol>
+<li>在Google Chrome中安装Markdown－here插件。</li>
+<li>完成markdown格式的文章编辑</li>
+<li>拷贝粘贴到微信公共帐号的编辑器中</li>
+<li>点击浏览器上的插件按钮，使用Markdown－here渲染</li>
+<li>插入图片，修订</li>
+</ol>
+<p>从此告别公众号排版的烦恼。</p>
+<p>那么markdown具体有哪些常用的排版样式呢？</p>
+<p><strong>换行</strong><br>在上行结尾加两个空格回车就可以换行啦<br>如果要新起一个段落空行就可以啦。</p>
+<blockquote>
+<p>这是引用</p>
+<blockquote>
+<p>这是应用嵌套</p>
+<h2 id="gt-可以嵌套很多层"><a href="#gt-可以嵌套很多层" class="headerlink" title="&gt; 可以嵌套很多层"></a>&gt; 可以嵌套很多层</h2></blockquote>
+</blockquote>
+<p><strong>代码显示</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(&quot;这是代码的展现方式&quot;);</div></pre></td></tr></table></figure></p>
+<hr>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;alert(&quot;这里形成代码块&quot;);</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<p><strong>列表显示</strong></p>
+<ul>
+<li>这是无序列表1</li>
+<li>这是无序列表2</li>
+</ul>
+<ol>
+<li>这是有序列表1</li>
+<li>这是有序列表2</li>
+</ol>
+<p>更多具体的操作还请自己google喽！<br>今天的分享就到这里啦！</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/12/常用的hexo指令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1441,345 +1971,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/20/css编码技巧/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/20/css编码技巧/" itemprop="url">
-                  css编码技巧
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-20T18:06:14+08:00">
-                2016-11-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="css编码技巧"><a href="#css编码技巧" class="headerlink" title="css编码技巧"></a>css编码技巧</h4><h5 id="尽量减少代码重复"><a href="#尽量减少代码重复" class="headerlink" title="尽量减少代码重复"></a>尽量减少代码重复</h5><p>当某些值相互依赖时，应该把它们的相互关系用代码表达出来。如：</p>
-<p><code>font-size: 20px;line-height: 30px;</code><br><code>font-size: 20px;line-height: 1.5;</code></p>
-<p>做按钮时应考虑到底哪些效果应该跟着按钮一起放大，而哪些效果是保持不变的。</p>
-<p>Q：怎样解决不能颜色背景的按钮？(<a href="http://runjs.cn/code/gi75vrzv" target="_blank" rel="external">Demo点这里</a>)<br>A：把半透明的黑色或白色叠加在主色调上，即可产生主色调的亮色和暗色变体。<br>说人话，加入透明色。</p>
-<h5 id="代码变得更DRY的方法"><a href="#代码变得更DRY的方法" class="headerlink" title="代码变得更DRY的方法"></a>代码变得更DRY的方法</h5><p>代码易维护 vs. 代码量少<br>代码易维护和代码量少不可兼得，应该根据实际情况取舍</p>
-<p>currentColor<br>CSS中有史以来的第一个变量,会自动地从文本颜色那里得到颜色。</p>
-<h5 id="合理使用简写"><a href="#合理使用简写" class="headerlink" title="合理使用简写"></a>合理使用简写</h5><h6 id="我应该使用预处理器吗"><a href="#我应该使用预处理器吗" class="headerlink" title="我应该使用预处理器吗"></a>我应该使用预处理器吗</h6><p>如果使用得当，它们在大型项目中可以让代码更加灵活<br>CSS 的文件体积和复杂度可能会失控。<br>调试难度会增加，因为你在开发工具中看到的CSS代码并不是你写的源代码。<br>预处理器在开发过程中引入了一定程度的延时。<br>很多受预处理器启发的特性都已经以各种方式融入到原生CSS中了。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/03/css设计指南读书笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/03/css设计指南读书笔记/" itemprop="url">
-                  css设计指南读书笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-03T22:31:11+08:00">
-                2016-11-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><code>&lt;b&gt;</code>和<code>&lt;strong&gt;</code>区别：<br><code>&lt;b&gt;</code> 粗体文本，<code>&lt;strong&gt;</code> 用于强调文本。首先，从语义上来说<code>&lt;b&gt;</code>是UI层面上的‘加粗’，而<code>&lt;strong&gt;</code>是语气上的强调。所以语义控的同学，要区别使用这两种标签。<br>官方解释：<br>注释：根据 HTML5 规范，在没有其他合适标签更合适时，才应该把 <code>&lt;b&gt;</code> 标签作为最后的选项。HTML5 规范声明：应该使用 <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> 来表示标题，使用 <code>&lt;em&gt;</code> 标签来表示强调的文本，应该使用 <code>&lt;strong&gt;</code> 标签来表示重要文本，应该使用 <code>&lt;mark&gt;</code>标签来表示标注的/突出显示的文本。<br>提示：您也能够使用 CSS “font-weight” 属性来设置粗体文本。<br><code>&lt;strong&gt;</code> 标签和 <code>&lt;em&gt;</code>标签一样，用于强调文本，但它强调的程度更强一些。</p>
-<p>就表现而言<code>&lt;em&gt;&lt;/em&gt;</code>,<code>&lt;i&gt;&lt;/i&gt;</code>表现都一样，都是表示斜体。<br>但是<code>&lt;em&gt;</code>标签是“含有语义”的标签，搜索引擎会了解这些语义。其在HTML中是特意被设定为表示“强调”的意思。当发现这些表示“强调”的标签时，一些屏幕阅读器可能使用不同的inflection，更利于SEO。</p>
-<p><code>&lt;abbr&gt;</code> 标签表示简写，在 Firefox中默认会加上点下划线。</p>
-<hr>
-<h4 id="特殊的上下文选择符"><a href="#特殊的上下文选择符" class="headerlink" title="特殊的上下文选择符"></a>特殊的上下文选择符</h4><p>①、子选择符<code>&gt;</code><br>标签1&gt;标签2    标签2必须是标签1的子元素<br>②、紧邻同胞选择符<code>+</code><br>标签1+标签2  标签2必须跟在其同胞标签1的后面<br>③、一般同胞选择符<code>~</code><br>标签1~标签2  标签2必须跟(不一定紧跟)在同胞标签1的后面<br>④、通用选择符<code>*</code><br>通用选择符匹配所有元素。一般在使用<code>*</code>选择符时，都会同时使用另一个选择符.<br>比如：<br>color 属性设定的是前景色。前景色既影响文本也影响边框，但人们通常只用它设定文本颜色。<br><code>p * {color:red;}</code> 这样只会把 p 包含的所有元素的文本变成红色。<br>这个选择符有一个非常有意思的用法，即用它构成非子选择符。<br>比如：section * a {font-size:1.3em;}  任何是 section 孙子元素，而非子元素的 a 标签都会被选中。至于 a的父元素是什么，没有关系。<br>⑤、多类选择符<br>选择同时存在这两个类名的元素，可以这样写：.specialtext.featured {font-size:120%;}<br>注意，CSS 选择符的两个类名之间没有空格，因为我们只想选择同时具有这两个类名的那个元素。如果你加了空格，那就变成了“祖先/后代”关系的上下文选择符了。</p>
-<hr>
-<h4 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h4><p>方法1：为父元素添加overflow:hidden<br>原因是overflow的另外一个作为用迫使父元素包含其浮动的子元素。<br>方法2：同时浮动父元素。<br>方法3：在父元素内容的末尾添加非浮动元素，可以直接在标记中加，也可以通过给父元<br>素添加 clearfix 类来加</p>
-<pre>
-.clearfix:after{ 
-    content:'.';display:block;clear:both;height:0;
-    overflow:hidden;visibility:hidden
-}
-</pre>
-
-
-<hr>
-<h4 id="background"><a href="#background" class="headerlink" title="background"></a>background</h4><p>设置背景可以使用三种值：关键字、百分比、绝对或者相对单位的数值。<br>可以使用两个值分别设定水平和垂直位置。</p>
-<p>使用数值(40% 30%)时，第一个表示水平位置，第二个表示垂直位置。<br>要是只设定一个值，则将其用来设置水平位置，而垂直位置会被设置为center。</p>
-<p>在使用关键字和百分比值的情况下，设定的值同时应用于元素和图片。<br>如果设定了33% 33%，则图片水平位置与元素水平33%的位置对齐。垂直方面也一样。</p>
-<p>像素之类的绝对单位数值就不一样了。要是用像素单位来设定位置，那么图片的左上角会被放在<br>距离元素左上角制定位置的地方。</p>
-<p>有意思的是，还可以使用负值，这样就把图片左上角定位到元素外部，从而在元素中只能看到部分图片。</p>
-<hr>
-<h4 id="css样式符号"><a href="#css样式符号" class="headerlink" title="css样式符号"></a>css样式符号</h4><p>组合符号<br><code>&lt;font-size&gt;&lt;font-family&gt;</code> 两项必须按顺序存在<br><code>&lt;length&gt;&amp;&amp;&lt;color&gt;</code> 两项必须存在<br><code>&lt;underline||overline||line-through||blink&gt;</code> 至少选一，顺序无碍<br><code>&lt;color&gt;|transparent</code> 只可选一，不可共存<br><code>bold[thin||&lt;length&gt;]</code> 分组用，视为整体</p>
-<p>数量符号<br><code>&lt;length&gt; 只可出现一次</code><br><code>&lt;color-stop&gt;[,&lt;color-stop&gt;]+</code>  <strong>+可出现一次或者多次</strong><br><code>inset?&amp;&amp;&lt;color&gt;</code>  <strong>?表示可选</strong><br><code>&lt;length&gt;{2,4}</code>  <strong>{2,4}</strong>表可出现的最少次数和最多出现次数<br><code>&lt;time&gt;[,&lt;time&gt;]*</code>  <strong>*表可出现0次或多次</strong><br><code>&lt;time&gt;#</code>  <strong>#出现一次或者多次，用，分隔 如2s,3s</strong> </p>
-<hr>
-<h4 id="text-indent继承属性"><a href="#text-indent继承属性" class="headerlink" title="text-indent继承属性"></a>text-indent继承属性</h4><p><strong>text-indent是可以被子元素继承的。</strong><br>如果在div上设定了text-indent属性，那么<strong>div中的所有段落都会集成该缩进值。</strong><br>然而，这个值和所有继承的CSS属性一样，<strong>这个缩进值并不是祖先元素中设定的值，而是计算的值。</strong></p>
-<p>假设有一个400像素宽的div，包含的文本缩进5%，则缩进的像素是20像素(400的5%)。<br>在这个div中有一个200像素的段落。作为子元素，它继承父元素的text-indent值。所以它包含的文本也缩进。<br>但是缩进的值是多少呢？不是5%,而是20像素。<br>也就是说。子元素的继承是根据父元素宽度计算而得到的值。这样可以保证，无论段落多宽，它们的缩进距离都一样。<br>当然，<strong>在子元素上重新设定text-indent属性，可以覆盖继承的值。</strong></p>
-<hr>
-<h4 id="background缩写"><a href="#background缩写" class="headerlink" title="background缩写"></a>background缩写</h4><pre>
-    body{
-        background-image:url(images/water.png);
-        background-position:center;
-        background-color:#fff;
-        background-repeat:no-repeat;
-        background-size:contain;
-        background-attachment:fixed;
-    }
-
-    body{ background:url(images/water.png) center #fff no-repeat contain fixed};
-</pre>
-
-<hr>
-<h4 id="盒阴影"><a href="#盒阴影" class="headerlink" title="盒阴影"></a>盒阴影</h4><p>最简单的语法形式：<br><code>box-shadow:4px 4px 5px 8px #aaa inset</code><br>这几个属性值分别代表：水平偏移量、垂直偏移量、模糊量、扩展量、颜色、阴影位于边框内部<br><img src="/img/0.jpg" alt="box-shadow效果"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1824,7 +2020,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1835,7 +2031,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1846,7 +2042,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

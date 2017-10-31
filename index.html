@@ -258,6 +258,308 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/26/Node.js安装及环境配置之Windows篇/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/26/Node.js安装及环境配置之Windows篇/" itemprop="url">
+                  Node.js安装及环境配置之Windows篇
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-26T17:19:09+08:00">
+                2017-06-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Node/" itemprop="url" rel="index">
+                    <span itemprop="name">Node</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Node.js安装及环境配置之Windows篇</p>
+<h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h3><p>1、本机系统：Windows 10 Pro（64位）<br>2、Node.js：v6.9.2LTS（64位）</p>
+<h3 id="安装Node-js步骤"><a href="#安装Node-js步骤" class="headerlink" title="安装Node.js步骤"></a>安装Node.js步骤</h3><p>1、下载对应你系统的Node.js版本:<a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a><br>2、选安装目录进行安装<br>3、环境配置<br>4、测试</p>
+<h3 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h3><p>1、Node.js简介<br>简单的说 Node.js 就是运行在服务端的 JavaScript。Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。<br>2、下载Node.js<br>打开官网下载链接:<a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a> 我这里下载的是node-v6.9.2-x64.msi,如下图：</p>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><p>1、下载完成后，双击“node-v6.9.2-x64.msi”，开始安装Node.js<br><img src="/img/node.png" alt="NodeJs安装"><br>至此Node.js已经安装完成，可以先进行下简单的测试安装是否成功了，后面还要进行环境配置<br>在键盘按下【win+R】键，输入cmd，然后回车，打开cmd窗口<br><img src="/img/node1.png" alt="NodeJs安装"></p>
+<p>安装完后的目录如下图所示：<br><img src="/img/node2.png" alt="NodeJs安装"><br>此处说明下：新版的Node.js已自带npm，安装Node.js时会一起安装，npm的作用就是对Node.js依赖的包进行管理，也可以理解为用来安装/卸载Node.js需要装的东西</p>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><p>说明：这里的环境配置主要配置的是npm安装的全局模块所在的路径，以及缓存cache的路径，之所以要配置，是因为以后在执行类似：npm install express [-g] （后面的可选参数-g，g代表global全局安装的意思）的安装语句时，会将安装的模块安装到【C:\Users\用户名\AppData\Roaming\npm】路径中，占C盘空间。<br>例如：我希望将全模块所在路径和缓存路径放在我node.js安装的文件夹中，则在我安装的文件夹【D:\Develop\nodejs】下创建两个文件夹【node_global】及【node_cache】如下图：</p>
+<p>创建完两个空文件夹之后，打开cmd命令窗口，输入<br>npm config set prefix “D:\Develop\nodejs\node_global”<br>npm config set cache “D:\Develop\nodejs\node_cache”</p>
+<p>接下来设置环境变量，关闭cmd窗口，“我的电脑”-右键-“属性”-“高级系统设置”-“高级”-“环境变量”</p>
+<p>进入环境变量对话框，在【系统变量】下新建【NODE_PATH】，输入【D:\Develop\nodejs\node_global\node_modules】，将【用户变量】下的【Path】修改为【D:\Develop\nodejs\node_global】</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>配置完后，安装个module测试下，我们就安装最常用的express模块，打开cmd窗口，<br>输入如下命令进行模块的全局安装：<br>npm install express -g     # -g是全局安装的意思</p>
+<p> </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/16/html5拖拽/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/16/html5拖拽/" itemprop="url">
+                  html5拖拽
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T18:06:14+08:00">
+                2017-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="创建拖拽对象"><a href="#创建拖拽对象" class="headerlink" title="创建拖拽对象"></a>创建拖拽对象</h3><p>①给需要拖拽的元素设置draggable属性，它有三个值：<br>true：元素可以被拖拽；false：元素不能被拖拽；auto：<br>浏览器自己判断元素是否能被拖拽。</p>
+<h3 id="处理拖拽事件"><a href="#处理拖拽事件" class="headerlink" title="处理拖拽事件"></a>处理拖拽事件</h3><p>①当我们拖拽对象的时候会触发拖拽事件包括：<br>A.dragstart：当元素拖拽开始触发；<br>B.drag：在元素拖拽过程中触发；<br>C.dragend：元素拖拽结束时触发。</p>
+<h3 id="创建投放区"><a href="#创建投放区" class="headerlink" title="创建投放区"></a>创建投放区</h3><p>①当拖拽对象进入投放区的时候会触发相关的事件<br>A.dragenter：当拖拽对象进入投放区时触发；<br>B.dragover：拖拽对象在投放区内移动时触发；<br>C.dragleave：拖拽对象没有投放到投放区，离开投放区的<br>时候触发；<br>D.drop：拖拽对象投放在投放区时触发。</p>
+<p>②注意：dragenter、dragover可能会受到默认事件的影响，所以我们在这两个事件当中使用e.preventDefault();来阻止事件默认事件</p>
+<h3 id="使用dataTransfer传递数据"><a href="#使用dataTransfer传递数据" class="headerlink" title="使用dataTransfer传递数据"></a>使用dataTransfer传递数据</h3><p>1.当我们需要拖拽对象向投放区传递数据的时候用到<br>dataTransfer有下面的属性和方法：<br>1.types：返回数据的格式；<br>2.getData(<format>)：返回指定格式数据；<br>3.setData(<format>, <data>)：设置指定格式数据；<br>4.clearData(<format>)：移除指定格式数据；<br>5.files：返回已经投放的文件的信息数组。(1.type：文件类型 2.size:文件大小 3.name:文件名)</format></data></format></format></p>
+<h3 id="html5拖拽异步上传"><a href="#html5拖拽异步上传" class="headerlink" title="html5拖拽异步上传"></a>html5拖拽异步上传</h3><p>1.异步ajax<br>var xml=new XMLHttpRequest();<br>xml.open(“post”,”1.php”);<br>xml.send(formData);<br>2.表单数据<br>var formData=new FormData();<br>formData.append(“aa”,DataTransferObj);</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/15/html5新增属性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1538,398 +1840,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/响应式Web设计/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/10/响应式Web设计/" itemprop="url">
-                  响应式web设计
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML5/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML5</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="视口和屏幕尺寸"><a href="#视口和屏幕尺寸" class="headerlink" title="视口和屏幕尺寸"></a>视口和屏幕尺寸</h5><p>视口和屏幕尺寸不是同一视口是指浏览器窗口内的内容区域，不包含工具栏、标签栏等。也就是网页实际显示的区域。个概念。</p>
-<p>屏幕尺寸指的是设备的物理显示区域。<br>需要注意的是有些浏览器调整工具显示的尺寸包含浏览器的其他元素，诸如地址栏、标签栏和搜索栏，而有些工具则不是这样。</p>
-<h5 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h5><p><code>&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait)&quot; href=&quot;portrait-screen.css&quot; /&gt;</code><br>媒体查询表达式询问了媒体类型（你是一块显示屏吗？），然后询问了媒体特性（显示屏是纵向放置的吗？）。<br>任何纵向放置的显示屏设备都会加载 portrait-screen.css样式表，其他设备则会忽略该文件。<br>在媒体查询的开头追加not则会颠倒该查询的逻辑。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait) and (min-width:800px)&quot; </div><div class="line">href=&quot;800wide-portrait-screen.css&quot; /&gt;</div></pre></td></tr></table></figure></p>
-<p>限制只有视口宽度大于800像素的显示屏设备才能加载文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait) and (min-width:</div><div class="line">800px), projection&quot; href=&quot;800wide-portrait-screen.css&quot; /&gt;</div></pre></td></tr></table></figure></p>
-<p>有两点需要注意。<br>第一，媒体查询之间使用逗号分隔。<br>第二，你会注意到在projection之后，没有and，也没有任何特性/值的组合。<br>没有后续表达式，意味着只要是projection就满足条件。本例中，样式会应用于所有的投影仪。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media screen and (max-device-width: 400px) &#123;</div><div class="line">	h1 &#123; color: green &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>在屏幕宽度小于等于400像素的设备上,h1元素的文字颜色就会变成绿色。<br><code>@import url(&quot;phone.css&quot;) screen and (max-width:360px);</code></p>
-<p>CSS的@import指令在当前样式表中按条件引入其他样式表。<br>如上代码会给视口最大宽度为360像素的显示屏设备加载一个名为phone.css的样式表。<br>切记，使用CSS的@import方式会增加HTTP请求(这会影响加载速度),所以请谨慎使用该方法。</p>
-<p>媒体查询能检测那些特性<br><img src="/img/11.png" alt="这些特性"></p>
-<h5 id="安装iOS模拟器和Android模拟器"><a href="#安装iOS模拟器和Android模拟器" class="headerlink" title="安装iOS模拟器和Android模拟器"></a>安装iOS模拟器和Android模拟器</h5><p>虽然真机测试无可替代，但还是可以使用Android和iOS模拟器。<br>Windows、Linux和Mac版的Android模拟器都可以免费下载，Android软件开发工具包（SDK）也可以免费安装。<br>下载地址是<a href="http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。" target="_blank" rel="external">http://developer.android.com/sdk/。不过得使用命令行安装，需要你有一颗勇敢的心。</a><br>iOS模拟器是Xcode开发包在MacAppStore中免费下载)的一部分，只能在MacOSX上使用。<br>一旦安装了Xcode你就可以在这个路径下找到模拟器：<br>~/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications iOS Simulator.app</p>
-<h5 id="阻止移动浏览器自动调整页面大小"><a href="#阻止移动浏览器自动调整页面大小" class="headerlink" title="阻止移动浏览器自动调整页面大小"></a>阻止移动浏览器自动调整页面大小</h5><p><code>&lt;meta&gt;</code>标签还可以控制页面可缩放的范围<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, maximum-scale=3, minimum-scale=0.5&quot; /&gt;</code><br>上面的代码允许用户将页面最多放大至设备宽度的3倍，最小压缩至设备宽度的一半。<br><code>user-scalable=no</code>即是禁止缩放</p>
-<h5 id="需要牢记的公式"><a href="#需要牢记的公式" class="headerlink" title="需要牢记的公式"></a>需要牢记的公式</h5><p>目标元素宽度÷上下文元素宽度=百分比宽度</p>
-<h5 id="HTML5的全新语义化元素"><a href="#HTML5的全新语义化元素" class="headerlink" title="HTML5的全新语义化元素"></a>HTML5的全新语义化元素</h5><blockquote>
-<p><code>&lt;nav&gt;</code>元素用来定义文档的主导航区域，其中的链接指向其他页面或当前页面的某些区域。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><code>&lt;article&gt;</code>元素用来包裹独立的内容片段。<br>当搭建一个页面时，想想你准备放入<article>标签的内容能否作为一个整块而被复制粘贴到另外一个完全不<br>同的网站且能保持完整的意义？<br>另一种办法是，想想包裹在<article>中的内容能否在RSS订阅源中独立成为一篇文章？<br>应该使用<article>标签包裹的内容，最明显的例子就是博客正文。<br>注意，如果出现嵌套的<article>元素，那内层<article>元素内容应该和外层文章内容直接有关。</article></article></article></article></article></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><code>&lt;aside&gt;</code>元素用来表示与页面主内容松散相关的内容。在实践中，我经常将其用作侧边栏(当它包含合适的内容时)。<br>另外，引文、广告以及导航元素(如友情链接等)也可以使用它。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><code>&lt;hgroup&gt;</code>如果页面中有一组使用<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code>、<code>&lt;h3&gt;</code>等标签的标题、标语和副标题，则可以考虑使用<code>&lt;hgroup&gt;</code>将它们包裹起来。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><code>&lt;header&gt;</code>元素不计入大纲结构，所以不能用它来划分内容结构，而是应该用它来包含对区域内容的介绍说明。<br>实际使用中，<code>&lt;header&gt;</code>可用作网站头部的“刊头”区域，也可用作对其他内容如<code>&lt;article&gt;</code>元素的简要介绍。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><code>&lt;footer&gt;</code>元素也不计入大纲结构，所以也不能用于划分内容结构。<br>应该用它来包含其所在区域的辅助信息。例如可以用它包含一组指向其他页面的超链接，或者用它包含版权信息。<br>例如博客网站的页脚可以用它，同时博客正文<code>&lt;article&gt;</code>元素内的文脚也可以用它。<br>不过规范指出，博文作者的联系信息应该使用<code>&lt;address&gt;</code>元素来包裹。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><code>&lt;address&gt;</code>元素用于明确地标注离其最近的<code>&lt;article&gt;</code>或<code>&lt;body&gt;</code>祖先元素的联系信息。<br>为避免产生混淆，请记住<code>&lt;address&gt;</code>中一般不放具体的邮政地址，除非相应内容确实需要联系地址。<br>而邮政地址和其他可能会改变的联系信息应该使用<code>&lt;p&gt;</code>标签来包裹。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><code>&lt;b&gt;</code>过去，人们通常利用<code>&lt;b&gt;</code>元素为文本添加样式，但它的实际用途其实是“给文本加粗”。<br>不过现在你可以正式地将其仅用作样式钩子了，因为现在 HTML5 标准对<b>的定义是：<br>一小段文本，纯粹为了吸引人的注意，除此之外不传达任何重要性，也不暗示其他语态或语气，<br>如文档摘要中的关键词、评论中的产品名称、交互式文本软件中的可操作单词，或者文章的导语。</b></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><code>&lt;em&gt;</code>强调内容中的重点。除非你确实想强调标签中的内容，否则的话可以考虑使用<code>&lt;b&gt;</code>标签或者可以的话使<br>用<code>&lt;i&gt;</code>标签。</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><code>&lt;i&gt;</code>一小段有不同语态或语气的文字，或者是样子上与普通文章有所差异以便标明不同特点的文字。</p>
-</blockquote>
-<h5 id="遵循WAI-ARIA实现无障碍站点"><a href="#遵循WAI-ARIA实现无障碍站点" class="headerlink" title="遵循WAI-ARIA实现无障碍站点"></a>遵循WAI-ARIA实现无障碍站点</h5><p>WAI-ARIA是Web Accessibility Initiative - Accessible Rich Internet Applications的缩写，<br>指无障碍网页应用技术，它主要解决一个问题：让残障人士能无障碍地访问网页上的动态内容。<br>我们可以让导航区域在支持无障碍网页应用技术的屏幕阅读器上轻松地定位，<br>只需为其追加一个地标角色属性 role 即可，如下面的代码片段所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;nav role=&quot;navigation&quot;&gt;</div><div class="line">&lt;ul&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Why?&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Synopsis&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Stills/Photos&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Videos/clips&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Quotes&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Quiz&lt;/a&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">&lt;/nav&gt;</div></pre></td></tr></table></figure></p>
-<p>够简单吧？针对文档结构的各部分分别有如下的地标角色。</p>
-<ul>
-<li>application：用来定义用作网页应用的区域。</li>
-<li>banner：用来定义一个站点级别（而不是某个特定文档的）的区域。如网站的头部和logo。</li>
-<li>complementary：用来定义一个对页面主要区域进行补充说明的区域。<br>在And thewinner isn’t…这个网站中,UNSUNG HEROES和OVERHYPED NONSENSE区域就可以定义为complementary。</li>
-<li>contentinfo：用来定义与页面主要内容相关的信息区域。例如页脚的网站版权信息区域。</li>
-<li>form：你猜都能猜到，定义表单！但注意，如果表单用于搜索，则请使用search来替代。</li>
-<li>main：定义页面的主体内容。</li>
-<li>navigation：用来定义链向当前文档或相关文档的导航链接。</li>
-<li>search：用来定义一个用于搜索的区域。</li>
-</ul>
-<p>为使用了无障碍技术的元素设置样式<br>和其他属性一样，可以直接使用属性选择器来为其设置样式。如，使用nav[role=”navigation”] {}可以为导航区域设置样式。</p>
-<h5 id="使用非可视桌面阅读器（NVDA）免费测试网站可访问性"><a href="#使用非可视桌面阅读器（NVDA）免费测试网站可访问性" class="headerlink" title="使用非可视桌面阅读器（NVDA）免费测试网站可访问性"></a>使用非可视桌面阅读器（NVDA）免费测试网站可访问性</h5><p>如果你是在 Windows 平台上开发且想使用屏幕阅读器测试网站的可访问性，可以免费使用 NVDA。<br>软件的官方地址如下：<a href="http://www.nvdaproject.org/。" target="_blank" rel="external">http://www.nvdaproject.org/。</a></p>
-<h5 id="提供备用的媒体源文件"><a href="#提供备用的媒体源文件" class="headerlink" title="提供备用的媒体源文件"></a>提供备用的媒体源文件</h5><p>最初的HTML5规范呼吁所有浏览器内置支持使用Ogg格式直接播放视频或音频(无需插件)<br>但是由于HTML5工作组的内部争议，曾经作为基线标准的支持Ogg(包括 Theora video和Vorbis audio)的主张<br>在最近更新的HTML5规范中被放弃。因此目前的情况是，一些浏览器支持某一套视频和音频文件格式，<br>而另一些浏览器则支持其他格式。例如Safari只允许在<code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>元素中使用MP4/H.264/AAC媒体文件，<br>而Firefox和Opera则只支持Ogg和WebM。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;video width=&quot;640&quot; height=&quot;480&quot; controls autoplay preload=&quot;auto&quot; loop</div><div class="line">poster=&quot;myVideoPoster.jpg&quot;&gt;</div><div class="line">&lt;source src=&quot;video/myVideo.ogv&quot; type=&quot;video/ogg&quot;&gt;</div><div class="line">&lt;source src=&quot;video/myVideo.mp4&quot; type=&quot;video/mp4&quot;&gt;</div><div class="line">What, do you mean you don&apos;t understand HTML5?</div><div class="line">&lt;/video&gt;</div></pre></td></tr></table></figure></p>
-<p>如果浏览器支持 Ogg 格式，则使用第一个文件；否则它会继续往下解析下一个<code>&lt;source&gt;</code>标签。</p>
-<p><code>&lt;audio&gt;</code>标签的用法与<code>&lt;video&gt;</code>基本一致，除了width、height和poster之外其他属性基本相同。<br>你甚至可以将<code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>标签互换使用。两者之间的最大差别就是<code>&lt;audio&gt;</code>没有可视内容的播放区域。</p>
-<h5 id="响应式视频"><a href="#响应式视频" class="headerlink" title="响应式视频"></a>响应式视频</h5><p>对于HTML5式嵌入视频，修正方法很简单。<br>只需删除视频标签中的height和width属性(如删除width=”640” height=”480”)，<br>然后在CSS中追加如下代码：<code>video { max-width: 100%; height: auto; }</code><br>这种方法对本页面中的视频文件很有用，但它不能解决使用iframe嵌入的视频的响应问题。<br>可以使用一个名为FitVids的jQuery小插件。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/试试markdown的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/试试markdown的使用/" itemprop="url">
-                  试试markdown的使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-24T15:28:46+08:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MarkDown/" itemprop="url" rel="index">
-                    <span itemprop="name">MarkDown</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>小瑞想试试在博客和公众号之间实现文章互通。无间隙共享。那么问题来了。博客使用的是hexo搭建的，使用markdown语言。但是公众微信号貌似还不支持呢。</p>
-<p>所以，铛铛铛铛。小瑞来教你怎么实现在微信公众号使用markdown。</p>
-<ol>
-<li>在Google Chrome中安装Markdown－here插件。</li>
-<li>完成markdown格式的文章编辑</li>
-<li>拷贝粘贴到微信公共帐号的编辑器中</li>
-<li>点击浏览器上的插件按钮，使用Markdown－here渲染</li>
-<li>插入图片，修订</li>
-</ol>
-<p>从此告别公众号排版的烦恼。</p>
-<p>那么markdown具体有哪些常用的排版样式呢？</p>
-<p><strong>换行</strong><br>在上行结尾加两个空格回车就可以换行啦<br>如果要新起一个段落空行就可以啦。</p>
-<blockquote>
-<p>这是引用</p>
-<blockquote>
-<p>这是应用嵌套</p>
-<h2 id="gt-可以嵌套很多层"><a href="#gt-可以嵌套很多层" class="headerlink" title="&gt; 可以嵌套很多层"></a>&gt; 可以嵌套很多层</h2></blockquote>
-</blockquote>
-<p><strong>代码显示</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(&quot;这是代码的展现方式&quot;);</div></pre></td></tr></table></figure></p>
-<hr>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;alert(&quot;这里形成代码块&quot;);</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<hr>
-<p><strong>列表显示</strong></p>
-<ul>
-<li>这是无序列表1</li>
-<li>这是无序列表2</li>
-</ul>
-<ol>
-<li>这是有序列表1</li>
-<li>这是有序列表2</li>
-</ol>
-<p>更多具体的操作还请自己google喽！<br>今天的分享就到这里啦！</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1974,7 +1889,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1985,7 +1900,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1996,7 +1911,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
