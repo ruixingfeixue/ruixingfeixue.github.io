@@ -95,7 +95,11 @@
 <meta property="og:image" content="http://yoursite.com/img/node.png">
 <meta property="og:image" content="http://yoursite.com/img/node1.png">
 <meta property="og:image" content="http://yoursite.com/img/node2.png">
-<meta property="og:updated_time" content="2017-10-31T10:59:51.863Z">
+<meta property="og:image" content="http://yoursite.com/img/node3.png">
+<meta property="og:image" content="http://yoursite.com/img/node4.png">
+<meta property="og:image" content="http://yoursite.com/img/node5.png">
+<meta property="og:image" content="http://yoursite.com/img/node6.png">
+<meta property="og:updated_time" content="2017-11-01T08:05:18.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js安装及环境配置之Windows篇">
 <meta name="twitter:description" content="Node.js安装及环境配置之Windows篇 安装环境1、本机系统：Windows 10 Pro（64位）2、Node.js：v6.9.2LTS（64位） 安装Node.js步骤1、下载对应你系统的Node.js版本:https://nodejs.org/en/download/2、选安装目录进行安装3、环境配置4、测试 前期准备1、Node.js简介简单的说 Node.js 就是运行在服务端的">
@@ -359,14 +363,15 @@
         <p>Node.js安装及环境配置之Windows篇</p>
 <h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h3><p>1、本机系统：Windows 10 Pro（64位）<br>2、Node.js：v6.9.2LTS（64位）</p>
 <h3 id="安装Node-js步骤"><a href="#安装Node-js步骤" class="headerlink" title="安装Node.js步骤"></a>安装Node.js步骤</h3><p>1、下载对应你系统的Node.js版本:<a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a><br>2、选安装目录进行安装<br>3、环境配置<br>4、测试</p>
-<h3 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h3><p>1、Node.js简介<br>简单的说 Node.js 就是运行在服务端的 JavaScript。Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。<br>2、下载Node.js<br>打开官网下载链接:<a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a> 我这里下载的是node-v6.9.2-x64.msi,如下图：</p>
+<h3 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h3><p>1、Node.js简介<br>简单的说 Node.js 就是运行在服务端的JavaScript。Node.js是一个基于ChromeV8引擎的JavaScript运行环境。<br>Node.js使用了一个事件驱动、非阻塞式I/O的模型，使其轻量又高效。<br>Node.js的包管理器npm，是全球最大的开源库生态系统。</p>
+<p>2、下载Node.js<br>打开官网下载链接:<a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a> 我这里下载的是node-v6.9.2-x64.msi,如下图：</p>
 <h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><p>1、下载完成后，双击“node-v6.9.2-x64.msi”，开始安装Node.js<br><img src="/img/node.png" alt="NodeJs安装"><br>至此Node.js已经安装完成，可以先进行下简单的测试安装是否成功了，后面还要进行环境配置<br>在键盘按下【win+R】键，输入cmd，然后回车，打开cmd窗口<br><img src="/img/node1.png" alt="NodeJs安装"></p>
 <p>安装完后的目录如下图所示：<br><img src="/img/node2.png" alt="NodeJs安装"><br>此处说明下：新版的Node.js已自带npm，安装Node.js时会一起安装，npm的作用就是对Node.js依赖的包进行管理，也可以理解为用来安装/卸载Node.js需要装的东西</p>
-<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><p>说明：这里的环境配置主要配置的是npm安装的全局模块所在的路径，以及缓存cache的路径，之所以要配置，是因为以后在执行类似：npm install express [-g] （后面的可选参数-g，g代表global全局安装的意思）的安装语句时，会将安装的模块安装到【C:\Users\用户名\AppData\Roaming\npm】路径中，占C盘空间。<br>例如：我希望将全模块所在路径和缓存路径放在我node.js安装的文件夹中，则在我安装的文件夹【D:\Develop\nodejs】下创建两个文件夹【node_global】及【node_cache】如下图：</p>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><p>说明：这里的环境配置主要配置的是npm安装的全局模块所在的路径，以及缓存cache的路径，之所以要配置，是因为以后在执行类似：npm install express [-g] （后面的可选参数-g，g代表global全局安装的意思）的安装语句时，会将安装的模块安装到【C:\Users\用户名\AppData\Roaming\npm】路径中，占C盘空间。<br>例如：我希望将全模块所在路径和缓存路径放在我node.js安装的文件夹中，则在我安装的文件夹【D:\Develop\nodejs】下创建两个文件夹【node_global】及【node_cache】如下图：<br><img src="/img/node3.png" alt="NodeJs安装"></p>
 <p>创建完两个空文件夹之后，打开cmd命令窗口，输入<br>npm config set prefix “D:\Develop\nodejs\node_global”<br>npm config set cache “D:\Develop\nodejs\node_cache”</p>
-<p>接下来设置环境变量，关闭cmd窗口，“我的电脑”-右键-“属性”-“高级系统设置”-“高级”-“环境变量”</p>
-<p>进入环境变量对话框，在【系统变量】下新建【NODE_PATH】，输入【D:\Develop\nodejs\node_global\node_modules】，将【用户变量】下的【Path】修改为【D:\Develop\nodejs\node_global】</p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>配置完后，安装个module测试下，我们就安装最常用的express模块，打开cmd窗口，<br>输入如下命令进行模块的全局安装：<br>npm install express -g     # -g是全局安装的意思</p>
+<p><img src="/img/node4.png" alt="NodeJs安装"></p>
+<p>接下来设置环境变量，关闭cmd窗口，“我的电脑”-右键-“属性”-“高级系统设置”-“高级”-“环境变量”<br>进入环境变量对话框，在【系统变量】下新建【NODE_PATH】，输入【D:\Develop\nodejs\node_global\node_modules】，将【用户变量】下的【Path】修改为【D:\Develop\nodejs\node_global】<br><img src="/img/node5.png" alt="NodeJs安装"></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>配置完后，安装个module测试下，我们就安装最常用的express模块，打开cmd窗口，<br>输入如下命令进行模块的全局安装：<br>npm install express -g     # -g是全局安装的意思<br><img src="/img/node6.png" alt="NodeJs安装"></p>
 <p> </p>
 
       
@@ -414,6 +419,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/27/npm/" rel="next" title="NPM">
+                <i class="fa fa-chevron-left"></i> NPM
+              </a>
             
           </div>
 
@@ -495,7 +504,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

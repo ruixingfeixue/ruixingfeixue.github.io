@@ -258,6 +258,309 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/css选择器和字体/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/12/css选择器和字体/" itemprop="url">
+                  css选择器和字体
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-12T17:19:09+08:00">
+                2017-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本书是css权威指南第三版,涵盖了CSS2和CSS2.1(截止2006年4月11日发布的工作草案)。</p>
+<h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><p>1.替换元素<br>替换元素是指用来替换元素内容的部分并非由文档内容直接表示。<br>例如img元素，它是由文档本身之外的一个图像文件来替换。<br><code>&lt;img src=&quot;a.png&quot;</code>这个标记片段不包含任何具体内容，只有一个元素名和属性。<br>只有指定了src，否则没有任何意义。还有input也是替换元素，其类型取决于type。<br>2.非替换元素<br>大部分的html和xhtml都是非替换元素。其内容在元素本身生成的框中显示。</p>
+<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><p>link标签：rel代表关系(relation).值为stylesheet。media属性，css2为这个属性定义了很多可取值。<br>all 用于表现所有媒体<br>aural 用于语音合成器、屏幕阅读器和文档的其它声音表现。<br>浏览器的支持性自己去查啦。毕竟用的也不多。<br>等等。。</p>
+<h5 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h5><p>1.分组选择器<br><code>h2,p{color:grey}</code>这样就将h2和p分到一个组啦。h2和p颜色都是灰色啦。</p>
+<p>2.多类选择器<br><code>.warning.urgent{color:grey}</code> 这样就可以给元素增加样式<code>class=&quot;warning urgent&quot;</code>。元素既紧急又有警告了。<br><code>.warning.help{color:red}</code> 这个选择器只匹配class包含warning、help的元素。</p>
+<p>3.属性选择器<br><code>p[class~=&quot;warning&quot;]{font-weight:bold};</code> 这样就可以选择class属性中包含warning的元素。<br><code>[foo^=&quot;ch&quot;]</code> 选择foo属性值以”ch”开头的所有元素<br><code>[foo$=&quot;le&quot;]</code> 选择foo属性值以”le”结尾的所有元素<br><code>[foo*=&quot;l&quot;]</code> 选择foo属性值包含子串”l”的所有元素<br><code>[lang|=&#39;en&#39;]</code> 选择foo属性值等于en或者以en-开头的元素</p>
+<p>4、选择子元素<br><code>h1&gt;strong {color:red;}</code> 选择h1元素的第一个strong元素。第二个不受影响。</p>
+<p>5、选择相邻兄弟元素<br><code>h1+p{ margin-top:0}</code> 选择紧连在一个h1元素后出现的所有段落,h1要与p元素有共同的父元素。<br>注意：一个选择符只能选择两个相邻兄弟中的第二个元素。<br><code>li+li{font-weight:bold}</code> 会把第二个和第三个li字体变粗。</p>
+<p>6.伪类选择器<br>静态伪类：第一次显示之后不会再改变文档的样式，例如:link、:visited<br>动态伪类：可以根据用户行为改变文档的外观。例如:hover、:active、:focus<br>选择第一个子元素：:first-child来选择元素的第一个子元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">	&lt;p&gt;&lt;/p&gt;</div><div class="line">	&lt;em&gt;&lt;/em&gt;</div><div class="line">	&lt;li&gt;&lt;/li&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>如代码，元素的第一个子元素包括第一个p，第一个em，第一个li。<br>p:first-child{ font-weight:bold;}<br>li:first-child{ text-transform:uppercase;}<br>第一个规则将作为某元素的第一个子元素的所有p元素设置为粗体。<br>第二个规则将作为某元素的第一个子元素的所有li元素变成大写。</p>
+<p>5.伪元素选择器<br>:first-letter{color:red;}  用于设置一个块级元素首字母的样式。<br>:first-line{ color:red;} 用来影响元素中的第一个文本行。</p>
+<p>注意点: :first-letter和:first-line只能运用于标记或者段落之类的块级元素，而不能运用于超链接等行内元素。</p>
+<h5 id="元素继承性"><a href="#元素继承性" class="headerlink" title="元素继承性"></a>元素继承性</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*&#123; color:grey&#125;</div><div class="line">h1&#123; color:black;&#125;</div><div class="line">&lt;h1&gt;market&lt;em&gt;center&lt;/em&gt;&lt;/h1&gt;</div></pre></td></tr></table></figure>
+<p>不仅正常的h1会变成灰色，连em文本也会变成灰色。因为继承的值没有特殊性，甚至连0特殊性都没有。而通配符选择器适用于所有元素，而且有0特殊性。其颜色声明指定的值gray要优先于继承值。</p>
+<h5 id="字体大小和继承"><a href="#字体大小和继承" class="headerlink" title="字体大小和继承"></a>字体大小和继承</h5><p>在CSS中font-size是可以继承的。不过继承的是计算值而不是百分数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">p&#123; font-size:12px;&#125;</div><div class="line">em&#123; font-size:120%;&#125;</div><div class="line">strong&#123;	font-size:135%;&#125;</div><div class="line">&lt;p&gt;我是font-size(12px)&lt;strong&gt;我是font-size(120%)&lt;/strong&gt;&lt;em&gt;我是font-size(135%)&lt;/em&gt;&lt;/p&gt;</div></pre></td></tr></table></figure></p>
+<p>strong元素的大小值就算如下：<br>12px × 120% =14.4px ≈ 14px<br>14.4px × 135% = 19.44px ≈ 19px</p>
+<h5 id="字体变形"><a href="#字体变形" class="headerlink" title="字体变形"></a>字体变形</h5><p>font-varient有两个非继承值:默认值normal和small-caps。<br>normal描述正常文本。small=caps要求使用小型大写字母文本。</p>
+<h5 id="字体匹配的原理"><a href="#字体匹配的原理" class="headerlink" title="字体匹配的原理"></a>字体匹配的原理</h5><p><img src="/img/13.png" alt="字体匹配的原理"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/html5标记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/10/html5标记/" itemprop="url">
+                  html5标记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5实战/" itemprop="url" rel="index">
+                    <span itemprop="name">html5实战</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/响应式Web设计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -426,149 +729,6 @@
 <p>如果浏览器支持 Ogg 格式，则使用第一个文件；否则它会继续往下解析下一个<code>&lt;source&gt;</code>标签。</p>
 <p><code>&lt;audio&gt;</code>标签的用法与<code>&lt;video&gt;</code>基本一致，除了width、height和poster之外其他属性基本相同。<br>你甚至可以将<code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>标签互换使用。两者之间的最大差别就是<code>&lt;audio&gt;</code>没有可视内容的播放区域。</p>
 <h5 id="响应式视频"><a href="#响应式视频" class="headerlink" title="响应式视频"></a>响应式视频</h5><p>对于HTML5式嵌入视频，修正方法很简单。<br>只需删除视频标签中的height和width属性(如删除width=”640” height=”480”)，<br>然后在CSS中追加如下代码：<code>video { max-width: 100%; height: auto; }</code><br>这种方法对本页面中的视频文件很有用，但它不能解决使用iframe嵌入的视频的响应问题。<br>可以使用一个名为FitVids的jQuery小插件。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/html5标记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/10/html5标记/" itemprop="url">
-                  html5标记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/html5实战/" itemprop="url" rel="index">
-                    <span itemprop="name">html5实战</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
 
           
         
@@ -1782,195 +1942,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/26/css背景与边框/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/26/css背景与边框/" itemprop="url">
-                  css背景与边框
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-26T20:57:47+08:00">
-                2016-11-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="半透明边框"><a href="#半透明边框" class="headerlink" title="半透明边框"></a>半透明边框</h4><p>(<a href="http://runjs.cn/code/iobax1rr" target="_blank" rel="external">Demo点这里</a>)</p>
-<h5 id="科普RGBA和HSLA背景知识"><a href="#科普RGBA和HSLA背景知识" class="headerlink" title="科普RGBA和HSLA背景知识"></a>科普RGBA和HSLA背景知识</h5><p>RGBA(R,G,B,A)取值：(正整数值的取值范围为：0 - 255 )<br>R：红色值。正整数 | 百分数<br>G：绿色值。正整数 | 百分数<br>B：蓝色值。正整数 | 百分数<br>A：Alpha透明度。取值0~1之间。</p>
-<p>HSLA(H,S,L,A)<br>HSL模式是基于一个360°的色相环。<br>取值:<br>H：Hue(色调)。60°时为黄色,120°时为绿色,180°时为青色,240°时为蓝色,300°时为洋红色,360°时为红色。<br>S：Saturation(饱和度)。取值为：0.0% - 100.0%<br>L：Lightness(亮度)。取值为：0.0% - 100.0%<br>A：Alpha透明度。取值0~1之间。  </p>
-<p>HSL和RGB与十六进制颜色值最大的区别，是它们支持透明通道。这意味着可以让元素透明，使其下方的元素可见。 </p>
-<h5 id="为什么不使用opacity"><a href="#为什么不使用opacity" class="headerlink" title="为什么不使用opacity"></a>为什么不使用opacity</h5><p>CSS3 还允许通过opacity声明来设置元素的透明度。<br>该透明度的值也是一个介于0到1之间的小数(如将opacity设置为0.1表示为10%透明)。<br>但是这种透明度与RGBA及HSLA有所不同，这种方式设置的透明度会对整个元素产生影响(元素的内容都会透明)。<br>反之，使用HSLA或RGBA则可以仅让元素的某些部分有透明效果。<br>这样，一个元素可以带有HSLA透明背景，但内部的文字仍然不透明。</p>
-<h5 id="如何给容器加上透明边框"><a href="#如何给容器加上透明边框" class="headerlink" title="如何给容器加上透明边框"></a>如何给容器加上透明边框</h5><p><code>border: 10px solid hsla(0,0%,100%,.5) background: white;</code><br>使用如上代码来实现结果会发现透明边框没有显示出来。因为默认背景会覆盖边框。<br>解决方案：设置background-clip: padding-box;即可。默认的是border-box。</p>
-<hr>
-<h4 id="多重边框"><a href="#多重边框" class="headerlink" title="多重边框"></a>多重边框</h4><p>(<a href="http://runjs.cn/code/uddyuvxi" target="_blank" rel="external">Demo点这里</a>)</p>
-<h5 id="使用box-shadow来实现"><a href="#使用box-shadow来实现" class="headerlink" title="使用box-shadow来实现"></a>使用box-shadow来实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: yellowgreen;</div><div class="line">box-shadow: 0 0 0 10px #655,0 0 0 15px deeppink,0 2px 5px 15px rgba(0,0,0,.6);</div></pre></td></tr></table></figure>
-<p>好处：投影的行为不会影响布局，也不会受到box-sizing的影响。也不会影响鼠标事件。  </p>
-<h5 id="outline方案"><a href="#outline方案" class="headerlink" title="outline方案"></a>outline方案</h5><p><code>background: yellowgreen;border: 10px solid #655;outline: 5px solid deeppink;</code><br>好处：outline边框样式灵活，可以使用虚线(box-shadow不可以。<br>还可以设置outline-offset属性来控制它跟元素边缘之间的间距，可设为负值实现缝边效果。<br>注意点：如果元素是圆角的，描边不一定是圆角，绝大多数情况下描边是直角的。</p>
-<hr>
-<h4 id="灵活的背景定位"><a href="#灵活的背景定位" class="headerlink" title="灵活的背景定位"></a>灵活的背景定位</h4><p>(<a href="http://runjs.cn/code/mpsazdgq" target="_blank" rel="external">Demo点这里</a>)</p>
-<h5 id="使用backgrou-position实现带有偏移量的背景定位"><a href="#使用backgrou-position实现带有偏移量的背景定位" class="headerlink" title="使用backgrou-position实现带有偏移量的背景定位"></a>使用backgrou-position实现带有偏移量的背景定位</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: url(code-pirate.svg) no-repeat #58a;</div><div class="line">background-position: right 20px bottom 10px;</div></pre></td></tr></table></figure>
-<p>浏览器的回退实现:即把bottom right 定位值写进background的简写属性。</p>
-<h5 id="background-origin实现带有偏移量的背景定位"><a href="#background-origin实现带有偏移量的背景定位" class="headerlink" title="background-origin实现带有偏移量的背景定位"></a>background-origin实现带有偏移量的背景定位</h5><p><code>background-origin: content-box;</code><br>当背景位置的偏移量是padding的值可以借助background-orgin来实现背景偏移。默认值为border—box。 </p>
-<h5 id="calc-方案"><a href="#calc-方案" class="headerlink" title="calc()方案"></a>calc()方案</h5><p>实现背景距离下方20px,右方20px,即水平偏移100%-20px,垂直偏移100%-20px。<br><code>background-position: calc(100% - 20px) calc(100% - 10px);</code><br>注意点：请不要忘记在 calc() 函数内部的 - 和 + 运算符的两侧各加一个空白符，否则会产生解析错误！<br>这个规则如此怪异，是为了向前兼容：未来，在 calc() 内部可能会允许使用关键字，而这些关键字可能会包含连字符（即减号）。</p>
-<hr>
-<h4 id="边框内圆角"><a href="#边框内圆角" class="headerlink" title="边框内圆角"></a>边框内圆角</h4><p>(<a href="http://runjs.cn/code/4cd0rqhq" target="_blank" rel="external">Demo点这里</a>)</p>
-<h5 id="使用box-shadow和outline"><a href="#使用box-shadow和outline" class="headerlink" title="使用box-shadow和outline"></a>使用box-shadow和outline</h5><p>使用ouline描边，box-shadow来填充元素扩张值从而实现边框内圆角效果。<br>如图，在我们的例子中， border-radius是 .8em，那么最小的扩张值就<br>是0.8(√2-1)≈ 0.331。我们要做的就是把它稍微向上取个整,把.34em设置为投影的扩张半径。<br>为了避免每次都要计算，你可以直接使用圆角半径的一半，因为(√2-1)&lt;0.5。<br>注意点：r(√2-1)&lt;扩张半径&lt;描边宽度。这意味着，如果描边的宽度比r(√2-1)小，那我们是不可能用这个方法达成该效果的。</p>
-<p><img src="/img/2.png" alt="说明"></p>
-<hr>
-<h4 id="条纹背景"><a href="#条纹背景" class="headerlink" title="条纹背景"></a>条纹背景</h4><p>(<a href="http://runjs.cn/code/ml9zhtlt" target="_blank" rel="external">Demo点这里</a>)</p>
-<h5 id="如何实现渐变"><a href="#如何实现渐变" class="headerlink" title="如何实现渐变"></a>如何实现渐变</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(white 50%, black 0);</div><div class="line">background-size: 100% 30px;</div></pre></td></tr></table></figure>
-<p>如上即有一个从上到下白色(0-50%)到黑色的渐变(50%-100%)。       </p>
-<blockquote>
-<p>如果多个色标具有相同的位置，它们会产生一个无限小的过渡区域，<br>过渡的起止色分别是第一个和最后一个指定值。<br>从效果上看，颜色会在那个位置突然变化，而不是一个平滑的渐变过程。</p>
-</blockquote>
-<h5 id="斜向条纹的实现"><a href="#斜向条纹的实现" class="headerlink" title="斜向条纹的实现"></a>斜向条纹的实现</h5><p><code>background: repeating-linear-gradient(60deg,#fb3, #fb3 15px, #58a 0, #58a 30px);</code><br>如上即有一个60度的重复渐变。从0到15px是黄色，从15到30px是墨绿色。   </p>
-<blockquote>
-<p>如果某个色标的位置值比整个列表中在它之前的色标的位置值都要小，则该色标的位置值会被设置为它前面所有色标位置值的最大值。</p>
-</blockquote>
-<h5 id="垂直条纹的实现"><a href="#垂直条纹的实现" class="headerlink" title="垂直条纹的实现"></a>垂直条纹的实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(to right, #fb3 50%, #58a 0);</div><div class="line">background-size: 30px 100%;</div></pre></td></tr></table></figure>
-<p>改变background属性的方向即可。默认是从上到下。其次要注意background-size数值要调换。</p>
-<p>如图，在我们的斜向条纹中，背景尺寸指定的长度值决定了直角三角形的斜边长度，<br>但条纹的宽度实际上是直角三角形的高。<br>这意味着，如果想让条纹的宽度变化为我们原本想要的 15px ，就需要把background-size指定为2×15√2≈42.42像素<br><img src="/img/1.jpg" alt="说明"></p>
-<p>实际上repeating-linear-gradient()和repeating-radial-gradient()循环加强版就可以实现。<br><code>background: repeating-linear-gradient(45deg,#fb3, #fb3 15px, #58a 0, #58a 30px);</code><br>这样就创建了一个45度的渐变条纹。<br>注意：在这个方法中，不论条纹的角度如何，我们在创建双色条纹时都需要用到四个色标。</p>
-<h5 id="同色系条纹-色彩差异不大，只是明度不同"><a href="#同色系条纹-色彩差异不大，只是明度不同" class="headerlink" title="同色系条纹(色彩差异不大，只是明度不同)"></a>同色系条纹(色彩差异不大，只是明度不同)</h5><p>方法一:按普通方法来，正常色值按语法写即可<br>方法二:背景设为颜色值，改变透明度来实现  </p>
-<hr>
-<h4 id="复杂的背景图案"><a href="#复杂的背景图案" class="headerlink" title="复杂的背景图案"></a>复杂的背景图案</h4><p>(<a href="http://runjs.cn/code/nqzsurmc" target="_blank" rel="external">Demo点这里</a>)<br>1.创建条纹网格<br>按照常规的路子走都能想到<br>2.让网格的框框更细<br>使用长度而不是百分比<br>3.叠加出更逼真的网格<br>linear-gradient的叠加使用<br>4.波点<br>用两层背景来实现。重点是要弄清楚图案是怎样平铺的<br><img src="/img/3.png" alt="波点"><br>5.棋盘效果<br><img src="/img/4.png" alt="棋盘"><br>要想实现如图的平铺效果，窍门在于用两个直角三角形来拼合出我们想要的方块。</p>
-<h4 id="伪随机背景"><a href="#伪随机背景" class="headerlink" title="伪随机背景"></a>伪随机背景</h4><p>(<a href="http://runjs.cn/code/zkvgmgln" target="_blank" rel="external">Demo点这里</a>)<br>质数来实现伪随机，蝉原则,不是很懂的样子呢！</p>
-<hr>
-<h4 id="连续的背景边框"><a href="#连续的背景边框" class="headerlink" title="连续的背景边框"></a>连续的背景边框</h4><p>(<a href="http://runjs.cn/code/xyj5fn49" target="_blank" rel="external">Demo点这里</a>)   </p>
-<h5 id="如何给边框设背景"><a href="#如何给边框设背景" class="headerlink" title="如何给边框设背景"></a>如何给边框设背景</h5><p>方法一:使用两个 HTML 元素：一个元素用来把我们的石雕图片设为背景，另一个元素用来存放内容，并设置纯白背景，然后覆盖在前者之上。   </p>
-<p>方法二:只用一个元素就能达成完全一样的效果。主要的思路就是在石雕背景图片之上，再叠加一层纯白的实色背景。为了让下层的图片背景透过边框区域显示出来，我们需要给两层背景指定不同的background-clip值。最后一个要点在于，我们只能在多重背景的最底层设置背景色，因此需要用一道从白色过渡到白色的 CSS 渐变来模拟出纯白实色背景的效果。<br>注意点：出来的图片backgroud-origin默认是padding-box，需要设置为border-box。</p>
-<h5 id="实现信封效果"><a href="#实现信封效果" class="headerlink" title="实现信封效果"></a>实现信封效果</h5><p>1.可以用background实现<br>2.可以用border-image实现<br>用border-image实现存在的问题：<br>每当我们改变border-image-slice时，都需要同时修改border-width来让它们相互匹配。<br>由于我们不能在border-image-slice属性中使用em单位，只能把边框厚度指定为像素单位。<br>条纹的宽度需要在色标的位置信息中写好，因此我们在改变条纹宽度时，需要修改四处。</p>
-<h5 id="蚂蚁行军边框"><a href="#蚂蚁行军边框" class="headerlink" title="蚂蚁行军边框"></a>蚂蚁行军边框</h5><p>background-position 以动画的方式改变为100%,实现滚动效果<br>可以使用background创建出各种特殊样式的虚线框：不管是为虚线线段指定不同的颜色，还是自定义线段的长度和间隙的长度</p>
-<h5 id="关于border-image了解的详细"><a href="#关于border-image了解的详细" class="headerlink" title="关于border-image了解的详细"></a>关于border-image了解的详细</h5><p>可以参考(<a href="http://www.zhangxinxu.com/wordpress/2010/01/css3-border-image/" target="_blank" rel="external">这里</a>)   </p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2020,7 +1991,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
