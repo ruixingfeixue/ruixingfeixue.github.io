@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="瑞的指南针">
 <meta property="og:description" content="本书是css权威指南第三版,涵盖了CSS2和CSS2.1(截止2006年4月11日发布的工作草案)。 概念1.替换元素替换元素是指用来替换元素内容的部分并非由文档内容直接表示。例如img元素，它是由文档本身之外的一个图像文件来替换。&amp;lt;img src=&amp;quot;a.png&amp;quot;这个标记片段不包含任何具体内容，只有一个元素名和属性。只有指定了src，否则没有任何意义。还有input也是替">
 <meta property="og:image" content="http://yoursite.com/img/13.png">
-<meta property="og:updated_time" content="2017-09-18T09:28:28.220Z">
+<meta property="og:updated_time" content="2017-11-07T08:29:58.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css选择器和字体">
 <meta name="twitter:description" content="本书是css权威指南第三版,涵盖了CSS2和CSS2.1(截止2006年4月11日发布的工作草案)。 概念1.替换元素替换元素是指用来替换元素内容的部分并非由文档内容直接表示。例如img元素，它是由文档本身之外的一个图像文件来替换。&amp;lt;img src=&amp;quot;a.png&amp;quot;这个标记片段不包含任何具体内容，只有一个元素名和属性。只有指定了src，否则没有任何意义。还有input也是替">
@@ -366,7 +366,8 @@
 <p>如代码，元素的第一个子元素包括第一个p，第一个em，第一个li。<br>p:first-child{ font-weight:bold;}<br>li:first-child{ text-transform:uppercase;}<br>第一个规则将作为某元素的第一个子元素的所有p元素设置为粗体。<br>第二个规则将作为某元素的第一个子元素的所有li元素变成大写。</p>
 <p>5.伪元素选择器<br>:first-letter{color:red;}  用于设置一个块级元素首字母的样式。<br>:first-line{ color:red;} 用来影响元素中的第一个文本行。</p>
 <p>注意点: :first-letter和:first-line只能运用于标记或者段落之类的块级元素，而不能运用于超链接等行内元素。</p>
-<h5 id="元素继承性"><a href="#元素继承性" class="headerlink" title="元素继承性"></a>元素继承性</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*&#123; color:grey&#125;</div><div class="line">h1&#123; color:black;&#125;</div><div class="line">&lt;h1&gt;market&lt;em&gt;center&lt;/em&gt;&lt;/h1&gt;</div></pre></td></tr></table></figure>
+<h5 id="元素继承性"><a href="#元素继承性" class="headerlink" title="元素继承性"></a>元素继承性</h5><p>并非所有的元素都可以继承。<br>与元素外观(文字颜色、字体等)相关的样式会被继承。与元素在页面上的布局相关的样式不会被继承。<br>在样式中使用inherit这个特别设立的值可以强行实施继承。明确指示浏览器在该属性上使用父元素样式中的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*&#123; color:grey&#125;</div><div class="line">h1&#123; color:black;&#125;</div><div class="line">&lt;h1&gt;market&lt;em&gt;center&lt;/em&gt;&lt;/h1&gt;</div></pre></td></tr></table></figure>
 <p>不仅正常的h1会变成灰色，连em文本也会变成灰色。因为继承的值没有特殊性，甚至连0特殊性都没有。而通配符选择器适用于所有元素，而且有0特殊性。其颜色声明指定的值gray要优先于继承值。</p>
 <h5 id="字体大小和继承"><a href="#字体大小和继承" class="headerlink" title="字体大小和继承"></a>字体大小和继承</h5><p>在CSS中font-size是可以继承的。不过继承的是计算值而不是百分数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">p&#123; font-size:12px;&#125;</div><div class="line">em&#123; font-size:120%;&#125;</div><div class="line">strong&#123;	font-size:135%;&#125;</div><div class="line">&lt;p&gt;我是font-size(12px)&lt;strong&gt;我是font-size(120%)&lt;/strong&gt;&lt;em&gt;我是font-size(135%)&lt;/em&gt;&lt;/p&gt;</div></pre></td></tr></table></figure></p>
 <p>strong元素的大小值就算如下：<br>12px × 120% =14.4px ≈ 14px<br>14.4px × 135% = 19.44px ≈ 19px</p>

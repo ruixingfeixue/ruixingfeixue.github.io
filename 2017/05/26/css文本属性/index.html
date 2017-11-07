@@ -85,20 +85,20 @@
 
 
 
-<meta name="description" content="行高line-height属性是文本行间基线之间的距离。line-height控制了行间距，这是文本行之间超出字体大小的额外空间。换句话说，line-height值和字体大小之差就是行间距。 构造文本行文本行的每个元素都会生成一个内容区，这由字体的大小决定。这个内容区则会产生一个行内框(line-box)。要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算">
+<meta name="description" content="行高line-height属性是文本行间基线之间的距离。line-height控制了行间距，这是文本行之间超出字体大小的额外空间。换句话说，line-height值和字体大小之差就是行间距。 构造文本行文本行的每个元素都会生成一个内容区，这由字体的大小决定。这个内容区则会产生一个行内框(line-box)。要确定一个给定元素的行间距，只需将line-size的计算值。这个值是总的行间距。 举个栗子">
 <meta name="keywords" content="css权威指南第三版">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css文本属性">
 <meta property="og:url" content="http://yoursite.com/2017/05/26/css文本属性/index.html">
 <meta property="og:site_name" content="瑞的指南针">
-<meta property="og:description" content="行高line-height属性是文本行间基线之间的距离。line-height控制了行间距，这是文本行之间超出字体大小的额外空间。换句话说，line-height值和字体大小之差就是行间距。 构造文本行文本行的每个元素都会生成一个内容区，这由字体的大小决定。这个内容区则会产生一个行内框(line-box)。要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算">
+<meta property="og:description" content="行高line-height属性是文本行间基线之间的距离。line-height控制了行间距，这是文本行之间超出字体大小的额外空间。换句话说，line-height值和字体大小之差就是行间距。 构造文本行文本行的每个元素都会生成一个内容区，这由字体的大小决定。这个内容区则会产生一个行内框(line-box)。要确定一个给定元素的行间距，只需将line-size的计算值。这个值是总的行间距。 举个栗子">
 <meta property="og:image" content="http://yoursite.com/img/14.png">
 <meta property="og:image" content="http://yoursite.com/img/15.png">
 <meta property="og:image" content="http://yoursite.com/img/16.png">
-<meta property="og:updated_time" content="2017-09-18T09:28:16.948Z">
+<meta property="og:updated_time" content="2017-11-03T09:50:49.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css文本属性">
-<meta name="twitter:description" content="行高line-height属性是文本行间基线之间的距离。line-height控制了行间距，这是文本行之间超出字体大小的额外空间。换句话说，line-height值和字体大小之差就是行间距。 构造文本行文本行的每个元素都会生成一个内容区，这由字体的大小决定。这个内容区则会产生一个行内框(line-box)。要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算">
+<meta name="twitter:description" content="行高line-height属性是文本行间基线之间的距离。line-height控制了行间距，这是文本行之间超出字体大小的额外空间。换句话说，line-height值和字体大小之差就是行间距。 构造文本行文本行的每个元素都会生成一个内容区，这由字体的大小决定。这个内容区则会产生一个行内框(line-box)。要确定一个给定元素的行间距，只需将line-size的计算值。这个值是总的行间距。 举个栗子">
 <meta name="twitter:image" content="http://yoursite.com/img/14.png">
 
 
@@ -357,7 +357,7 @@
 
       
         <h5 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h5><p>line-height属性是文本行间基线之间的距离。<br>line-height控制了行间距，这是文本行之间超出字体大小的额外空间。<br>换句话说，line-height值和字体大小之差就是行间距。</p>
-<h5 id="构造文本行"><a href="#构造文本行" class="headerlink" title="构造文本行"></a>构造文本行</h5><p>文本行的每个元素都会生成一个内容区，这由字体的大小决定。<br>这个内容区则会产生一个行内框(line-box)。<br>要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算值。<br>这个值是总的行间距。</p>
+<h5 id="构造文本行"><a href="#构造文本行" class="headerlink" title="构造文本行"></a>构造文本行</h5><p>文本行的每个元素都会生成一个内容区，这由字体的大小决定。<br>这个内容区则会产生一个行内框(line-box)。<br>要确定一个给定元素的行间距，只需将line-size的计算值。<br>这个值是总的行间距。</p>
 <p><img src="/img/14.png" alt="行框图"><br>举个栗子：<br>假设font-size为14px(相应的，内容区的高度也是14px)，而且line-height为18px。<br>其差(4像素)除以2，将其一半应用到内容区的顶部和底部。这会得到一个18像素高的行内框。<br>在内容区的上面和下面分别有2个额外的像素。</p>
 <h5 id="指定line-height值"><a href="#指定line-height值" class="headerlink" title="指定line-height值"></a>指定line-height值</h5><p>line-height的可取值，如果使用默认值normal，用户代理必须计算行间的垂直空间。<br>不同的用户代理计算出来的值可能不同，不过通常都是字体大小的1.2倍。<br>这使得行框要高于给定元素的font-size值。</p>
 <h5 id="垂直对齐文本"><a href="#垂直对齐文本" class="headerlink" title="垂直对齐文本"></a>垂直对齐文本</h5><p>CSS的属性vertical-align用来指定行内元素(inline)或表格单元格(table-cell)元素的垂直对齐方式。</p>

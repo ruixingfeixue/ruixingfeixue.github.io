@@ -815,6 +815,9 @@
 <hr>
 <h4 id="draggable"><a href="#draggable" class="headerlink" title="draggable"></a>draggable</h4><p>规定元素是否可拖拽<br>3个枚举值<br>true     规定元素是可拖动的。<br>false     规定元素是不可拖动的。<br>auto     使用浏览器的默认特性。</p>
 <h4 id="hidden"><a href="#hidden" class="headerlink" title="hidden"></a>hidden</h4><p>hidden属性用于隐藏该元素。一旦使用了此属性，则该元素就不会在浏览器中被显示<br>2个布尔值<br>true     规定元素是可见。<br>false 规定元素是不可见</p>
+<h4 id="accesskey"><a href="#accesskey" class="headerlink" title="accesskey"></a>accesskey</h4><p>accesskey属性可以设定一个或几个用来选择页面上的元素的快捷键。<br>其目的是让网页或网站的熟客可以使用快捷键访问经常用到的元素。<br>用来触发accesske机制的按键组合因平台而异。在windows系统上是同时按下alt键和accesskey属性值对应的键。</p>
+<h4 id="spellcheck属性"><a href="#spellcheck属性" class="headerlink" title="spellcheck属性"></a>spellcheck属性</h4><p>spellcheck属性用来表明浏览器是否应该对元素的内容进行拼写检查。<br>这个属性只用在用户可以编辑的元素上才有意义。<br>spellcheck属性可以接受的值有两个：true(启用拼写检查)和false(禁用拼写检查)。<br>至于拼写检查的实现方式则因浏览器而异。<br>chrome的处理方式是键入时检查，其它浏览器则需要用户发出检查拼写的指示。<br>警告：目前大多数浏览器中的拼写检查都会忽略前面介绍过的lang属性。<br>它们的拼写检查基于用户所用操作系统中的语言设置或浏览器的语言设置。</p>
+<h4 id="tabindex属性"><a href="#tabindex属性" class="headerlink" title="tabindex属性"></a>tabindex属性</h4><p>HTML页面上的键盘焦点可以通过按Tab键在各元素之间切换。<br>用tabindex属性可以改变默认的转移顺序。<br>tabindex值为1的元素会第一个被选中。用户按一下Tab后，tabindex值为2的那个元素会被选中。依此类推。<br>tabindex设置为-1的元素不会再用户按下tab键后被选中。</p>
 
           
         
@@ -959,6 +962,7 @@
           
             <h4 id="文档声明"><a href="#文档声明" class="headerlink" title="文档声明"></a>文档声明</h4><p>定义和用法<br><code>&lt;!DOCTYPE&gt;</code> 声明必须位于HTML5文档中的第一行，也就是位于<code>&lt;html&gt;</code>标签之前。该标签告知浏览器文档所使用的HTML规范。<br>doctype声明不属于HTML标签; 它是一条指令，告诉浏览器编写页面所用的标记的版本。<br>在所有HTML文档中规定doctype是非常重要的，这样浏览器就能了解预期的文档类型。<br>HTML4.01中的doctype需要对DTD进行引用，因为HTML4.01基于SGML,而HTML5不基于SGML，因此不需要对DTD进行引用，<br>但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行。）。</p>
 <hr>
+<p>HTML5规范将元素分为三大类：元数据元素(metadata)、流元素(flow element)和短语元素(phrasing element).<br>元数据元素用来构建HTML文档的基本结构,以及就如何处理文档向浏览器提供信息和指示.<br>短语元素是HTML的基本成分。流元素是短语元素的超集。所有的短语元素都是流元素，但并非所有流元素都是短语元素。</p>
 <h4 id="结构性标签"><a href="#结构性标签" class="headerlink" title="结构性标签"></a>结构性标签</h4><p>结构性标签（construct tag）主要负责Web的上下文结构的定义，确保HTML文档的完整性，这类标签包括以下几个。<br><code>section</code>：用于表达书的一部分或一章，或者一章内的一节。在Web页面应用中，该标签也可以用于区域的章节表述。<br><code>hgroup</code>：对网页或区段（section）的标题进行组合。<br><code>header</code>：页面主体上的头部，注意区别于head标签。<br><code>footer</code>：页面的底部（页脚）。通常，人们会在这里标出网站的一些相关信息，例如关于我们、法律申明、邮件信息、管理入口等。<br><code>nav</code>：是专门用于菜单导航、链接导航的标签，是navigator的缩写。<br><code>article</code>：用于表示一篇文章的主体内容，一般为文字集中显示的区域。</p>
 <hr>
 <h4 id="块性标签"><a href="#块性标签" class="headerlink" title="块性标签"></a>块性标签</h4><p>级块性标签（block tag）主要完成Web页面区域的划分，确保内容的有效分隔，这类标签包括以下几个。</p>
@@ -1777,7 +1781,7 @@
         
           
             <h5 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h5><p>line-height属性是文本行间基线之间的距离。<br>line-height控制了行间距，这是文本行之间超出字体大小的额外空间。<br>换句话说，line-height值和字体大小之差就是行间距。</p>
-<h5 id="构造文本行"><a href="#构造文本行" class="headerlink" title="构造文本行"></a>构造文本行</h5><p>文本行的每个元素都会生成一个内容区，这由字体的大小决定。<br>这个内容区则会产生一个行内框(line-box)。<br>要确定一个给定元素的行间距，只需将line-height的计算值减去font-size的计算值。<br>这个值是总的行间距。</p>
+<h5 id="构造文本行"><a href="#构造文本行" class="headerlink" title="构造文本行"></a>构造文本行</h5><p>文本行的每个元素都会生成一个内容区，这由字体的大小决定。<br>这个内容区则会产生一个行内框(line-box)。<br>要确定一个给定元素的行间距，只需将line-size的计算值。<br>这个值是总的行间距。</p>
 <p><img src="/img/14.png" alt="行框图"><br>举个栗子：<br>假设font-size为14px(相应的，内容区的高度也是14px)，而且line-height为18px。<br>其差(4像素)除以2，将其一半应用到内容区的顶部和底部。这会得到一个18像素高的行内框。<br>在内容区的上面和下面分别有2个额外的像素。</p>
 <h5 id="指定line-height值"><a href="#指定line-height值" class="headerlink" title="指定line-height值"></a>指定line-height值</h5><p>line-height的可取值，如果使用默认值normal，用户代理必须计算行间的垂直空间。<br>不同的用户代理计算出来的值可能不同，不过通常都是字体大小的1.2倍。<br>这使得行框要高于给定元素的font-size值。</p>
 <h5 id="垂直对齐文本"><a href="#垂直对齐文本" class="headerlink" title="垂直对齐文本"></a>垂直对齐文本</h5><p>CSS的属性vertical-align用来指定行内元素(inline)或表格单元格(table-cell)元素的垂直对齐方式。</p>
