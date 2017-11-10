@@ -258,6 +258,342 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/27/css基本视觉格式化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/27/css基本视觉格式化/" itemprop="url">
+                  css基本视觉格式化
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-27T17:19:09+08:00">
+                2017-05-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="行内布局基础术语"><a href="#行内布局基础术语" class="headerlink" title="行内布局基础术语"></a>行内布局基础术语</h5><blockquote>
+<p>匿名文本：<br>是指所有未包含在行内元素中的字符串。<br>在标记<code>&lt;p&gt;I&#39;m&lt;em&gt;so&lt;/em&gt;happy&lt;/p&gt;</code>中，序列”I’m”和”happy”都是匿名文本。<br>注意：空格也是匿名文本的一部分，因为空格和其它元素一样都是字符。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>em框:<br>在字体中定义。也成为字符框(character box)。实际的字形可能比其em框更高或更矮。<br>在css中，font-size的值决定了各个em框的高度。<br><img src="/img/17.png" alt="em图"></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>内容区:<br>在非替换元素中，内容区可能有两种：css2.1规范允许用户代理选择其中任意一种。<br>内容区可以是元素中各字符的em框串在一起构成的框，也可以是由元素中字符字形描述的框。<br>在替换元素中，内容区就是元素的固有高度再加上可能有的外边框，边框或内边距。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>行间距:<br>行间距(leading)是font-size值和line-height值之差。这个差实际上要分为两半，分别应用到内容区的顶部和底部。<br>为内容区增加的这两部分分别称为半间距(half-leading)。行间距只适用于非替换元素。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>行内框:<br>这个框通过向内容区增加行间距来描述。<br>对于非替换元素，元素行内框的高度刚好等于line-height的值。<br>对于替换元素，元素行内框的高度恰好等于内容区的高度，因为行间距不应用到替换元素。<br><img src="/img/18.png" alt="em图"></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>行框:<br>这是包含该行中出现行内框的最高点和最低点的最小框。<br>换句话说，行框的上边界要位于最高行内框的上边界，而行框的底边要放在最低行内框的下边界。</p>
+</blockquote>
+<hr>
+<p>行为和有用的概念：</p>
+<ul>
+<li>内容区类似于一个块级元素的内容框。</li>
+<li>行内元素的背景应用于内容区及所有内边距。</li>
+<li>行内元素的边框要包围内容区及所有内边距和边距。</li>
+<li>非替换元素的内边距、边框和外边距对行内元素或其生成的框没有垂直效果，<br>也就是说，它们不会影响元素行内框的高度。(也不会影响包含该元素的行框的高度)</li>
+<li>替换元素的外边距和边框确实会影响该元素行内框的高度，相应的，也可能影响包含该元素的行框的高度。</li>
+<li>行内框在行中根据其vertical-align属性值垂直对齐。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/26/css文本属性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/26/css文本属性/" itemprop="url">
+                  css文本属性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-26T17:19:09+08:00">
+                2017-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h5><p>line-height属性是文本行间基线之间的距离。<br>line-height控制了行间距，这是文本行之间超出字体大小的额外空间。<br>换句话说，line-height值和字体大小之差就是行间距。</p>
+<h5 id="构造文本行"><a href="#构造文本行" class="headerlink" title="构造文本行"></a>构造文本行</h5><p>文本行的每个元素都会生成一个内容区，这由字体的大小决定。<br>这个内容区则会产生一个行内框(line-box)。<br>要确定一个给定元素的行间距，只需将line-size的计算值。<br>这个值是总的行间距。</p>
+<p><img src="/img/14.png" alt="行框图"><br>举个栗子：<br>假设font-size为14px(相应的，内容区的高度也是14px)，而且line-height为18px。<br>其差(4像素)除以2，将其一半应用到内容区的顶部和底部。这会得到一个18像素高的行内框。<br>在内容区的上面和下面分别有2个额外的像素。</p>
+<h5 id="指定line-height值"><a href="#指定line-height值" class="headerlink" title="指定line-height值"></a>指定line-height值</h5><p>line-height的可取值，如果使用默认值normal，用户代理必须计算行间的垂直空间。<br>不同的用户代理计算出来的值可能不同，不过通常都是字体大小的1.2倍。<br>这使得行框要高于给定元素的font-size值。</p>
+<h5 id="垂直对齐文本"><a href="#垂直对齐文本" class="headerlink" title="垂直对齐文本"></a>垂直对齐文本</h5><p>CSS的属性vertical-align用来指定行内元素(inline)或表格单元格(table-cell)元素的垂直对齐方式。</p>
+<ol>
+<li>vertical-align:baseline<br>要求一个元素的基线与其父元素的基线对齐。<br>如果一个垂直对齐元素没有基线-比如是一个图像或者表单输入元素-那么该元素的底端与其父元素的基线对齐。<br><img src="/img/15.png" alt="baseline"></li>
+<li>vertical-align:sub<br>声明会使一个元素变成下标，这意味着其基线相对于其父元素的基线降低。<br>规范并没有规定降低的距离，所以对于不同的用户代理，可能距离会有所不同。</li>
+<li>vertical-align:super<br>声明会使一个元素变成上标，这意味着其基线相对于其父元素的基线升高。<br>规范并没有规定升高的距离，所以对于不同的用户代理，可能距离会有所不同。<br>注意：sub和super不会改变元素的字体大小。所以下标和上标文本不会变小或变大。所有文本都与父元素的文本大小相同。</li>
+<li>vertical-align:bottom<br>将元素行内框的底端与行框的底端对齐。</li>
+<li>vertical-align:middle<br>会把行内元素框的中点与父元素基线上方0.5ex处的一个点对齐。这里的1ex相对于父元素的font-size定义。</li>
+<li>vertical-align:top<br>将元素行内框的顶端与包含该元素的行框的顶端对齐。</li>
+<li>vertical-align:text-top<br>将元素行内框的顶端与包含该元素的内容区的底端对齐。</li>
+<li><code>&lt;percentage&gt;</code><br>将元素上移或下移一定距离，这个距离由相对于元素line-height值指定的一个百分数确定。</li>
+</ol>
+<p><a href="http://www.zhangxinxu.com/wordpress/2010/05/%E6%88%91%E5%AF%B9css-vertical-align%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%86%E8%A7%A3%E4%B8%8E%E8%AE%A4%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/" target="_blank" rel="external">具体的用法点这里</a></p>
+<h5 id="字间隔"><a href="#字间隔" class="headerlink" title="字间隔"></a>字间隔</h5><p>word-spacing用于修改字间间隔。可能会受text-align影响。</p>
+<h5 id="字母间隔"><a href="#字母间隔" class="headerlink" title="字母间隔"></a>字母间隔</h5><p>letter-spacing用于修改字母间隔。不会受text-align影响。</p>
+<h5 id="处理空白符"><a href="#处理空白符" class="headerlink" title="处理空白符"></a>处理空白符</h5><p>white-space可以影响浏览器处理字之间和文本行之间的空白符的方式。<br>默认的xhtml处理会把所有的空白符合并为一个空格。<br><img src="/img/16.png" alt="white-space"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/css选择器和字体/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -376,149 +712,6 @@
 <p>strong元素的大小值就算如下：<br>12px × 120% =14.4px ≈ 14px<br>14.4px × 135% = 19.44px ≈ 19px</p>
 <h5 id="字体变形"><a href="#字体变形" class="headerlink" title="字体变形"></a>字体变形</h5><p>font-varient有两个非继承值:默认值normal和small-caps。<br>normal描述正常文本。small=caps要求使用小型大写字母文本。</p>
 <h5 id="字体匹配的原理"><a href="#字体匹配的原理" class="headerlink" title="字体匹配的原理"></a>字体匹配的原理</h5><p><img src="/img/13.png" alt="字体匹配的原理"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/html5标记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/10/html5标记/" itemprop="url">
-                  html5标记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
-                2017-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/html5实战/" itemprop="url" rel="index">
-                    <span itemprop="name">html5实战</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
 
           
         
@@ -730,6 +923,149 @@
 <p>如果浏览器支持 Ogg 格式，则使用第一个文件；否则它会继续往下解析下一个<code>&lt;source&gt;</code>标签。</p>
 <p><code>&lt;audio&gt;</code>标签的用法与<code>&lt;video&gt;</code>基本一致，除了width、height和poster之外其他属性基本相同。<br>你甚至可以将<code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>标签互换使用。两者之间的最大差别就是<code>&lt;audio&gt;</code>没有可视内容的播放区域。</p>
 <h5 id="响应式视频"><a href="#响应式视频" class="headerlink" title="响应式视频"></a>响应式视频</h5><p>对于HTML5式嵌入视频，修正方法很简单。<br>只需删除视频标签中的height和width属性(如删除width=”640” height=”480”)，<br>然后在CSS中追加如下代码：<code>video { max-width: 100%; height: auto; }</code><br>这种方法对本页面中的视频文件很有用，但它不能解决使用iframe嵌入的视频的响应问题。<br>可以使用一个名为FitVids的jQuery小插件。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/html5标记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ruixingfeixue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="瑞的指南针">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/10/html5标记/" itemprop="url">
+                  html5标记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T18:06:14+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5实战/" itemprop="url" rel="index">
+                    <span itemprop="name">html5实战</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容"><a href="#无需JavaScript，使用-lt-details-gt-和-lt-summary-gt-创建可折叠内容" class="headerlink" title="无需JavaScript，使用&lt;details&gt;和&lt;summary&gt;创建可折叠内容"></a>无需JavaScript，使用<code>&lt;details&gt;</code>和<code>&lt;summary&gt;</code>创建可折叠内容</h3><p>(<a href="http://runjs.cn/code/lglvcwtx" target="_blank" rel="external">Demo点这里</a>)  </p>
 
           
         
@@ -1630,319 +1966,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/14/css视觉效果/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/14/css视觉效果/" itemprop="url">
-                  css视觉效果
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-14T18:12:52+08:00">
-                2016-12-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="单侧投影"><a href="#单侧投影" class="headerlink" title="单侧投影"></a>单侧投影</h4><p>(<a href="http://runjs.cn/code/akcvaqy1" target="_blank" rel="external">Demo点这里</a>)<br>1.单边投影<br>对元素使用4px的模糊半径意味着投影的尺寸会比元素本身的尺寸大约8px。这个如何解决呢?<br>最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在模糊半径参数之后，称作扩张半径。<br>这个参数会根据你指定的值去扩大或(当指定负值时)缩小投影的尺寸。<br>举例来说，一个-5px的扩张半径会把投影的宽度和高度各减少10px(即每边各5px)。<br>辣么把扩张半径设为负的模糊值不就看不见投影啦。再用偏移量来移动，不就形成单边投影啦。</p>
-<p>2.邻边投影<br>技巧1:我们不应该把投影缩得太小，而是只需把阴影藏进一侧，另一侧自然露出就好。因此，扩张半径不应设为模糊半径的相反值，而应该是这个相反值的一半。<br>技巧2: 需要指定两个偏移量，因为我们希望投影在水平和垂直方向上同时移动。它们的值需要大于或等于模糊半径的一半，因为我们希望把投影藏进另外两条边之内。 </p>
-<p>3.双侧投影<br>因为扩张半径在四个方向上的作用是均等的（也就是说，我们无法指定投影在水平方向上放大，而在垂直方向上缩小）<br>唯一的办法是用两块投影（每边各一块）来达到目的。然后基本上就是把“单侧投影”中的技巧运用两次。</p>
-<hr>
-<h4 id="不规则投影"><a href="#不规则投影" class="headerlink" title="不规则投影"></a>不规则投影</h4><p>(<a href="http://runjs.cn/code/yipe0lk1" target="_blank" rel="external">Demo点这里</a>)<br>1.box-shadow不支持不规则投影。（元素添加了一些伪元素或半透明的装饰之后）具体情形如下：<br>半透明图像、背景图像、或者 border-image （比如老式的金质像框）;<br>元素设置了点状、虚线或半透明的边框，但没有背景（或者当background-clip 不是 border-box 时）;<br>对话气泡，它的小尾巴通常是用伪元素生成的;<br>我们在“切角效果”一节中见过的切角形状;<br>几乎所有的折角效果，包括“折角效果”一节将提到的例子;<br>通过 clip-path 生成的形状，比如“菱形图片”一节中提到的菱形图像。  </p>
-<p>2、解决方案 （使用CSS滤镜）<br>例如drop-shadow() 滤镜可接受的参数基本上跟 box-shadow 属性是一样的，但不包括扩张半径，不包括 inset 关键字，也不支持逗号分割的多层投<br>影语法。<br>举个例子，box-shadow: 2px 2px 10px rgba(0,0,0,.5); 可以这样写  filter: drop-shadow(2px 2px 10px rgba(0,0,0,.5));<br>CSS 滤镜最大的好处：它们可以平稳退化：当浏览器不支持时，不会出现问题，只不过没有任何效果而已。<br>如果你确实需要这个效果在尽可能多的浏览器中显示出来，可以同时附上一个 SVG 滤镜，这样可以得到稍微好一些的浏览器支持度。  </p>
-<hr>
-<h4 id="染色效果"><a href="#染色效果" class="headerlink" title="染色效果"></a>染色效果</h4><p>(<a href="http://runjs.cn/code/5oan2unq" target="_blank" rel="external">Demo点这里</a>)<br>1.使用滤镜<br>sepia()会给图片增加一种降饱和度的橙黄色染色效果，几乎所有像素的色相值会被收敛到 35~40。<br>如果我们想要的主色调的饱和度比这更高，可以用saturate()滤镜来给每个像素提升饱和度。<br>hue-roatate()滤镜，把每个像素的色相以指定的度数进行偏移。为了把原有的色相值40改变为335，需要增加大约295度(335-40)。<br>2.基于混合模式的方案<br>“混合模式”控制了上层元素的颜色与下层颜色进行混合的方式。<br>用它来实现染色效果时，需要用到的混合模式是luminosity。<br>这种luminosity混合模式会保留上层元素的HSL亮度信息，并从它的下层吸取色相和饱和度信息。<br>要对一个元素设置混合模式，有两个属性可以派上用场：<br>mix-blend-mode可以为整个元素设置混合模式，background-blend-mode可以为每层背景单独指定混合模式。<br>使用这种策略有两种选择模式：<br>第一种选择：需要把图片包裹在一个容器中，并把容器的背景色设置为我们想要的主色调。<br>第二种选择：不用图片元素，而是用div元素——把这个元素的第一层背景设置为要染色的图片，并把第二层的背景设置为我们想要的主色调。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/05/css形状/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ruixingfeixue">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="瑞的指南针">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/05/css形状/" itemprop="url">
-                  css形状
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-05T21:22:07+08:00">
-                2016-12-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="自适应的椭圆"><a href="#自适应的椭圆" class="headerlink" title="自适应的椭圆"></a>自适应的椭圆</h4><p>(<a href="http://runjs.cn/code/ltgrlo4v" target="_blank" rel="external">Demo点这里</a>)<br>1、如何实现自适应椭圆<br><code>border-radius: 50% / 50%;</code><br>border-radius 这个属性它不仅可以接受长度值，还可以接受百分比值。<br>这个百分比值会基于元素的尺寸进行解析，即宽度用于水平半径的解析，而高度用于垂直半径的解析。<br>这意味着相同的百分比可能会计算出不同的水平和垂直半径。  </p>
-<hr>
-<p>2、如何实现半椭圆<br><img src="/img/5.png" alt="border-radius实现"><br>真正简洁的方法还是使用 border-radius 这个简写属性，因为我们可以向它一次性提供用空格分开的多个值。<br>如果我们传给它四个值，这四个值就会被分别从左上角开始以顺时针顺序应用到元素的各个拐角。<br>如果我们提供的值少于四个，则它们会以 CSS 的常规方式重复。<br>如果只提供了三个值，则意味着第四个值与第二值相同。<br>如果只有两个值，则意味着第三个值与第一个相同。<br>我们甚至可以为所有四个角提供完全不同的水平和垂直半径，方法是在斜杠前指定 1~4 个值，在斜杠后指定另外 1~4 个值。请注意这两组值是单独展开为四个值的。<br>举例来说，当 border-radius 的值为10px / 5px 20px 时，其效果相当于 10px 10px 10px 10px / 5px 20px 5px 20px 。  </p>
-<hr>
-<p>3、如何实现四分之一椭圆<br>思路：其中一个角的水平和垂直半径值都需要是100%，而其他三个角都不能设为圆角。<br>代码实现：<code>border-radius: 100% 0 0 0;</code></p>
-<hr>
-<h4 id="平行四边形"><a href="#平行四边形" class="headerlink" title="平行四边形"></a>平行四边形</h4><p>(<a href="http://runjs.cn/code/3knysf8r" target="_blank" rel="external">Demo点这里</a>)<br>1、如何实现平行四边形<br>很简单tranform-skew扭曲即可。但是外形扭曲后，里面的文字也相应的扭曲了。文字反扭曲即可实现效果。<br>缺点:文字也要使用扭曲，不添加额外的HTML元素。<br>2、伪元素方案实现平行四边形<br>思路:把所有样式（背景、边框等）应用到伪元素上，然后再对伪元素进行变形。<br>因为我们的内容并不是包含在伪元素里的，所以内容并不会受到变形的影响。<br>做法：<br>我们希望伪元素保持良好的灵活性，可以自动继承其宿主元素的尺寸，甚至当宿主元素的尺寸是由其内容来决定时仍然如此。<br>一个简单的办法是给宿主元素应用 position: relative 样式，并为伪元素设置 position:absolute 。<br>然后再把所有偏移量设置为零，以便让它在水平和垂直方向上都被拉伸至宿主元素的尺寸。<br>此时，用伪元素生成的方块是重叠在内容之上的，一旦给它设置背景就会遮住内容。<br>为了修复这个问题，我们可以给伪元素设置z-index: -1 样式，这样它的堆叠层次就会被推到宿主元素之后。</p>
-<hr>
-<h4 id="菱形图片"><a href="#菱形图片" class="headerlink" title="菱形图片"></a>菱形图片</h4><p>(<a href="http://runjs.cn/code/a263mx5i" target="_blank" rel="external">Demo点这里</a>)<br>如何实现菱形图片   </p>
-<h5 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h5><p>把图片用一个div包裹起来，然后对其应用相反的rotate()变形样式。<br><img src="/img/6.png" alt="失败图"><br>嗯哼，这主要是因为max-width:100%这条声明，被解析为容器.picture的边长。<br>要想让图片在容器里正确显示，那就得<strong>图片的宽度等于容器的对角线</strong>。<br><img src="/img/7.png" alt="懂了么"><br>解决方式：1.算出图片的边长。2.调整图片的大小。</p>
-<h5 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h5><p>使用clip-path用一系列（以逗号分隔的）坐标点来指定任意的多边形。我们甚至可以使用百分比值，它们会解析为元素自身的尺寸。<br><code>clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);</code><br>这个属性甚至可以参与动画，只要我们的动画是在同一种形状函数(比如这里是polygon())之间进行的，而且点的数量是相同的。  </p>
-<hr>
-<h4 id="切角效果"><a href="#切角效果" class="headerlink" title="切角效果"></a>切角效果</h4><p>(<a href="http://runjs.cn/code/9aev9kjh" target="_blank" rel="external">Demo点这里</a>)</p>
-<p>1.使用线性渐变实现<br>渐变可以接受一个角度(比如45deg)作为方向，而且色标的位置信息也可以是绝对的长度值，这一点丝毫不受容器尺寸的影响。<br>注意点：<br>线性渐变的角度(<a href="http://www.zhangxinxu.com/wordpress/2013/09/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3css3-gradient%E6%96%9C%E5%90%91%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98/" target="_blank" rel="external">可以参考这里</a>)<br>多个切角用多个渐变会出现覆盖的情况，可以使用background-size解决。同时应注意background-repeat。</p>
-<p>2.使用border-image实现<br><img src="/img/8.png" alt="使用的svg图像"> </p>
-<h5 id="裁剪路径方案"><a href="#裁剪路径方案" class="headerlink" title="裁剪路径方案"></a>裁剪路径方案</h5><p>可以使用任意类型的背景，甚至可以对替换元素(比如图片)进行裁切</p>
-<p>3.关于未来<br>corner-shape可以直接实现切角效果</p>
-<hr>
-<h4 id="梯形标签页"><a href="#梯形标签页" class="headerlink" title="梯形标签页"></a>梯形标签页</h4><p>(<a href="http://runjs.cn/code/ynqjfvlg" target="_blank" rel="external">使用3D旋转实现</a>)<br>(<a href="http://runjs.cn/code/nfr2mwal" target="_blank" rel="external">使用伪元素实现</a>) </p>
-<hr>
-<h4 id="简单的饼图"><a href="#简单的饼图" class="headerlink" title="简单的饼图"></a>简单的饼图</h4><hr>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1992,7 +2015,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2014,7 +2037,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
